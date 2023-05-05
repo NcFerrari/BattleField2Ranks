@@ -1,0 +1,4 @@
+
+[squid:UselessImportCheck"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ÑÌ†Æþ0
+fsquid:UselessImportCheck"6Remove this unused import 'org.hibernate.query.Query'.(¤— ´ûÿÿÿÿ8¤ûªÅþ0
+dsquid:UselessImportCheck"4Remove this unused import 'jpa.entity.PlayerEntity'.(†œÅøýÿÿÿÿ8¢è†Æþ0

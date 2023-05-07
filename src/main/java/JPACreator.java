@@ -20,9 +20,6 @@ public class JPACreator {
 
     private final String configFile = "hibernate.cfg.xml";
     private final String db = "bf2stats";
-    private String entityPath = "src/main/java/jpa/entity/";
-    private String daoPath = "src/main/java/jpa/dao/";
-    private String daoImplPath = "src/main/java/jpa/daoimpl/";
 
     private Map<String, ValidatedColumns> schemaMap;
 
@@ -77,14 +74,20 @@ public class JPACreator {
 
     @Getter
     private enum JPAType {
-        ENTITY("Entity"),
-        DAO("Dao"),
-        DAO_IMPL("DaoImpl)");
+        ENTITY("Entity", "src/main/java/jpa/entity/"),
+        DAO("Dao", "src/main/java/jpa/dao/"),
+        DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"),
+        DTO("Dto", "src/main/java/dto/");
 
         private String suffix;
+        private String path;
 
-        JPAType(String suffix) {
+        JPAType(String suffix, String path) {
             this.suffix = suffix;
+            this.path = path;
+            if (!path.endsWith("/")) {
+                this.path += "/";
+            }
         }
     }
     // =================================================================== HIBERNATE ===================================
@@ -182,26 +185,69 @@ public class JPACreator {
         }
         return resultName;
     }
-    // =================================================================== ENTITY FILES ===============================
+    // =================================================================== ENTITY FILES ================================
+
+    // =================================================================== DAO FILES ===================================
+
+    private void fillDaoFile() {
+        createFiles(schemaMap, JPAType.DAO).forEach((tableName, file) -> {
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                writer.write("package jpa.dao;");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    // =================================================================== DAO FILES ===================================
 
 
-    // =================================================================== DAO FILES ===============================
+    // =================================================================== DAO IMPLEMENTS FILES ========================
+
+    private void fillDaoImplFiles() {
+        createFiles(schemaMap, JPAType.DAO_IMPL).forEach((tableName, file) -> {
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                writer.write("");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    // =================================================================== DAO IMPLEMENTS FILES ========================
 
 
-    // =================================================================== DAO FILES ===============================
+    // =================================================================== DTO FILES ===================================
+
+    private void fillDtoFiles() {
+        createFiles(schemaMap, JPAType.DTO).forEach((tableName, file) -> {
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+                writer.write("");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+    }
+
+    // =================================================================== DTO FILES ===================================
+
     public Map<String, File> createFiles(Map<String, ValidatedColumns> schemaMap, JPAType jpaType) {
         if (schemaMap == null || schemaMap.keySet().isEmpty()) {
             return null;
         }
-        if (!entityPath.endsWith("/")) {
-            entityPath += "/";
-        }
-        if (!new File(entityPath).exists()) {
-            new File(entityPath).mkdirs();
+        final String path = jpaType.getPath();
+        if (!new File(path).exists()) {
+            new File(path).mkdirs();
         }
         final Map<String, File> files = new HashMap<>();
         schemaMap.keySet().stream().forEach(tableName -> {
-            File file = new File(String.format("%s%s%s", entityPath, formatName(tableName, true, jpaType), ".java"));
+            File file = new File(String.format("%s%s%s", path, formatName(tableName, true, jpaType), ".java"));
             if (!file.exists()) {
                 try {
                     file.createNewFile();
@@ -216,7 +262,10 @@ public class JPACreator {
 
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
-        fillEntityFile();
+//        fillEntityFile(); DONE
+        fillDaoFile();
+//        fillDaoImplFiles();
+//        fillDtoFiles();
     }
 
     public static void main(String[] args) {

@@ -5,67 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec5a1276-ae08-4ca0-bbb8-43e16a1181ad" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/JPACreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0599bbb93a4e32c785930a61e92d26134a62caef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/1/e1ea3be06fa8364ca6d60c409c0581352aa6261d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/ToDo.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/_config.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/_readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/bf2statistics.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getawardsinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getbackendinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getclaninfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getleaderboard.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getmapinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getplayerid.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getplayerinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getrankinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/getunlocksinfo.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/images/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/images/bf2admin.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/images/bf2logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/images/but.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/Validator_help.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.content.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.import.bf2web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.menu.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.process.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/admin.security.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/class.validator.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/data.awards.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/db/sql.dbdata.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/db/sql.dbschema.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/db/sql.dbupgrade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/pngfix.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/includes/utils.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/ranknotification.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/searchforplayers.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ASP/selectunlock.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleField2Ranks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleField2Ranks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/PlayerEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/JPACreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/JPACreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/CourseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/EmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/InstructorDetailEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/InstructorEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/ReviewEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/StudentEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$Column.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JPACreator$Column.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$ValidatedColumns.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JPACreator$ValidatedColumns.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/JPACreator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/PlayerEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +168,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/BattleField2Ranks/src/main/java/jpa/entity",
@@ -222,6 +176,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.36206895",
@@ -311,7 +266,8 @@
       <option name="presentableId" value="Default" />
       <updated>1683222704964</updated>
       <workItem from="1683222706464" duration="5637000" />
-      <workItem from="1683263302077" duration="40262000" />
+      <workItem from="1683263302077" duration="40298000" />
+      <workItem from="1683461941083" duration="2603000" />
     </task>
     <servers />
   </component>

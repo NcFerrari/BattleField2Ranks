@@ -92,8 +92,8 @@ public class JPACreator {
 
     // =================================================================== ENTITY FILES ===============================
 
-    private void fillEntityFile(String key) {
-        createFiles(schemaMap, entityPath).stream().forEach(file -> {
+    private void fillEntityFile() {
+        createFiles(schemaMap, JPAType.ENTITY).forEach((tableName, file) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(file));
                 System.out.println("GENERATE PACKAGE");
@@ -118,13 +118,13 @@ public class JPACreator {
                 writer.write("@Data\n");
                 writer.write("@NoArgsConstructor\n");
                 writer.write("@Entity\n");
-                writer.write(String.format("@Table(name = \"%s\")\n", key));
-                writer.write(String.format("public class %s {\n\n", name));
+                writer.write(String.format("@Table(name = \"%s\")\n", tableName));
+                writer.write(String.format("public class %s {\n\n", file.getName().split("\\.")[0]));
                 System.out.println("GENERATE PARAMETERS");
                 writer.write("    @Id\n");
                 writer.write("    @GeneratedValue(strategy = GenerationType.IDENTITY)\n");
 
-                columns.getColumns().stream().forEach(column -> {
+                schemaMap.get(tableName).getColumns().stream().forEach(column -> {
                     try {
                         writer.write(String.format("    @Column(name = \"%s\")\n", column.getColumnName()));
                         writer.write(String.format("    private %s %s;\n\n", getDataType(column.getDataType()), formatName(column.getColumnName(), JPAType.ENTITY)));
@@ -189,7 +189,7 @@ public class JPACreator {
 
 
     // =================================================================== DAO FILES ===============================
-    public List<File> createFiles(Map<String, ValidatedColumns> schemaMap, String path) {
+    public Map<String, File> createFiles(Map<String, ValidatedColumns> schemaMap, JPAType jpaType) {
         if (schemaMap == null || schemaMap.keySet().isEmpty()) {
             return null;
         }
@@ -199,10 +199,9 @@ public class JPACreator {
         if (!new File(entityPath).exists()) {
             new File(entityPath).mkdirs();
         }
-        final List<File> files = new ArrayList<>();
-        schemaMap.keySet().stream().forEach(key -> {
-            String name = formatName(key, true, null);
-            File file = new File(String.format("%s%s%s", entityPath, name, ".java"));
+        final Map<String, File> files = new HashMap<>();
+        schemaMap.keySet().stream().forEach(tableName -> {
+            File file = new File(String.format("%s%s%s", entityPath, formatName(tableName, true, jpaType), ".java"));
             if (!file.exists()) {
                 try {
                     file.createNewFile();
@@ -210,14 +209,14 @@ public class JPACreator {
                     e.printStackTrace();
                 }
             }
-            files.add(file);
+            files.put(tableName, file);
         });
         return files;
     }
 
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
-        fillEntityFile(key, name, schemaMap.get(key));
+        fillEntityFile();
     }
 
     public static void main(String[] args) {

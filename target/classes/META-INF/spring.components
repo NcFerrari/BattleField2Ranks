@@ -1,3 +1,14 @@
 #
-#Thu May 04 23:53:43 CEST 2023
-jpa.entity.PlayerEntity=javax.persistence.Entity,javax.persistence.Table
+#Fri May 05 20:19:39 CEST 2023
+jpa.entity.StudentEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.EmployeeEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.InstructorEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.ReviewEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.ReviewEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.InstructorDetailEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.EmployeeEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.CourseEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.jpa.entity.StudentEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.CourseEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.InstructorDetailEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.InstructorEntity=javax.persistence.Entity,javax.persistence.Table

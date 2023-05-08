@@ -1,6 +1,3 @@
-import dto.Course;
-import jpa.dao.CourseDao;
-import jpa.daoimpl.CourseDaoImpl;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -25,6 +22,14 @@ public class JPACreator {
     private final String db = "bf2stats";
 
     private Map<String, ValidatedColumns> schemaMap;
+
+    public JPACreator() {
+        schemaMap = loadDBStructureFromSpecificDB();
+        fillEntityFile();
+//        fillDtoFiles();
+//        fillDaoFile();
+//        fillDaoImplFiles();
+    }
 
     // =================================================================== HIBERNATE ===================================
     private Map<String, ValidatedColumns> loadDBStructureFromSpecificDB() {
@@ -54,49 +59,6 @@ public class JPACreator {
         });
         return resultMap;
     }
-
-    @Data
-    private class ValidatedColumns {
-        private List<Column> columns = new ArrayList<>();
-        private boolean primaryKeyIncluded = false;
-    }
-
-    @Data
-    @AllArgsConstructor
-    @NoArgsConstructor
-    private class Column {
-
-        private String columnName;
-        private String dataType;
-
-        @Override
-        public String toString() {
-            return columnName;
-        }
-    }
-
-    @Getter
-    private enum JPAType {
-        ENTITY("Entity", "src/main/java/jpa/entity/"), DAO("Dao", "src/main/java/jpa/dao/"), DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"), DTO("Dto", "src/main/java/dto/"), ENTITY_MANAGER("", "src/main/java/jpa/daoimpl/");
-
-        private String suffix;
-        private String path;
-
-        JPAType(String suffix, String path) {
-            this.suffix = suffix;
-            this.path = path;
-            if (!path.endsWith("/")) {
-                this.path += "/";
-            }
-        }
-    }
-
-    @Data
-    @AllArgsConstructor
-    private class FileObject {
-        private String tableTitle;
-        private File file;
-    }
     // =================================================================== HIBERNATE ===================================
 
 
@@ -110,19 +72,12 @@ public class JPACreator {
                 writer.write("package jpa.entity;\n\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import lombok.NoArgsConstructor;\n\n");
-                writer.write("import javax.persistence.CascadeType;\n");
                 writer.write("import javax.persistence.Column;\n");
                 writer.write("import javax.persistence.Entity;\n");
-                writer.write("import javax.persistence.FetchType;\n");
                 writer.write("import javax.persistence.GeneratedValue;\n");
                 writer.write("import javax.persistence.GenerationType;\n");
                 writer.write("import javax.persistence.Id;\n");
-                writer.write("import javax.persistence.JoinColumn;\n");
-                writer.write("import javax.persistence.ManyToOne;\n");
-                writer.write("import javax.persistence.OneToMany;\n");
-                writer.write("import javax.persistence.Table;\n");
-                writer.write("import java.util.ArrayList;\n");
-                writer.write("import java.util.List;\n\n");
+                writer.write("import javax.persistence.Table;\n\n");
                 writer.write("@Data\n");
                 writer.write("@NoArgsConstructor\n");
                 writer.write("@Entity\n");
@@ -196,7 +151,7 @@ public class JPACreator {
             String dtoClass = fileObject.getTableTitle();
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package jpa.dao;\n\n");
+                writer.write("package safe.jpa.dao;\n\n");
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public interface %s<%s> {\n\n", fileObject.getFile().getName().split("\\.")[0], dtoClass));
                 writer.write(String.format("    void saveOrUpdate(%s %s);\n\n", dtoClass, dtoClass.split("")[0].toLowerCase() + dtoClass.substring(1)));
@@ -226,9 +181,9 @@ public class JPACreator {
             tableTitles.add(title);
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package jpa.daoimpl;\n\n");
-                writer.write(String.format("import dto.%s;\n", title));
-                writer.write(String.format("import jpa.dao.%s%s;\n\n", title, JPAType.DAO.suffix));
+                writer.write("package safe.jpa.daoimpl;\n\n");
+                writer.write(String.format("import safe.dto.%s;\n", title));
+                writer.write(String.format("import safe.jpa.dao.%s%s;\n\n", title, JPAType.DAO.suffix));
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public class %s%s extends EntityManager implements %s%s<%s> {\n\n", title, JPAType.DAO_IMPL.suffix, title, JPAType.DAO.suffix, title));
                 writer.write("    @Override\n");
@@ -268,7 +223,7 @@ public class JPACreator {
         createFiles(schemaMap, JPAType.DTO).forEach((tableName, fileObject) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package dto;\n\n");
+                writer.write("package safe.dto;\n\n");
                 writer.write("import lombok.AllArgsConstructor;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import lombok.NoArgsConstructor;\n\n");
@@ -304,8 +259,8 @@ public class JPACreator {
         createFiles(entityManagerFile, JPAType.ENTITY_MANAGER).forEach((classFile, fileObject) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package jpa.daoimpl;\n\n");
-                writer.write("import jpa.entity.*;\n");
+                writer.write("package safe.jpa.daoimpl;\n\n");
+                writer.write("import safe.jpa.entity.*;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import org.hibernate.Session;\n");
                 writer.write("import org.hibernate.SessionFactory;\n");
@@ -367,15 +322,54 @@ public class JPACreator {
         return resultMap;
     }
 
-    public JPACreator() {
-//        schemaMap = loadDBStructureFromSpecificDB();
-//        fillEntityFile();
-//        fillDaoFile();
-//        fillDtoFiles();
-//        fillDaoImplFiles();
-    }
-
     public static void main(String[] args) {
         new JPACreator();
+    }
+
+    @Data
+    private class ValidatedColumns {
+        private List<Column> columns = new ArrayList<>();
+        private boolean primaryKeyIncluded = false;
+    }
+
+    @Data
+    @AllArgsConstructor
+    @NoArgsConstructor
+    private class Column {
+
+        private String columnName;
+        private String dataType;
+
+        @Override
+        public String toString() {
+            return columnName;
+        }
+    }
+
+    @Getter
+    private enum JPAType {
+        ENTITY("Entity", "src/main/java/jpa/entity/"),
+        DAO("Dao", "src/main/java/jpa/dao/"),
+        DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"),
+        DTO("Dto", "src/main/java/dto/"),
+        ENTITY_MANAGER("", "src/main/java/jpa/daoimpl/");
+
+        private String suffix;
+        private String path;
+
+        JPAType(String suffix, String path) {
+            this.suffix = suffix;
+            this.path = path;
+            if (!path.endsWith("/")) {
+                this.path += "/";
+            }
+        }
+    }
+
+    @Data
+    @AllArgsConstructor
+    private class FileObject {
+        private String tableTitle;
+        private File file;
     }
 }

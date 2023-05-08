@@ -26,7 +26,7 @@ public class JPACreator {
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
         fillEntityFile();
-//        fillDtoFiles();
+        fillDtoFiles();
 //        fillDaoFile();
 //        fillDaoImplFiles();
     }
@@ -61,9 +61,7 @@ public class JPACreator {
     }
     // =================================================================== HIBERNATE ===================================
 
-
     // =================================================================== ENTITY FILES ===============================
-
     private void fillEntityFile() {
         System.out.println("GENERATE ENTITIES");
         createFiles(schemaMap, JPAType.ENTITY).forEach((tableName, fileObject) -> {
@@ -102,49 +100,40 @@ public class JPACreator {
         });
         System.out.println("ENTITIES done ...");
     }
-
-    private String getDataType(String sqlDataType) {
-        switch (sqlDataType) {
-            case "varchar":
-                return "String";
-            case "char":
-                return "Character";
-            case "tiny":
-            case "int":
-                return "Integer";
-            case "float":
-                return "Float";
-            case "bool":
-                return "Boolean";
-            default:
-                try {
-                    throw new Exception("Unknown format");
-                } catch (Exception e) {
-                }
-                return null;
-        }
-    }
-
-    private String formatName(String key) {
-        return this.formatName(key, false);
-    }
-
-    private String formatName(String key, boolean isClass) {
-        String resultName = "";
-        key.replace("-", "_");
-        String[] words = key.split("_");
-        for (String word : words) {
-            resultName += word.split("")[0].toUpperCase() + word.substring(1);
-        }
-        if (!isClass) {
-            resultName = resultName.split("")[0].toLowerCase() + resultName.substring(1);
-        }
-        return resultName;
-    }
     // =================================================================== ENTITY FILES ================================
 
-    // =================================================================== DAO FILES ===================================
+    // =================================================================== DTO FILES ===================================
+    private void fillDtoFiles() {
+        System.out.println("GENERATE DTOS");
+        createFiles(schemaMap, JPAType.DTO).forEach((tableName, fileObject) -> {
+            try {
+                BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
+                writer.write("package dto;\n\n");
+                writer.write("import lombok.AllArgsConstructor;\n");
+                writer.write("import lombok.Data;\n");
+                writer.write("import lombok.NoArgsConstructor;\n\n");
+                writer.write("@Data\n");
+                writer.write("@AllArgsConstructor\n");
+                writer.write("@NoArgsConstructor\n");
+                writer.write(String.format("public class %s {\n\n", fileObject.getFile().getName().split("\\.")[0]));
+                schemaMap.get(tableName).getColumns().stream().forEach(column -> {
+                    try {
+                        writer.write(String.format("    private %s %s;\n\n", getDataType(column.getDataType()), formatName(column.getColumnName())));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
+                writer.write("}");
+                writer.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+        System.out.println("DTOS done ...");
+    }
+    // =================================================================== DTO FILES ===================================
 
+    // =================================================================== DAO FILES ===================================
     private void fillDaoFile() {
         System.out.println("GENERATE DAOS");
         createFiles(schemaMap, JPAType.DAO).forEach((tableName, fileObject) -> {
@@ -214,40 +203,6 @@ public class JPACreator {
     }
 
     // =================================================================== DAO IMPLEMENTS FILES ========================
-
-
-    // =================================================================== DTO FILES ===================================
-
-    private void fillDtoFiles() {
-        System.out.println("GENERATE DTOS");
-        createFiles(schemaMap, JPAType.DTO).forEach((tableName, fileObject) -> {
-            try {
-                BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package safe.dto;\n\n");
-                writer.write("import lombok.AllArgsConstructor;\n");
-                writer.write("import lombok.Data;\n");
-                writer.write("import lombok.NoArgsConstructor;\n\n");
-                writer.write("@Data\n");
-                writer.write("@AllArgsConstructor\n");
-                writer.write("@NoArgsConstructor\n");
-                writer.write(String.format("public class %s {\n\n", fileObject.getFile().getName().split("\\.")[0]));
-                schemaMap.get(tableName).getColumns().stream().forEach(column -> {
-                    try {
-                        writer.write(String.format("    private %s %s;\n\n", getDataType(column.getDataType()), formatName(column.getColumnName())));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-                writer.write("}");
-                writer.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
-        System.out.println("DTOS done ...");
-    }
-
-    // =================================================================== DTO FILES ===================================
 
 
     // =================================================================== ENTITY MANAGER ==============================
@@ -324,6 +279,45 @@ public class JPACreator {
 
     public static void main(String[] args) {
         new JPACreator();
+    }
+
+    private String getDataType(String sqlDataType) {
+        switch (sqlDataType) {
+            case "varchar":
+                return "String";
+            case "char":
+                return "Character";
+            case "tiny":
+            case "int":
+                return "Integer";
+            case "float":
+                return "Float";
+            case "bool":
+                return "Boolean";
+            default:
+                try {
+                    throw new Exception("Unknown format");
+                } catch (Exception e) {
+                }
+                return null;
+        }
+    }
+
+    private String formatName(String key) {
+        return this.formatName(key, false);
+    }
+
+    private String formatName(String key, boolean isClass) {
+        String resultName = "";
+        key.replace("-", "_");
+        String[] words = key.split("_");
+        for (String word : words) {
+            resultName += word.split("")[0].toUpperCase() + word.substring(1);
+        }
+        if (!isClass) {
+            resultName = resultName.split("")[0].toLowerCase() + resultName.substring(1);
+        }
+        return resultName;
     }
 
     @Data

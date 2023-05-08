@@ -1,5 +1,5 @@
 #
-#Mon May 08 18:59:00 CEST 2023
+#Mon May 08 19:17:20 CEST 2023
 safe.jpa.entity.CourseEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.StudentEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.EmployeeEntity=javax.persistence.Entity,javax.persistence.Table

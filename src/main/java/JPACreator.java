@@ -75,8 +75,14 @@ public class JPACreator {
                 writer.write("import javax.persistence.GeneratedValue;\n");
                 writer.write("import javax.persistence.GenerationType;\n");
                 writer.write("import javax.persistence.Id;\n");
-                writer.write("import javax.persistence.Table;\n\n");
-                writer.write("@Data\n");
+                writer.write("import javax.persistence.Table;\n");
+                for (Column column : schemaMap.get(tableName).getColumns()) {
+                    if ("datetime".equals(column.getDataType())) {
+                        writer.write("import java.time.LocalDateTime;\n");
+                        break;
+                    }
+                }
+                writer.write("\n@Data\n");
                 writer.write("@NoArgsConstructor\n");
                 writer.write("@Entity\n");
                 writer.write(String.format("@Table(name = \"%s\")\n", tableName));
@@ -112,6 +118,12 @@ public class JPACreator {
                 writer.write("import lombok.AllArgsConstructor;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import lombok.NoArgsConstructor;\n\n");
+                for (Column column : schemaMap.get(tableName).getColumns()) {
+                    if ("datetime".equals(column.getDataType())) {
+                        writer.write("import java.time.LocalDateTime;\n\n");
+                        break;
+                    }
+                }
                 writer.write("@Data\n");
                 writer.write("@AllArgsConstructor\n");
                 writer.write("@NoArgsConstructor\n");
@@ -176,7 +188,7 @@ public class JPACreator {
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public class %s%s extends EntityManager implements %s%s<%s> {\n\n", title, JPAType.DAO_IMPL.suffix, title, JPAType.DAO.suffix, title));
                 writer.write("    @Override\n");
-                writer.write(String.format("    public void saveOrUpdate(%s %s) {\n\n", title, title.split("")[0].toLowerCase() + title.substring(1)));
+                writer.write(String.format("    public void saveOrUpdate(%s %s) {\n", title, title.split("")[0].toLowerCase() + title.substring(1)));
                 writer.write(String.format("        if (%s != null) {\n", title.split("")[0].toLowerCase() + title.substring(1)));
                 writer.write("            getSession().beginTransaction();\n");
                 writer.write(String.format("            getSession().saveOrUpdate(mapDtoToEntity(%s));\n", title.split("")[0].toLowerCase() + title.substring(1)));
@@ -203,7 +215,7 @@ public class JPACreator {
                 writer.write("        return dtos;\n");
                 writer.write("    }\n\n");
                 writer.write("    @Override\n");
-                writer.write(String.format("    public void delete%s(%s %s) {\n\n", title, title, title.split("")[0].toLowerCase() + title.substring(1)));
+                writer.write(String.format("    public void delete%s(%s %s) {\n", title, title, title.split("")[0].toLowerCase() + title.substring(1)));
                 writer.write(String.format("        if (%s != null) {\n", title.split("")[0].toLowerCase() + title.substring(1)));
                 writer.write("            getSession().beginTransaction();\n");
                 writer.write(String.format("            getSession().delete(mapDtoToEntity(%s));\n", title.split("")[0].toLowerCase() + title.substring(1)));
@@ -333,13 +345,21 @@ public class JPACreator {
                 return "String";
             case "char":
                 return "Character";
+            case "bigint":
+                return "Long";
+            case "tinyint":
             case "tiny":
+            case "smallint":
+                return "Short";
             case "int":
+            case "mediumint":
                 return "Integer";
             case "float":
                 return "Float";
             case "bool":
                 return "Boolean";
+            case "datetime":
+                return "LocalDateTime";
             default:
                 try {
                     throw new Exception("Unknown format");
@@ -358,7 +378,9 @@ public class JPACreator {
         key.replace("-", "_");
         String[] words = key.split("_");
         for (String word : words) {
-            resultName += word.split("")[0].toUpperCase() + word.substring(1);
+            if (word.length() > 0) {
+                resultName += word.split("")[0].toUpperCase() + word.substring(1);
+            }
         }
         if (!isClass) {
             resultName = resultName.split("")[0].toLowerCase() + resultName.substring(1);

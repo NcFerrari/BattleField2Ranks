@@ -220,28 +220,28 @@ public class JPACreator {
                 writer.write("        getSession().getTransaction().commit();\n");
                 writer.write("        getSession().close();\n");
                 writer.write("    }\n\n");
-                writer.write(String.format("            private %s mapEntityToDto(%s%s entity) {\n", title, title, JPAType.ENTITY.getSuffix()));
-                writer.write(String.format("                %s dto = new %s();\n", title, title));
+                writer.write(String.format("    private %s mapEntityToDto(%s%s entity) {\n", title, title, JPAType.ENTITY.getSuffix()));
+                writer.write(String.format("        %s dto = new %s();\n", title, title));
                 schemaMap.get(tableName).getColumns().forEach(column -> {
                     try {
-                        writer.write(String.format("                dto.set%s(entity.get%s%s());\n", formatName(column.getColumnName(), true), formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix()));
+                        writer.write(String.format("        dto.set%s(entity.get%s%s());\n", formatName(column.getColumnName(), true), formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix()));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 });
-                writer.write("                return dto;\n");
-                writer.write("            }\n\n");
-                writer.write(String.format("            private %s%s mapDtoToEntity(%s dto) {\n", title, JPAType.ENTITY.getSuffix(), title));
-                writer.write(String.format("                %s%s entity = new %s%s();\n", title, JPAType.ENTITY.getSuffix(), title, JPAType.ENTITY.getSuffix()));
+                writer.write("        return dto;\n");
+                writer.write("    }\n\n");
+                writer.write(String.format("    private %s%s mapDtoToEntity(%s dto) {\n", title, JPAType.ENTITY.getSuffix(), title));
+                writer.write(String.format("        %s%s entity = new %s%s();\n", title, JPAType.ENTITY.getSuffix(), title, JPAType.ENTITY.getSuffix()));
                 schemaMap.get(tableName).getColumns().forEach(column -> {
                     try {
-                        writer.write(String.format("                entity.set%s%s(dto.get%s());\n", formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix(), formatName(column.getColumnName(), true)));
+                        writer.write(String.format("        entity.set%s%s(dto.get%s());\n", formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix(), formatName(column.getColumnName(), true)));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 });
-                writer.write("                return entity;\n");
-                writer.write("            }\n\n");
+                writer.write("        return entity;\n");
+                writer.write("    }\n\n");
                 writer.write("}");
                 writer.close();
             } catch (IOException e) {

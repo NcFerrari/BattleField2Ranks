@@ -62,20 +62,20 @@ public class CourseDaoImpl extends EntityManager implements CourseDao<Course> {
         getSession().close();
     }
 
-            private Course mapEntityToDto(CourseEntity entity) {
-                Course dto = new Course();
-                dto.setId(entity.getIdEntity());
-                dto.setTitle(entity.getTitleEntity());
-                dto.setInstructorId(entity.getInstructorIdEntity());
-                return dto;
-            }
+    private Course mapEntityToDto(CourseEntity entity) {
+        Course dto = new Course();
+        dto.setId(entity.getIdEntity());
+        dto.setTitle(entity.getTitleEntity());
+        dto.setInstructorId(entity.getInstructorIdEntity());
+        return dto;
+    }
 
-            private CourseEntity mapDtoToEntity(Course dto) {
-                CourseEntity entity = new CourseEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setTitleEntity(dto.getTitle());
-                entity.setInstructorIdEntity(dto.getInstructorId());
-                return entity;
-            }
+    private CourseEntity mapDtoToEntity(Course dto) {
+        CourseEntity entity = new CourseEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setTitleEntity(dto.getTitle());
+        entity.setInstructorIdEntity(dto.getInstructorId());
+        return entity;
+    }
 
 }

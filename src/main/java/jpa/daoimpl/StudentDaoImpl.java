@@ -62,22 +62,22 @@ public class StudentDaoImpl extends EntityManager implements StudentDao<Student>
         getSession().close();
     }
 
-            private Student mapEntityToDto(StudentEntity entity) {
-                Student dto = new Student();
-                dto.setId(entity.getIdEntity());
-                dto.setFirstName(entity.getFirstNameEntity());
-                dto.setLastName(entity.getLastNameEntity());
-                dto.setEmail(entity.getEmailEntity());
-                return dto;
-            }
+    private Student mapEntityToDto(StudentEntity entity) {
+        Student dto = new Student();
+        dto.setId(entity.getIdEntity());
+        dto.setFirstName(entity.getFirstNameEntity());
+        dto.setLastName(entity.getLastNameEntity());
+        dto.setEmail(entity.getEmailEntity());
+        return dto;
+    }
 
-            private StudentEntity mapDtoToEntity(Student dto) {
-                StudentEntity entity = new StudentEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setFirstNameEntity(dto.getFirstName());
-                entity.setLastNameEntity(dto.getLastName());
-                entity.setEmailEntity(dto.getEmail());
-                return entity;
-            }
+    private StudentEntity mapDtoToEntity(Student dto) {
+        StudentEntity entity = new StudentEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setFirstNameEntity(dto.getFirstName());
+        entity.setLastNameEntity(dto.getLastName());
+        entity.setEmailEntity(dto.getEmail());
+        return entity;
+    }
 
 }

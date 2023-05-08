@@ -62,22 +62,22 @@ public class EmployeeDaoImpl extends EntityManager implements EmployeeDao<Employ
         getSession().close();
     }
 
-            private Employee mapEntityToDto(EmployeeEntity entity) {
-                Employee dto = new Employee();
-                dto.setId(entity.getIdEntity());
-                dto.setFirstName(entity.getFirstNameEntity());
-                dto.setLastName(entity.getLastNameEntity());
-                dto.setCompany(entity.getCompanyEntity());
-                return dto;
-            }
+    private Employee mapEntityToDto(EmployeeEntity entity) {
+        Employee dto = new Employee();
+        dto.setId(entity.getIdEntity());
+        dto.setFirstName(entity.getFirstNameEntity());
+        dto.setLastName(entity.getLastNameEntity());
+        dto.setCompany(entity.getCompanyEntity());
+        return dto;
+    }
 
-            private EmployeeEntity mapDtoToEntity(Employee dto) {
-                EmployeeEntity entity = new EmployeeEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setFirstNameEntity(dto.getFirstName());
-                entity.setLastNameEntity(dto.getLastName());
-                entity.setCompanyEntity(dto.getCompany());
-                return entity;
-            }
+    private EmployeeEntity mapDtoToEntity(Employee dto) {
+        EmployeeEntity entity = new EmployeeEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setFirstNameEntity(dto.getFirstName());
+        entity.setLastNameEntity(dto.getLastName());
+        entity.setCompanyEntity(dto.getCompany());
+        return entity;
+    }
 
 }

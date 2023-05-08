@@ -62,20 +62,20 @@ public class ReviewDaoImpl extends EntityManager implements ReviewDao<Review> {
         getSession().close();
     }
 
-            private Review mapEntityToDto(ReviewEntity entity) {
-                Review dto = new Review();
-                dto.setId(entity.getIdEntity());
-                dto.setComment(entity.getCommentEntity());
-                dto.setCourseId(entity.getCourseIdEntity());
-                return dto;
-            }
+    private Review mapEntityToDto(ReviewEntity entity) {
+        Review dto = new Review();
+        dto.setId(entity.getIdEntity());
+        dto.setComment(entity.getCommentEntity());
+        dto.setCourseId(entity.getCourseIdEntity());
+        return dto;
+    }
 
-            private ReviewEntity mapDtoToEntity(Review dto) {
-                ReviewEntity entity = new ReviewEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setCommentEntity(dto.getComment());
-                entity.setCourseIdEntity(dto.getCourseId());
-                return entity;
-            }
+    private ReviewEntity mapDtoToEntity(Review dto) {
+        ReviewEntity entity = new ReviewEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setCommentEntity(dto.getComment());
+        entity.setCourseIdEntity(dto.getCourseId());
+        return entity;
+    }
 
 }

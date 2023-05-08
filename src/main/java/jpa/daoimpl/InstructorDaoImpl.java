@@ -62,24 +62,24 @@ public class InstructorDaoImpl extends EntityManager implements InstructorDao<In
         getSession().close();
     }
 
-            private Instructor mapEntityToDto(InstructorEntity entity) {
-                Instructor dto = new Instructor();
-                dto.setId(entity.getIdEntity());
-                dto.setFirstName(entity.getFirstNameEntity());
-                dto.setLastName(entity.getLastNameEntity());
-                dto.setEmail(entity.getEmailEntity());
-                dto.setInstructorDetailId(entity.getInstructorDetailIdEntity());
-                return dto;
-            }
+    private Instructor mapEntityToDto(InstructorEntity entity) {
+        Instructor dto = new Instructor();
+        dto.setId(entity.getIdEntity());
+        dto.setFirstName(entity.getFirstNameEntity());
+        dto.setLastName(entity.getLastNameEntity());
+        dto.setEmail(entity.getEmailEntity());
+        dto.setInstructorDetailId(entity.getInstructorDetailIdEntity());
+        return dto;
+    }
 
-            private InstructorEntity mapDtoToEntity(Instructor dto) {
-                InstructorEntity entity = new InstructorEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setFirstNameEntity(dto.getFirstName());
-                entity.setLastNameEntity(dto.getLastName());
-                entity.setEmailEntity(dto.getEmail());
-                entity.setInstructorDetailIdEntity(dto.getInstructorDetailId());
-                return entity;
-            }
+    private InstructorEntity mapDtoToEntity(Instructor dto) {
+        InstructorEntity entity = new InstructorEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setFirstNameEntity(dto.getFirstName());
+        entity.setLastNameEntity(dto.getLastName());
+        entity.setEmailEntity(dto.getEmail());
+        entity.setInstructorDetailIdEntity(dto.getInstructorDetailId());
+        return entity;
+    }
 
 }

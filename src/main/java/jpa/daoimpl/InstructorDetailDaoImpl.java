@@ -62,20 +62,20 @@ public class InstructorDetailDaoImpl extends EntityManager implements Instructor
         getSession().close();
     }
 
-            private InstructorDetail mapEntityToDto(InstructorDetailEntity entity) {
-                InstructorDetail dto = new InstructorDetail();
-                dto.setId(entity.getIdEntity());
-                dto.setYoutubeChannel(entity.getYoutubeChannelEntity());
-                dto.setHobby(entity.getHobbyEntity());
-                return dto;
-            }
+    private InstructorDetail mapEntityToDto(InstructorDetailEntity entity) {
+        InstructorDetail dto = new InstructorDetail();
+        dto.setId(entity.getIdEntity());
+        dto.setYoutubeChannel(entity.getYoutubeChannelEntity());
+        dto.setHobby(entity.getHobbyEntity());
+        return dto;
+    }
 
-            private InstructorDetailEntity mapDtoToEntity(InstructorDetail dto) {
-                InstructorDetailEntity entity = new InstructorDetailEntity();
-                entity.setIdEntity(dto.getId());
-                entity.setYoutubeChannelEntity(dto.getYoutubeChannel());
-                entity.setHobbyEntity(dto.getHobby());
-                return entity;
-            }
+    private InstructorDetailEntity mapDtoToEntity(InstructorDetail dto) {
+        InstructorDetailEntity entity = new InstructorDetailEntity();
+        entity.setIdEntity(dto.getId());
+        entity.setYoutubeChannelEntity(dto.getYoutubeChannel());
+        entity.setHobbyEntity(dto.getHobby());
+        return entity;
+    }
 
 }

@@ -26,15 +26,15 @@ public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Integer idEntity;
 
     @Column(name = "first_name")
-    private String firstName;
+    private String firstNameEntity;
 
     @Column(name = "last_name")
-    private String lastName;
+    private String lastNameEntity;
 
     @Column(name = "email")
-    private String email;
+    private String emailEntity;
 
 }

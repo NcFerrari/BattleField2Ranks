@@ -2,14 +2,16 @@ package jpa.dao;
 
 import java.util.List;
 
-public interface CourseDao<CourseEntity> {
+public interface CourseDao<Course> {
 
-    void saveOrUpdate(CourseEntity courseEntity);
+    void saveOrUpdate(Course course);
 
-    CourseEntity getCourseEntity();
+    Course getCourse(int id);
 
-    List<CourseEntity> getAllCourseEntity();
+    List<Course> getAllCourse();
 
-    void deleteCourseEntity(CourseEntity courseEntity);
+    void deleteCourse(Course course);
+
+    void deleteCourse(int id);
 
 }

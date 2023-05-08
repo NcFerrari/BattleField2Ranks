@@ -26,12 +26,12 @@ public class ReviewEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Integer idEntity;
 
     @Column(name = "comment")
-    private String comment;
+    private String commentEntity;
 
     @Column(name = "course_id")
-    private Integer courseId;
+    private Integer courseIdEntity;
 
 }

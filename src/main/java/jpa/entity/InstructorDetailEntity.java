@@ -26,12 +26,12 @@ public class InstructorDetailEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Integer idEntity;
 
     @Column(name = "youtube_channel")
-    private String youtubeChannel;
+    private String youtubeChannelEntity;
 
     @Column(name = "hobby")
-    private String hobby;
+    private String hobbyEntity;
 
 }

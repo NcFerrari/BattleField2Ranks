@@ -27,7 +27,7 @@ public class JPACreator {
         schemaMap = loadDBStructureFromSpecificDB();
         fillEntityFile();
         fillDtoFiles();
-//        fillDaoFile();
+        fillDaoFile();
 //        fillDaoImplFiles();
     }
 
@@ -140,7 +140,7 @@ public class JPACreator {
             String dtoClass = fileObject.getTableTitle();
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package safe.jpa.dao;\n\n");
+                writer.write("package jpa.dao;\n\n");
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public interface %s<%s> {\n\n", fileObject.getFile().getName().split("\\.")[0], dtoClass));
                 writer.write(String.format("    void saveOrUpdate(%s %s);\n\n", dtoClass, dtoClass.split("")[0].toLowerCase() + dtoClass.substring(1)));
@@ -156,7 +156,6 @@ public class JPACreator {
         });
         System.out.println("DAOS done ...");
     }
-
     // =================================================================== DAO FILES ===================================
 
 
@@ -342,11 +341,7 @@ public class JPACreator {
 
     @Getter
     private enum JPAType {
-        ENTITY("Entity", "src/main/java/jpa/entity/"),
-        DAO("Dao", "src/main/java/jpa/dao/"),
-        DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"),
-        DTO("Dto", "src/main/java/dto/"),
-        ENTITY_MANAGER("", "src/main/java/jpa/daoimpl/");
+        ENTITY("Entity", "src/main/java/jpa/entity/"), DAO("Dao", "src/main/java/jpa/dao/"), DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"), DTO("Dto", "src/main/java/dto/"), ENTITY_MANAGER("", "src/main/java/jpa/daoimpl/");
 
         private String suffix;
         private String path;

@@ -1,4 +1,4 @@
-package safe.jpa.dao;
+package jpa.dao;
 
 import java.util.List;
 

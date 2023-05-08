@@ -25,7 +25,7 @@ class EntityManager {
     }
 
     public Session getSession() {
-        if (session == null) {
+        if (session == null || !session.isOpen()) {
             session = getFactory().getCurrentSession();
         }
         return session;

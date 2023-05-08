@@ -25,9 +25,9 @@ public class JPACreator {
 
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
-//        fillEntityFile();
-//        fillDtoFiles();
-//        fillDaoFile();
+        fillEntityFile();
+        fillDtoFiles();
+        fillDaoFile();
         fillDaoImplFiles();
     }
 

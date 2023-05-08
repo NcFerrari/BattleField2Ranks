@@ -1,0 +1,17 @@
+#
+#Tue May 09 00:17:53 CEST 2023
+jpa.entity.KillsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.VersionEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.KitsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.MapsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.PlayerEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.PlayerHistoryEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.WeaponsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.ArmyEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.UnlocksEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.MapinfoEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.ServersEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.VehiclesEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.RoundHistoryEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.AwardsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.Ip2nationEntity=javax.persistence.Entity,javax.persistence.Table

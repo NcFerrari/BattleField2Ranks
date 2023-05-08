@@ -29,6 +29,8 @@ public class JPACreator {
         fillDtoFiles();
         fillDaoFile();
         fillDaoImplFiles();
+        jpa.dao.PlayerDao<dto.Player> playerDao = new jpa.daoimpl.PlayerDaoImpl();
+        playerDao.getAllPlayer();
     }
 
     // =================================================================== HIBERNATE ===================================
@@ -38,7 +40,7 @@ public class JPACreator {
         SessionFactory factory = new Configuration().configure(configFile).buildSessionFactory();
         Session session = factory.getCurrentSession();
         session.beginTransaction();
-        Query query = session.createSQLQuery("" + "SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE, COLUMN_KEY " + "FROM INFORMATION_SCHEMA.COLUMNS " + "WHERE TABLE_SCHEMA=:db");
+        Query query = session.createSQLQuery("SELECT TABLE_NAME, COLUMN_NAME, COLUMN_TYPE, COLUMN_KEY FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA=:db");
         query.setParameter("db", db);
         List<Object[]> list = query.getResultList();
         session.getTransaction().commit();
@@ -52,9 +54,9 @@ public class JPACreator {
             }
             if (!resultMap.get(tableName).isPrimaryKeyIncluded() && "PRI".equals(object[3].toString())) {
                 resultMap.get(tableName).setPrimaryKeyIncluded(true);
-                resultMap.get(tableName).getColumns().add(0, new Column(object[1].toString(), object[2].toString()));
+                resultMap.get(tableName).getColumns().add(0, new Column(object[1].toString(), object[2].toString().split(" ")[0]));
             } else {
-                resultMap.get(tableName).getColumns().add(new Column(object[1].toString(), object[2].toString()));
+                resultMap.get(tableName).getColumns().add(new Column(object[1].toString(), object[2].toString().split(" ")[0]));
             }
         });
         return resultMap;
@@ -233,6 +235,9 @@ public class JPACreator {
                 writer.write("        getSession().close();\n");
                 writer.write("    }\n\n");
                 writer.write(String.format("    private %s mapEntityToDto(%s%s entity) {\n", title, title, JPAType.ENTITY.getSuffix()));
+                writer.write("        if (entity == null) {\n");
+                writer.write("            return null;\n");
+                writer.write("        }\n");
                 writer.write(String.format("        %s dto = new %s();\n", title, title));
                 schemaMap.get(tableName).getColumns().forEach(column -> {
                     try {
@@ -341,23 +346,28 @@ public class JPACreator {
 
     private String getDataType(String sqlDataType) {
         switch (sqlDataType) {
-            case "varchar":
+            case "varchar(15)":
+            case "varchar(20)":
+            case "varchar(30)":
+            case "varchar(45)":
+            case "varchar(50)":
+            case "varchar(100)":
                 return "String";
-            case "char":
+            case "char(1)":
+            case "char(2)":
                 return "Character";
-            case "bigint":
+            case "bigint(20)":
+            case "int(10)":
+            case "int(11)":
                 return "Long";
-            case "tinyint":
-            case "tiny":
-            case "smallint":
-                return "Short";
-            case "int":
-            case "mediumint":
+            case "mediumint(7)":
+            case "int(6)":
+            case "int(8)":
                 return "Integer";
-            case "float":
-                return "Float";
-            case "bool":
-                return "Boolean";
+            case "tinyint(1)":
+            case "tinyint(2)":
+            case "smallint(3)":
+                return "Short";
             case "datetime":
                 return "LocalDateTime";
             default:

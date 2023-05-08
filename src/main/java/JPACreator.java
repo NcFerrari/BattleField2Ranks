@@ -1,6 +1,3 @@
-import dto.Course;
-import jpa.dao.CourseDao;
-import jpa.daoimpl.CourseDaoImpl;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -28,9 +25,9 @@ public class JPACreator {
 
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
-        fillEntityFile();
-        fillDtoFiles();
-        fillDaoFile();
+//        fillEntityFile();
+//        fillDtoFiles();
+//        fillDaoFile();
         fillDaoImplFiles();
     }
 
@@ -173,8 +170,8 @@ public class JPACreator {
                 writer.write("package jpa.daoimpl;\n\n");
                 writer.write(String.format("import dto.%s;\n", title));
                 writer.write(String.format("import jpa.dao.%s%s;\n", title, JPAType.DAO.getSuffix()));
-                writer.write(String.format("import jpa.entity.%s%s\n", title, JPAType.ENTITY.getSuffix()));
-                writer.write("import org.hibernate.query.Query\n\n");
+                writer.write(String.format("import jpa.entity.%s%s;\n", title, JPAType.ENTITY.getSuffix()));
+                writer.write("import org.hibernate.query.Query;\n\n");
                 writer.write("import java.util.ArrayList;\n");
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public class %s%s extends EntityManager implements %s%s<%s> {\n\n", title, JPAType.DAO_IMPL.suffix, title, JPAType.DAO.suffix, title));
@@ -223,18 +220,26 @@ public class JPACreator {
                 writer.write("        getSession().getTransaction().commit();\n");
                 writer.write("        getSession().close();\n");
                 writer.write("    }\n\n");
-                writer.write("            private Course mapEntityToDto(CourseEntity entity) {\n");
-                writer.write("                Course dto = new Course();\n");
-                writer.write("                dto.setId(entity.getIdEntity());\n");
-                writer.write("                dto.setTitle(entity.getTitleEntity());\n");
-                writer.write("                dto.setInstructorId(entity.getInstructorIdEntity());\n");
+                writer.write(String.format("            private %s mapEntityToDto(%s%s entity) {\n", title, title, JPAType.ENTITY.getSuffix()));
+                writer.write(String.format("                %s dto = new %s();\n", title, title));
+                schemaMap.get(tableName).getColumns().forEach(column -> {
+                    try {
+                        writer.write(String.format("                dto.set%s(entity.get%s%s());\n", formatName(column.getColumnName(), true), formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
                 writer.write("                return dto;\n");
                 writer.write("            }\n\n");
-                writer.write("            private CourseEntity mapDtoToEntity(Course dto) {\n");
-                writer.write("                CourseEntity entity = new CourseEntity();\n");
-                writer.write("                entity.setIdEntity(dto.getId());\n");
-                writer.write("                entity.setTitleEntity(dto.getTitle());\n");
-                writer.write("                entity.setInstructorIdEntity(dto.getInstructorId());\n");
+                writer.write(String.format("            private %s%s mapDtoToEntity(%s dto) {\n", title, JPAType.ENTITY.getSuffix(), title));
+                writer.write(String.format("                %s%s entity = new %s%s();\n", title, JPAType.ENTITY.getSuffix(), title, JPAType.ENTITY.getSuffix()));
+                schemaMap.get(tableName).getColumns().forEach(column -> {
+                    try {
+                        writer.write(String.format("                entity.set%s%s(dto.get%s());\n", formatName(column.getColumnName(), true), JPAType.ENTITY.getSuffix(), formatName(column.getColumnName(), true)));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                });
                 writer.write("                return entity;\n");
                 writer.write("            }\n\n");
                 writer.write("}");

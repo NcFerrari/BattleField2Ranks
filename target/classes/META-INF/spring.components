@@ -1,5 +1,5 @@
 #
-#Mon May 08 20:10:47 CEST 2023
+#Mon May 08 21:28:37 CEST 2023
 jpa.entity.EmployeeEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.ReviewEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.StudentEntity=javax.persistence.Entity,javax.persistence.Table

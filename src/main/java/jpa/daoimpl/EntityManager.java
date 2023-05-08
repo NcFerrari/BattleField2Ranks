@@ -1,6 +1,6 @@
-package safe.jpa.daoimpl;
+package jpa.daoimpl;
 
-import safe.jpa.entity.*;
+import jpa.entity.*;
 import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -25,7 +25,7 @@ class EntityManager {
     }
 
     public Session getSession() {
-        if (session == null || !session.isOpen()) {
+        if (session == null) {
             session = getFactory().getCurrentSession();
         }
         return session;

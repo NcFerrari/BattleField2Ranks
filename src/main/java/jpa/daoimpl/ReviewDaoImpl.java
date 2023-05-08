@@ -1,7 +1,7 @@
-package safe.jpa.daoimpl;
+package jpa.daoimpl;
 
-import safe.dto.Review;
-import safe.jpa.dao.ReviewDao;
+import dto.Review;
+import jpa.dao.ReviewDao;
 
 import java.util.List;
 

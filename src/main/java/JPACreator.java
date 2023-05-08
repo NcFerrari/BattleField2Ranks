@@ -28,7 +28,7 @@ public class JPACreator {
         fillEntityFile();
         fillDtoFiles();
         fillDaoFile();
-//        fillDaoImplFiles();
+        fillDaoImplFiles();
     }
 
     // =================================================================== HIBERNATE ===================================
@@ -158,9 +158,7 @@ public class JPACreator {
     }
     // =================================================================== DAO FILES ===================================
 
-
     // =================================================================== DAO IMPLEMENTS FILES ========================
-
     private void fillDaoImplFiles() {
         System.out.println("GENERATE DAO IMPLEMENTS");
         final List<String> tableTitles = new ArrayList<>();
@@ -169,9 +167,9 @@ public class JPACreator {
             tableTitles.add(title);
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package safe.jpa.daoimpl;\n\n");
-                writer.write(String.format("import safe.dto.%s;\n", title));
-                writer.write(String.format("import safe.jpa.dao.%s%s;\n\n", title, JPAType.DAO.suffix));
+                writer.write("package jpa.daoimpl;\n\n");
+                writer.write(String.format("import dto.%s;\n", title));
+                writer.write(String.format("import jpa.dao.%s%s;\n\n", title, JPAType.DAO.suffix));
                 writer.write("import java.util.List;\n\n");
                 writer.write(String.format("public class %s%s extends EntityManager implements %s%s<%s> {\n\n", title, JPAType.DAO_IMPL.suffix, title, JPAType.DAO.suffix, title));
                 writer.write("    @Override\n");
@@ -200,12 +198,9 @@ public class JPACreator {
         generateManagerEntity(tableTitles);
         System.out.println("DAO IMPLEMENTS done...");
     }
-
     // =================================================================== DAO IMPLEMENTS FILES ========================
 
-
     // =================================================================== ENTITY MANAGER ==============================
-
     private void generateManagerEntity(List<String> titles) {
         System.out.println("GENERATE ENTITY MANAGER");
         Map<String, ValidatedColumns> entityManagerFile = new HashMap<>();
@@ -213,8 +208,8 @@ public class JPACreator {
         createFiles(entityManagerFile, JPAType.ENTITY_MANAGER).forEach((classFile, fileObject) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package safe.jpa.daoimpl;\n\n");
-                writer.write("import safe.jpa.entity.*;\n");
+                writer.write("package jpa.daoimpl;\n\n");
+                writer.write("import jpa.entity.*;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import org.hibernate.Session;\n");
                 writer.write("import org.hibernate.SessionFactory;\n");
@@ -250,10 +245,13 @@ public class JPACreator {
 
         System.out.println("ENTITY MANAGER done...");
     }
-
     // =================================================================== ENTITY MANAGER ==============================
 
-    public Map<String, FileObject> createFiles(Map<String, ValidatedColumns> schemaMap, JPAType jpaType) {
+    public static void main(String[] args) {
+        new JPACreator();
+    }
+
+    private Map<String, FileObject> createFiles(Map<String, ValidatedColumns> schemaMap, JPAType jpaType) {
         if (schemaMap == null || schemaMap.keySet().isEmpty()) {
             return null;
         }
@@ -274,10 +272,6 @@ public class JPACreator {
             resultMap.put(tableName, new FileObject(formatName(tableName, true), file));
         });
         return resultMap;
-    }
-
-    public static void main(String[] args) {
-        new JPACreator();
     }
 
     private String getDataType(String sqlDataType) {

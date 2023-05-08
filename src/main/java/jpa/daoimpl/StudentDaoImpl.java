@@ -1,7 +1,7 @@
-package safe.jpa.daoimpl;
+package jpa.daoimpl;
 
-import safe.dto.Student;
-import safe.jpa.dao.StudentDao;
+import dto.Student;
+import jpa.dao.StudentDao;
 
 import java.util.List;
 

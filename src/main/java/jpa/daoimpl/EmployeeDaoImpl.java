@@ -1,7 +1,7 @@
-package safe.jpa.daoimpl;
+package jpa.daoimpl;
 
-import safe.dto.Employee;
-import safe.jpa.dao.EmployeeDao;
+import dto.Employee;
+import jpa.dao.EmployeeDao;
 
 import java.util.List;
 

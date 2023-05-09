@@ -1,9 +1,9 @@
 #
-#Tue May 09 00:29:13 CEST 2023
+#Tue May 09 14:19:15 CEST 2023
 jpa.entity.KillsEntity=javax.persistence.Entity,javax.persistence.Table
+jpa.entity.MapsEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.VersionEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.KitsEntity=javax.persistence.Entity,javax.persistence.Table
-jpa.entity.MapsEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.PlayerEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.PlayerHistoryEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.WeaponsEntity=javax.persistence.Entity,javax.persistence.Table

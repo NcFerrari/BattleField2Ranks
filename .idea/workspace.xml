@@ -5,22 +5,223 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec5a1276-ae08-4ca0-bbb8-43e16a1181ad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/PictureService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/serviceimpl/PictureServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/NO_AWARD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/bronze/badge_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/gold/badge_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/badges/silver/badge_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/medals/medal_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ranks/9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pictures/ribbons/ribbon_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Army.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Army.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Awards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Awards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Ip2nation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Ip2nation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Kills.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Kills.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Kits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Kits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Mapinfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Mapinfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Maps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Maps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/PlayerHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/PlayerHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/RoundHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/RoundHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Servers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Servers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Unlocks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Unlocks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Vehicles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Vehicles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Weapons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dto/Weapons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/ArmyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/ArmyDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/AwardsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/AwardsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/Ip2nationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/Ip2nationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/KillsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/KillsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/KitsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/KitsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/MapinfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/MapinfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/MapsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/MapsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerHistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerHistoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/RoundHistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/RoundHistoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/ServersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/ServersDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/UnlocksDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/UnlocksDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/VehiclesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/VehiclesDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/VersionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/VersionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/WeaponsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/WeaponsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ArmyDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ArmyDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/AwardsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/AwardsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/EntityManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/Ip2nationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/Ip2nationDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KillsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KillsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KitsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KitsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapinfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapinfoDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerHistoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerHistoryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/RoundHistoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/RoundHistoryDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ServersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ServersDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/UnlocksDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/UnlocksDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VehiclesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VehiclesDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VersionDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VersionDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/WeaponsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/WeaponsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/ArmyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/ArmyEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/AwardsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/AwardsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/Ip2nationEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/Ip2nationEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/KillsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/KillsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/KitsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/KitsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/MapinfoEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/MapinfoEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/MapsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/MapsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/PlayerEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/PlayerEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/PlayerHistoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/PlayerHistoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/RoundHistoryEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/RoundHistoryEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/ServersEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/ServersEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/UnlocksEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/UnlocksEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/VehiclesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/VehiclesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/VersionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/VersionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/WeaponsEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/entity/WeaponsEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -156,11 +357,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/BattleField2Ranks/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "37c6b1c160678fa3c601b66f08a6705e",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\resources" />
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\jpa\entity" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -170,47 +385,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.JPACreator">
-    <configuration name="JPACreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="JPACreator" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="BattleField2Ranks" />
-      <envs />
-    </configuration>
-    <configuration name="Manager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" value="Manager" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="BattleField2Ranks" />
-      <envs />
-    </configuration>
+  <component name="RunManager" selected="Application.PictureServiceImpl">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -218,97 +393,80 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
+    <configuration name="JPACreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="JPACreator" />
+      <module name="BattleField2Ranks" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Manager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Manager" />
+      <module name="BattleField2Ranks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PictureServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="serviceimpl.PictureServiceImpl" />
+      <module name="BattleField2Ranks" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="serviceimpl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method>
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method>
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.JPACreator" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Manager" />
+    <list>
+      <item itemvalue="Application.PictureServiceImpl" />
+      <item itemvalue="Application.JPACreator" />
+      <item itemvalue="Application.Manager" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.JPACreator" />
+      <list>
+        <item itemvalue="Application.PictureServiceImpl" />
+        <item itemvalue="Application.JPACreator" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -321,6 +479,8 @@
       <workItem from="1683222706464" duration="5637000" />
       <workItem from="1683263302077" duration="40298000" />
       <workItem from="1683461941083" duration="52614000" />
+      <workItem from="1683621383540" duration="406000" />
+      <workItem from="1683624256174" duration="7451000" />
     </task>
     <servers />
   </component>
@@ -398,15 +558,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="3" />
-    </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/jpa/entity/WeaponsEntity.java">

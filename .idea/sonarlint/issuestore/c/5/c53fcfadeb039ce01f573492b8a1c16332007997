@@ -1,0 +1,27 @@
+
+p
+java:S20957"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ÿ®¸Óúÿÿÿÿ8ƒÌç‰€1
+e
+java:S2095$"HUse try-with-resources or close this "Connection" in a "finally" clause.(†ŠÏë8ƒÌç‰€1
+q
+java:S2095&"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(É³ñùşÿÿÿÿ8Í‰€1
+q
+java:S20953"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(“¾¸¼øÿÿÿÿ8œÍ‰€1
+e
+java:S20952"HUse try-with-resources or close this "Connection" in a "finally" clause.(†ŠÏë8‚Ìç‰€1
+j
+java:S2095%"MUse try-with-resources or close this "FileInputStream" in a "finally" clause.(ºµâ8®¿É„€1
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Çµí‘8ƒÌç‰€1
+O
+java:S4925#"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8ˆÌç‰€1
+F
+java:S2115$")Add password protection to this database.(†ŠÏë8ˆÌç‰€1
+O
+java:S49251"-Remove this "Class.forName()", it is useless.(¹µÖÁüÿÿÿÿ8ŠÌç‰€1
+F
+java:S21152")Add password protection to this database.(†ŠÏë8ŠÌç‰€1
+L
+java:S1144!"/Remove this unused private "saveIntoDb" method.(½ºµ‚8ŒÌç‰€1
+Q
+java:S1144/"/Remove this unused private "loadFromDb" method.(Şã©¹şÿÿÿÿ8ŒÌç‰€1

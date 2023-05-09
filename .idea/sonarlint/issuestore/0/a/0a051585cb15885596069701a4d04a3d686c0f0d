@@ -1,0 +1,115 @@
+
+c	java:S112€"FDefine and throw a dedicated exception instead of using a generic one.(ÿˆ¶í8Ü×µûÿ0
+Q
+java:S3740-"/Provide the parametrized type for this generic.(Â±Âûûÿÿÿÿ8Ş×µûÿ0
+‚
+java:S1192Ğ"_Define a constant instead of duplicating this literal "        getSession().close();
+" 3 times.(‘å•™üÿÿÿÿ8à×µûÿ0
+w
+java:S1192K"UDefine a constant instead of duplicating this literal "import lombok.Data;
+" 3 times.(— ±™ùÿÿÿÿ8á×µûÿ0
+i
+java:S1192É"KDefine a constant instead of duplicating this literal "        }
+" 4 times.(¡à‚ş8á×µûÿ0
+k
+java:S1192Ê"HDefine a constant instead of duplicating this literal "    }
+
+" 8 times.(õ¶®²øÿÿÿÿ8â×µûÿ0
+
+java:S1192Ï"qDefine a constant instead of duplicating this literal "        getSession().getTransaction().commit();
+" 3 times.(Ø“é8â×µûÿ0
+k
+java:S1192T"IDefine a constant instead of duplicating this literal "datetime" 3 times.(äş«¤ıÿÿÿÿ8â×µûÿ0
+r
+java:S1192Â"ODefine a constant instead of duplicating this literal "    @Override
+" 5 times.(Ô¥Ï­şÿÿÿÿ8ã×µûÿ0
+v
+java:S1192]"TDefine a constant instead of duplicating this literal "public class %s {
+
+" 3 times.(ºÀàäøÿÿÿÿ8µ¨º…€1
+‡
+java:S1192Í"jDefine a constant instead of duplicating this literal "        getSession().beginTransaction();
+" 3 times.(×Øó[8ã×µûÿ0
+?
+java:S1643‘"Use a StringBuilder instead.(±ıÛşÿÿÿÿ8‹¦¥…€1
+g
+java:S2259v"JA "NullPointerException" could be thrown; "createFiles()" can return null.(˜ÅÇ8µØµûÿ0
+m
+java:S2259›"JA "NullPointerException" could be thrown; "createFiles()" can return null.(¶Ü¡Şùÿÿÿÿ8´Øµûÿ0
+h
+java:S2259´"JA "NullPointerException" could be thrown; "createFiles()" can return null.(’üï8´Øµûÿ0
+l
+java:S2259G"JA "NullPointerException" could be thrown; "createFiles()" can return null.(İÓæøûÿÿÿÿ8µØµûÿ0
+h
+java:S2259Ÿ"JA "NullPointerException" could be thrown; "createFiles()" can return null.(Š¡É8®¦¥…€1
+>
+java:S1170"!Make this final field static too.(–÷Õ¹8ëÉÿæÿ0
+C
+java:S1170"!Make this final field static too.(Œï®Åùÿÿÿÿ8ëÉÿæÿ0
+X	java:S125""<This block of commented-out lines of code should be removed.(‘äËæ8ì°ü„€1
+X
+java:S1874-"6Remove this use of "createSQLQuery"; it is deprecated.(Â±Âûûÿÿÿÿ8ÌØµûÿ0
+U	java:S106F"9Replace this use of System.out or System.err by a logger.(ÕÈ‚Ö8ÕØµûÿ0
+n
+java:S3457\"Q%n should be used in place of \n to produce the platform-specific line separator.(Ù»Ø8ÜØµûÿ0
+Z	java:S106o"9Replace this use of System.out or System.err by a logger.(ô„š”úÿÿÿÿ8áØµûÿ0
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(‰öîÕ8âØµûÿ0
+[	java:S106”"9Replace this use of System.out or System.err by a logger.(ÇÜÓäıÿÿÿÿ8èØµûÿ0
+[	java:S106š"9Replace this use of System.out or System.err by a logger.(ĞŠçÂúÿÿÿÿ8éØµûÿ0
+t
+java:S3457¢"Q%n should be used in place of \n to produce the platform-specific line separator.(Ğ¿ûÿÿÿÿ8íØµûÿ0
+o
+java:S3457£"Q%n should be used in place of \n to produce the platform-specific line separator.(¾„¬¢8îØµûÿ0
+o
+java:S3457¤"Q%n should be used in place of \n to produce the platform-specific line separator.(“¢–8îØµûÿ0
+t
+java:S3457¥"Q%n should be used in place of \n to produce the platform-specific line separator.(ßÅêËüÿÿÿÿ8ïØµûÿ0
+t
+java:S3457¦"Q%n should be used in place of \n to produce the platform-specific line separator.(ŸĞı€øÿÿÿÿ8ğØµûÿ0
+[	java:S106­"9Replace this use of System.out or System.err by a logger.(†ÿöğüÿÿÿÿ8òØµûÿ0
+[	java:S106³"9Replace this use of System.out or System.err by a logger.(õêëšøÿÿÿÿ8ôØµûÿ0
+t
+java:S3457º"Q%n should be used in place of \n to produce the platform-specific line separator.(µÍ¯ûÿÿÿÿ8øØµûÿ0
+o
+java:S3457Á"Q%n should be used in place of \n to produce the platform-specific line separator.(“½ë÷8ûØµûÿ0
+t
+java:S3457Ã"Q%n should be used in place of \n to produce the platform-specific line separator.(—‘ÀÌøÿÿÿÿ8ûØµûÿ0
+t
+java:S3457Ä"Q%n should be used in place of \n to produce the platform-specific line separator.(Â”ÜÉùÿÿÿÿ8şØµûÿ0
+o
+java:S3457Æ"Q%n should be used in place of \n to produce the platform-specific line separator.(Ê‡¿î8€Ùµûÿ0
+t
+java:S3457Ì"Q%n should be used in place of \n to produce the platform-specific line separator.(Æ«¯™şÿÿÿÿ8‚Ùµûÿ0
+n
+java:S3457Ñ"Q%n should be used in place of \n to produce the platform-specific line separator.(¥Óú=8„Ùµûÿ0
+B
+java:S3457Ñ"%String contains no format specifiers.(¥Óú=8„Ùµûÿ0
+o
+java:S3457Ô"Q%n should be used in place of \n to produce the platform-specific line separator.(˜Ç‡8…Ùµûÿ0
+t
+java:S3457Ù"Q%n should be used in place of \n to produce the platform-specific line separator.(²¬¸úÿÿÿÿ8‡Ùµûÿ0
+t
+java:S3457Ş"Q%n should be used in place of \n to produce the platform-specific line separator.(óÎŸæùÿÿÿÿ8ˆÙµûÿ0
+t
+java:S3457ß"Q%n should be used in place of \n to produce the platform-specific line separator.(Â”ÜÉùÿÿÿÿ8ŠÙµûÿ0
+t
+java:S3457á"Q%n should be used in place of \n to produce the platform-specific line separator.(‘ƒôáüÿÿÿÿ8‹Ùµûÿ0
+t
+java:S3457ç"Q%n should be used in place of \n to produce the platform-specific line separator.(è§½ıÿÿÿÿ8Ùµûÿ0
+t
+java:S3457ó"Q%n should be used in place of \n to produce the platform-specific line separator.(ÃÉ²õıÿÿÿÿ8’Ùµûÿ0
+V	java:S106"9Replace this use of System.out or System.err by a logger.(‚¿“8™Ùµûÿ0
+[	java:S106œ"9Replace this use of System.out or System.err by a logger.(–¨×©úÿÿÿÿ8ã¦¥…€1
+t
+java:S3457©"Q%n should be used in place of \n to produce the platform-specific line separator.(•’Ùüÿÿÿÿ8å¦¥…€1
+t
+java:S3457¬"Q%n should be used in place of \n to produce the platform-specific line separator.(Øø…¼üÿÿÿÿ8å¦¥…€1
+o
+java:S3457®"Q%n should be used in place of \n to produce the platform-specific line separator.(»Ñ³¤8æ¦¥…€1
+[	java:S106Å"9Replace this use of System.out or System.err by a logger.(½¢‡ûÿÿÿÿ8ç¦¥…€1
+B
+java:S1168Ï"$Return an empty map instead of null.(¥¹ï8é¦¥…€1
+d	java:S899Ú"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ8ë¦¥…€1
+F	java:S108")Either remove or fill this block of code.(”ı¾8í¦¥…€1
+N
+java:S2201"+The return value of "replace" must be used.(…öĞşÿÿÿÿ8î¦¥…€1

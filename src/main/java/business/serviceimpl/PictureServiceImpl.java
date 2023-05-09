@@ -1,9 +1,10 @@
 package business.serviceimpl;
 
 import business.service.PictureService;
+import enums.PictureCategoryEnum;
 import javafx.scene.image.Image;
 
-import java.io.File;
+import javax.swing.ImageIcon;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
@@ -16,18 +17,14 @@ import java.sql.ResultSet;
 public class PictureServiceImpl implements PictureService {
 
     @Override
-    public Image getFXPicture(String path) {
+    public Image getFXPicture(PictureCategoryEnum pictureCategory, String name) {
         return null;
     }
 
     @Override
-    public java.awt.Image getSwingPicture(String path) {
-        return null;
-    }
-
-    @Override
-    public File getImage(String path) {
-        return null;
+    public java.awt.Image getSwingPicture(PictureCategoryEnum pictureCategory, String name) {
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource("pictures/" + pictureCategory.getPath() + name));
+        return imageIcon.getImage();
     }
 
     public static void main(String[] args) {

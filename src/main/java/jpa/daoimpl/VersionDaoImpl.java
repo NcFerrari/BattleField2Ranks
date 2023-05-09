@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Version;
+import business.dto.Version;
+import jpa.EntityManager;
 import jpa.dao.VersionDao;
 import jpa.entity.VersionEntity;
 import org.hibernate.query.Query;

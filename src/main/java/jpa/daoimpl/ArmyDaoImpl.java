@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Army;
+import business.dto.Army;
+import jpa.EntityManager;
 import jpa.dao.ArmyDao;
 import jpa.entity.ArmyEntity;
 import org.hibernate.query.Query;

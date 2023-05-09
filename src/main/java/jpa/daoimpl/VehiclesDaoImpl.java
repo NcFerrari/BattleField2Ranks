@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Vehicles;
+import business.dto.Vehicles;
+import jpa.EntityManager;
 import jpa.dao.VehiclesDao;
 import jpa.entity.VehiclesEntity;
 import org.hibernate.query.Query;

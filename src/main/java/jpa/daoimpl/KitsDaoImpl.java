@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Kits;
+import business.dto.Kits;
+import jpa.EntityManager;
 import jpa.dao.KitsDao;
 import jpa.entity.KitsEntity;
 import org.hibernate.query.Query;

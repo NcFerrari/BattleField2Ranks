@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Unlocks;
+import business.dto.Unlocks;
+import jpa.EntityManager;
 import jpa.dao.UnlocksDao;
 import jpa.entity.UnlocksEntity;
 import org.hibernate.query.Query;

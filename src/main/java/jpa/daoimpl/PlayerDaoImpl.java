@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Player;
+import business.dto.Player;
+import jpa.EntityManager;
 import jpa.dao.PlayerDao;
 import jpa.entity.PlayerEntity;
 import org.hibernate.query.Query;

@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Ip2nation;
+import business.dto.Ip2nation;
+import jpa.EntityManager;
 import jpa.dao.Ip2nationDao;
 import jpa.entity.Ip2nationEntity;
 import org.hibernate.query.Query;

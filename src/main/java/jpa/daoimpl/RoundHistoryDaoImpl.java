@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.RoundHistory;
+import business.dto.RoundHistory;
+import jpa.EntityManager;
 import jpa.dao.RoundHistoryDao;
 import jpa.entity.RoundHistoryEntity;
 import org.hibernate.query.Query;

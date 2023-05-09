@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Maps;
+import business.dto.Maps;
+import jpa.EntityManager;
 import jpa.dao.MapsDao;
 import jpa.entity.MapsEntity;
 import org.hibernate.query.Query;

@@ -22,15 +22,17 @@ public class JPACreator {
     private final String db = "bf2stats";
 
     private Map<String, ValidatedColumns> schemaMap;
+    private final List<String> tableTitles = new ArrayList<>();
 
     public JPACreator() {
         schemaMap = loadDBStructureFromSpecificDB();
-        fillEntityFile();
-        fillDtoFiles();
-        fillDaoFile();
-        fillDaoImplFiles();
-        jpa.dao.PlayerDao<dto.Player> playerDao = new jpa.daoimpl.PlayerDaoImpl();
-        playerDao.getAllPlayer();
+        generateEntityFile();
+        generateDtoFiles();
+        generateDaoFile();
+        generateDaoImplFiles();
+        generateManagerEntity(tableTitles);
+//        jpa.dao.PlayerDao<dto.Player> playerDao = new jpa.daoimpl.PlayerDaoImpl();
+//        playerDao.getAllPlayer();
     }
 
     // =================================================================== HIBERNATE ===================================
@@ -64,7 +66,7 @@ public class JPACreator {
     // =================================================================== HIBERNATE ===================================
 
     // =================================================================== ENTITY FILES ===============================
-    private void fillEntityFile() {
+    private void generateEntityFile() {
         System.out.println("GENERATE ENTITIES");
         createFiles(schemaMap, JPAType.ENTITY).forEach((tableName, fileObject) -> {
             try {
@@ -111,12 +113,12 @@ public class JPACreator {
     // =================================================================== ENTITY FILES ================================
 
     // =================================================================== DTO FILES ===================================
-    private void fillDtoFiles() {
+    private void generateDtoFiles() {
         System.out.println("GENERATE DTOS");
         createFiles(schemaMap, JPAType.DTO).forEach((tableName, fileObject) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package dto;\n\n");
+                writer.write("package business.dto;\n\n");
                 writer.write("import lombok.AllArgsConstructor;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import lombok.NoArgsConstructor;\n\n");
@@ -148,7 +150,7 @@ public class JPACreator {
     // =================================================================== DTO FILES ===================================
 
     // =================================================================== DAO FILES ===================================
-    private void fillDaoFile() {
+    private void generateDaoFile() {
         System.out.println("GENERATE DAOS");
         createFiles(schemaMap, JPAType.DAO).forEach((tableName, fileObject) -> {
             String dtoClass = fileObject.getTableTitle();
@@ -173,16 +175,16 @@ public class JPACreator {
     // =================================================================== DAO FILES ===================================
 
     // =================================================================== DAO IMPLEMENTS FILES ========================
-    private void fillDaoImplFiles() {
+    private void generateDaoImplFiles() {
         System.out.println("GENERATE DAO IMPLEMENTS");
-        final List<String> tableTitles = new ArrayList<>();
         createFiles(schemaMap, JPAType.DAO_IMPL).forEach((tableName, fileObject) -> {
             String title = fileObject.getTableTitle();
             tableTitles.add(title);
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
                 writer.write("package jpa.daoimpl;\n\n");
-                writer.write(String.format("import dto.%s;\n", title));
+                writer.write(String.format("import business.dto.%s;\n", title));
+                writer.write("import jpa.EntityManager;\n");
                 writer.write(String.format("import jpa.dao.%s%s;\n", title, JPAType.DAO.getSuffix()));
                 writer.write(String.format("import jpa.entity.%s%s;\n", title, JPAType.ENTITY.getSuffix()));
                 writer.write("import org.hibernate.query.Query;\n\n");
@@ -265,12 +267,19 @@ public class JPACreator {
                 e.printStackTrace();
             }
         });
-        generateManagerEntity(tableTitles);
         System.out.println("DAO IMPLEMENTS done...");
     }
     // =================================================================== DAO IMPLEMENTS FILES ========================
 
     // =================================================================== ENTITY MANAGER ==============================
+
+    /**
+     * IMPORTANT!
+     * Titles parameter is getting from DAO_IMPL generating, so its needed to call this method AFTER
+     * generateDaoImplFiles() method!!
+     *
+     * @param titles (filled from generateDaoImplFiles() method!)
+     */
     private void generateManagerEntity(List<String> titles) {
         System.out.println("GENERATE ENTITY MANAGER");
         Map<String, ValidatedColumns> entityManagerFile = new HashMap<>();
@@ -278,14 +287,14 @@ public class JPACreator {
         createFiles(entityManagerFile, JPAType.ENTITY_MANAGER).forEach((classFile, fileObject) -> {
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileObject.getFile()));
-                writer.write("package jpa.daoimpl;\n\n");
+                writer.write("package jpa;\n\n");
                 writer.write("import jpa.entity.*;\n");
                 writer.write("import lombok.Data;\n");
                 writer.write("import org.hibernate.Session;\n");
                 writer.write("import org.hibernate.SessionFactory;\n");
                 writer.write("import org.hibernate.cfg.Configuration;\n\n");
                 writer.write("@Data\n");
-                writer.write(String.format("class %s {\n\n", classFile));
+                writer.write(String.format("public class %s {\n\n", classFile));
                 writer.write("    private SessionFactory factory;\n");
                 writer.write("    private Session session;\n\n");
                 writer.write(String.format("    protected %s() {\n", classFile));
@@ -420,7 +429,7 @@ public class JPACreator {
 
     @Getter
     private enum JPAType {
-        ENTITY("Entity", "src/main/java/jpa/entity/"), DAO("Dao", "src/main/java/jpa/dao/"), DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"), DTO("Dto", "src/main/java/dto/"), ENTITY_MANAGER("", "src/main/java/jpa/daoimpl/");
+        ENTITY("Entity", "src/main/java/jpa/entity/"), DAO("Dao", "src/main/java/jpa/dao/"), DAO_IMPL("DaoImpl", "src/main/java/jpa/daoimpl/"), DTO("Dto", "src/main/java/business/dto/"), ENTITY_MANAGER("", "src/main/java/jpa/");
 
         private String suffix;
         private String path;

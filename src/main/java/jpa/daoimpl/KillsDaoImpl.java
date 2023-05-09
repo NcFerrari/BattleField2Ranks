@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Kills;
+import business.dto.Kills;
+import jpa.EntityManager;
 import jpa.dao.KillsDao;
 import jpa.entity.KillsEntity;
 import org.hibernate.query.Query;

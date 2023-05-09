@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Weapons;
+import business.dto.Weapons;
+import jpa.EntityManager;
 import jpa.dao.WeaponsDao;
 import jpa.entity.WeaponsEntity;
 import org.hibernate.query.Query;

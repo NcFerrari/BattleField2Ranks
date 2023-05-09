@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.Awards;
+import business.dto.Awards;
+import jpa.EntityManager;
 import jpa.dao.AwardsDao;
 import jpa.entity.AwardsEntity;
 import org.hibernate.query.Query;

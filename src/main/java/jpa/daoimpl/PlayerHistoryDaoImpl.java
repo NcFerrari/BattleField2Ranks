@@ -1,6 +1,7 @@
 package jpa.daoimpl;
 
-import dto.PlayerHistory;
+import business.dto.PlayerHistory;
+import jpa.EntityManager;
 import jpa.dao.PlayerHistoryDao;
 import jpa.entity.PlayerHistoryEntity;
 import org.hibernate.query.Query;

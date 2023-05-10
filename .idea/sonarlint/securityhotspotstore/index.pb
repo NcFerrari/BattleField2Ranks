@@ -17,8 +17,6 @@ R
 "src/main/java/jpa/dao/ArmyDao.java,d\8\d898d30ce6eeab7f9a08c56125fa91bb4f51b26f
 T
 $src/main/java/business/dto/Army.java,b\1\b183ccfc9965b6801c3d354b011fff0ec61d56b6
-M
-src/main/java/JPACreator.java,0\a\0a051585cb15885596069701a4d04a3d686c0f0d
 \
 ,src/main/java/enums/PictureCategoryEnum.java,4\e\4e5e482d24ae9914b93b1e74fc03335dc36700e9
 b

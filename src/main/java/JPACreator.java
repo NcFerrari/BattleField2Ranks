@@ -352,16 +352,10 @@ public class JPACreator {
     }
 
     private String getDataType(String sqlDataType) {
+        if (sqlDataType.contains("varchar") || sqlDataType.contains("char")) {
+            return "String";
+        }
         switch (sqlDataType) {
-            case "varchar(15)":
-            case "varchar(20)":
-            case "varchar(30)":
-            case "varchar(45)":
-            case "varchar(50)":
-            case "varchar(100)":
-            case "char(1)":
-            case "char(2)":
-                return "String";
             case "bigint(20)":
             case "int(10)":
             case "int(11)":

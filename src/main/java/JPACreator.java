@@ -25,12 +25,14 @@ public class JPACreator {
     private final List<String> tableTitles = new ArrayList<>();
 
     public JPACreator() {
-//        schemaMap = loadDBStructureFromSpecificDB();
-//        generateEntityFile();
-//        generateDtoFiles();
-//        generateDaoFile();
-//        generateDaoImplFiles();
-//        generateManagerEntity(tableTitles);
+        schemaMap = loadDBStructureFromSpecificDB();
+        generateEntityFile();
+        generateDtoFiles();
+        generateDaoFile();
+        generateDaoImplFiles();
+        generateManagerEntity(tableTitles);
+        jpa.dao.PlayerDao<business.dto.Player> dao = new jpa.daoimpl.PlayerDaoImpl();
+        System.out.println(dao.getPlayer(1));
     }
 
     // =================================================================== HIBERNATE ===================================
@@ -79,8 +81,14 @@ public class JPACreator {
                 writer.write("import javax.persistence.Id;\n");
                 writer.write("import javax.persistence.Table;\n");
                 for (Column column : schemaMap.get(tableName).getColumns()) {
-                    if ("datetime".equals(column.getDataType())) {
+                    if ("datetime".equals(column.getDataType()) || "time".equals(column.getDataType())) {
                         writer.write("import java.time.LocalDateTime;\n");
+                        break;
+                    }
+                }
+                for (Column column : schemaMap.get(tableName).getColumns()) {
+                    if ("date".equals(column.getDataType())) {
+                        writer.write("import java.time.LocalDate;\n");
                         break;
                     }
                 }
@@ -121,8 +129,14 @@ public class JPACreator {
                 writer.write("import lombok.Data;\n");
                 writer.write("import lombok.NoArgsConstructor;\n\n");
                 for (Column column : schemaMap.get(tableName).getColumns()) {
-                    if ("datetime".equals(column.getDataType())) {
+                    if ("datetime".equals(column.getDataType()) || "time".equals(column.getDataType())) {
                         writer.write("import java.time.LocalDateTime;\n\n");
+                        break;
+                    }
+                }
+                for (Column column : schemaMap.get(tableName).getColumns()) {
+                    if ("date".equals(column.getDataType())) {
+                        writer.write("import java.time.LocalDate;\n");
                         break;
                     }
                 }
@@ -357,19 +371,22 @@ public class JPACreator {
         }
         switch (sqlDataType) {
             case "bigint(20)":
-            case "int(10)":
-            case "int(11)":
                 return "Long";
             case "mediumint(7)":
             case "int(6)":
             case "int(8)":
+            case "int(10)":
+            case "int(11)":
                 return "Integer";
             case "tinyint(1)":
             case "tinyint(2)":
             case "smallint(3)":
                 return "Short";
             case "datetime":
+            case "time":
                 return "LocalDateTime";
+            case "date":
+                return "LocalDate";
             default:
                 try {
                     throw new Exception("Unknown format");

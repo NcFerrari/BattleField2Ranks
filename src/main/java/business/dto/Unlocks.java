@@ -13,6 +13,6 @@ public class Unlocks {
 
     private Short kit;
 
-    private Character state;
+    private String state;
 
 }

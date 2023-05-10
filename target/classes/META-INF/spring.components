@@ -1,5 +1,5 @@
 #
-#Tue May 09 17:58:08 CEST 2023
+#Tue May 09 20:55:59 CEST 2023
 jpa.entity.KillsEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.MapsEntity=javax.persistence.Entity,javax.persistence.Table
 jpa.entity.VersionEntity=javax.persistence.Entity,javax.persistence.Table

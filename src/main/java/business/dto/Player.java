@@ -13,7 +13,7 @@ public class Player {
 
     private String name;
 
-    private Character country;
+    private String country;
 
     private Long time;
 

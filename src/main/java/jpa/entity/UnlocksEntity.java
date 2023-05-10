@@ -25,6 +25,6 @@ public class UnlocksEntity {
     private Short kitEntity;
 
     @Column(name = "state")
-    private Character stateEntity;
+    private String stateEntity;
 
 }

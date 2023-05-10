@@ -25,14 +25,12 @@ public class JPACreator {
     private final List<String> tableTitles = new ArrayList<>();
 
     public JPACreator() {
-        schemaMap = loadDBStructureFromSpecificDB();
-        generateEntityFile();
-        generateDtoFiles();
-        generateDaoFile();
-        generateDaoImplFiles();
-        generateManagerEntity(tableTitles);
-//        jpa.dao.PlayerDao<dto.Player> playerDao = new jpa.daoimpl.PlayerDaoImpl();
-//        playerDao.getAllPlayer();
+//        schemaMap = loadDBStructureFromSpecificDB();
+//        generateEntityFile();
+//        generateDtoFiles();
+//        generateDaoFile();
+//        generateDaoImplFiles();
+//        generateManagerEntity(tableTitles);
     }
 
     // =================================================================== HIBERNATE ===================================
@@ -361,10 +359,9 @@ public class JPACreator {
             case "varchar(45)":
             case "varchar(50)":
             case "varchar(100)":
-                return "String";
             case "char(1)":
             case "char(2)":
-                return "Character";
+                return "String";
             case "bigint(20)":
             case "int(10)":
             case "int(11)":

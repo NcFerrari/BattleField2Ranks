@@ -11,6 +11,6 @@ public class Ip2nation {
 
     private Long ip;
 
-    private Character country;
+    private String country;
 
 }

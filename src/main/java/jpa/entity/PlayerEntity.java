@@ -25,7 +25,7 @@ public class PlayerEntity {
     private String nameEntity;
 
     @Column(name = "country")
-    private Character countryEntity;
+    private String countryEntity;
 
     @Column(name = "time")
     private Long timeEntity;

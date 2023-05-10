@@ -22,6 +22,6 @@ public class Ip2nationEntity {
     private Long ipEntity;
 
     @Column(name = "country")
-    private Character countryEntity;
+    private String countryEntity;
 
 }

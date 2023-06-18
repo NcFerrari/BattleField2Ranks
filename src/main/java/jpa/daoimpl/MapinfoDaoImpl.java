@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapinfoDaoImpl extends EntityManager implements MapinfoDao<Mapinfo> {
+public class MapinfoDaoImpl extends EntityManager implements MapinfoDao {
 
     @Override
     public void saveOrUpdate(Mapinfo mapinfo) {
-        if (mapinfo != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(mapinfo));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (mapinfo == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(mapinfo));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class MapinfoDaoImpl extends EntityManager implements MapinfoDao<Mapinfo>
     @Override
     public List<Mapinfo> getAllMapinfo() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<MapinfoEntity> entities = getSession().createQuery("FROM MapinfoEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class MapinfoDaoImpl extends EntityManager implements MapinfoDao<Mapinfo>
 
     @Override
     public void deleteMapinfo(Mapinfo mapinfo) {
-        if (mapinfo != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(mapinfo));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (mapinfo == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(mapinfo));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteMapinfo(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM MapinfoEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM MapinfoEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -78,6 +81,9 @@ public class MapinfoDaoImpl extends EntityManager implements MapinfoDao<Mapinfo>
     }
 
     private MapinfoEntity mapDtoToEntity(Mapinfo dto) {
+        if (dto == null) {
+            return null;
+        }
         MapinfoEntity entity = new MapinfoEntity();
         entity.setIdEntity(dto.getId());
         entity.setNameEntity(dto.getName());
@@ -89,5 +95,4 @@ public class MapinfoDaoImpl extends EntityManager implements MapinfoDao<Mapinfo>
         entity.setCustomEntity(dto.getCustom());
         return entity;
     }
-
 }

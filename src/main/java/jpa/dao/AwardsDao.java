@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Awards;
+
 import java.util.List;
 
-public interface AwardsDao<Awards> {
+public interface AwardsDao {
 
     void saveOrUpdate(Awards awards);
 

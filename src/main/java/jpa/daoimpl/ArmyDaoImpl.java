@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmyDaoImpl extends EntityManager implements ArmyDao<Army> {
+public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public void saveOrUpdate(Army army) {
-        if (army != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(army));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (army == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(army));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao<Army> {
     @Override
     public List<Army> getAllArmy() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<ArmyEntity> entities = getSession().createQuery("FROM ArmyEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao<Army> {
 
     @Override
     public void deleteArmy(Army army) {
-        if (army != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(army));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (army == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(army));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteArmy(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM ArmyEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM ArmyEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -155,6 +158,9 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao<Army> {
     }
 
     private ArmyEntity mapDtoToEntity(Army dto) {
+        if (dto == null) {
+            return null;
+        }
         ArmyEntity entity = new ArmyEntity();
         entity.setIdEntity(dto.getId());
         entity.setTime0Entity(dto.getTime0());
@@ -243,5 +249,4 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao<Army> {
         entity.setBrnd11Entity(dto.getBrnd11());
         return entity;
     }
-
 }

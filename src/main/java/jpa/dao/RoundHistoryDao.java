@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.RoundHistory;
+
 import java.util.List;
 
-public interface RoundHistoryDao<RoundHistory> {
+public interface RoundHistoryDao {
 
     void saveOrUpdate(RoundHistory roundHistory);
 

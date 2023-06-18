@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.PlayerHistory;
+
 import java.util.List;
 
-public interface PlayerHistoryDao<PlayerHistory> {
+public interface PlayerHistoryDao {
 
     void saveOrUpdate(PlayerHistory playerHistory);
 

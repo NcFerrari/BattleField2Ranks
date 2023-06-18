@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KillsDaoImpl extends EntityManager implements KillsDao<Kills> {
+public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public void saveOrUpdate(Kills kills) {
-        if (kills != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(kills));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (kills == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(kills));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class KillsDaoImpl extends EntityManager implements KillsDao<Kills> {
     @Override
     public List<Kills> getAllKills() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<KillsEntity> entities = getSession().createQuery("FROM KillsEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class KillsDaoImpl extends EntityManager implements KillsDao<Kills> {
 
     @Override
     public void deleteKills(Kills kills) {
-        if (kills != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(kills));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (kills == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(kills));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteKills(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM KillsEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM KillsEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -73,11 +76,13 @@ public class KillsDaoImpl extends EntityManager implements KillsDao<Kills> {
     }
 
     private KillsEntity mapDtoToEntity(Kills dto) {
+        if (dto == null) {
+            return null;
+        }
         KillsEntity entity = new KillsEntity();
         entity.setAttackerEntity(dto.getAttacker());
         entity.setVictimEntity(dto.getVictim());
         entity.setCountEntity(dto.getCount());
         return entity;
     }
-
 }

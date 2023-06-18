@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class KitsDaoImpl extends EntityManager implements KitsDao<Kits> {
+public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public void saveOrUpdate(Kits kits) {
-        if (kits != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(kits));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (kits == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(kits));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class KitsDaoImpl extends EntityManager implements KitsDao<Kits> {
     @Override
     public List<Kits> getAllKits() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<KitsEntity> entities = getSession().createQuery("FROM KitsEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class KitsDaoImpl extends EntityManager implements KitsDao<Kits> {
 
     @Override
     public void deleteKits(Kits kits) {
-        if (kits != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(kits));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (kits == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(kits));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteKits(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM KitsEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM KitsEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -92,6 +95,9 @@ public class KitsDaoImpl extends EntityManager implements KitsDao<Kits> {
     }
 
     private KitsEntity mapDtoToEntity(Kits dto) {
+        if (dto == null) {
+            return null;
+        }
         KitsEntity entity = new KitsEntity();
         entity.setIdEntity(dto.getId());
         entity.setTime0Entity(dto.getTime0());
@@ -117,5 +123,4 @@ public class KitsDaoImpl extends EntityManager implements KitsDao<Kits> {
         entity.setDeaths6Entity(dto.getDeaths6());
         return entity;
     }
-
 }

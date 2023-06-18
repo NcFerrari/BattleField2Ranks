@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class VehiclesDaoImpl extends EntityManager implements VehiclesDao<Vehicles> {
+public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public void saveOrUpdate(Vehicles vehicles) {
-        if (vehicles != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(vehicles));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (vehicles == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(vehicles));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao<Vehicl
     @Override
     public List<Vehicles> getAllVehicles() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<VehiclesEntity> entities = getSession().createQuery("FROM VehiclesEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao<Vehicl
 
     @Override
     public void deleteVehicles(Vehicles vehicles) {
-        if (vehicles != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(vehicles));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (vehicles == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(vehicles));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteVehicles(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM VehiclesEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM VehiclesEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -100,6 +103,9 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao<Vehicl
     }
 
     private VehiclesEntity mapDtoToEntity(Vehicles dto) {
+        if (dto == null) {
+            return null;
+        }
         VehiclesEntity entity = new VehiclesEntity();
         entity.setIdEntity(dto.getId());
         entity.setTime0Entity(dto.getTime0());
@@ -133,5 +139,4 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao<Vehicl
         entity.setRk6Entity(dto.getRk6());
         return entity;
     }
-
 }

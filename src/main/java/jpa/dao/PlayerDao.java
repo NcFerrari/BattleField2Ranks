@@ -1,10 +1,14 @@
 package jpa.dao;
 
+import business.dto.Player;
+
 import java.util.List;
 
-public interface PlayerDao<Player> {
+public interface PlayerDao {
 
     void saveOrUpdate(Player player);
+
+    Player getPlayer(String name);
 
     Player getPlayer(int id);
 

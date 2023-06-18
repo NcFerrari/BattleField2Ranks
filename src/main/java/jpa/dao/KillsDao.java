@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Kills;
+
 import java.util.List;
 
-public interface KillsDao<Kills> {
+public interface KillsDao {
 
     void saveOrUpdate(Kills kills);
 

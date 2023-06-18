@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Maps;
+
 import java.util.List;
 
-public interface MapsDao<Maps> {
+public interface MapsDao {
 
     void saveOrUpdate(Maps maps);
 

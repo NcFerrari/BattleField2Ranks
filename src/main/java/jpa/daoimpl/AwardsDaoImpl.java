@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AwardsDaoImpl extends EntityManager implements AwardsDao<Awards> {
+public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public void saveOrUpdate(Awards awards) {
-        if (awards != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(awards));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (awards == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(awards));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao<Awards> {
     @Override
     public List<Awards> getAllAwards() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<AwardsEntity> entities = getSession().createQuery("FROM AwardsEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao<Awards> {
 
     @Override
     public void deleteAwards(Awards awards) {
-        if (awards != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(awards));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (awards == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(awards));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteAwards(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM AwardsEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM AwardsEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -75,6 +78,9 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao<Awards> {
     }
 
     private AwardsEntity mapDtoToEntity(Awards dto) {
+        if (dto == null) {
+            return null;
+        }
         AwardsEntity entity = new AwardsEntity();
         entity.setIdEntity(dto.getId());
         entity.setAwdEntity(dto.getAwd());
@@ -83,5 +89,4 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao<Awards> {
         entity.setFirstEntity(dto.getFirst());
         return entity;
     }
-
 }

@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MapsDaoImpl extends EntityManager implements MapsDao<Maps> {
+public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public void saveOrUpdate(Maps maps) {
-        if (maps != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(maps));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (maps == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(maps));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class MapsDaoImpl extends EntityManager implements MapsDao<Maps> {
     @Override
     public List<Maps> getAllMaps() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<MapsEntity> entities = getSession().createQuery("FROM MapsEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class MapsDaoImpl extends EntityManager implements MapsDao<Maps> {
 
     @Override
     public void deleteMaps(Maps maps) {
-        if (maps != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(maps));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (maps == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(maps));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteMaps(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM MapsEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM MapsEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -77,6 +80,9 @@ public class MapsDaoImpl extends EntityManager implements MapsDao<Maps> {
     }
 
     private MapsEntity mapDtoToEntity(Maps dto) {
+        if (dto == null) {
+            return null;
+        }
         MapsEntity entity = new MapsEntity();
         entity.setIdEntity(dto.getId());
         entity.setMapidEntity(dto.getMapid());
@@ -87,5 +93,4 @@ public class MapsDaoImpl extends EntityManager implements MapsDao<Maps> {
         entity.setWorstEntity(dto.getWorst());
         return entity;
     }
-
 }

@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Kits;
+
 import java.util.List;
 
-public interface KitsDao<Kits> {
+public interface KitsDao {
 
     void saveOrUpdate(Kits kits);
 

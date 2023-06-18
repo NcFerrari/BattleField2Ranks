@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Weapons;
+
 import java.util.List;
 
-public interface WeaponsDao<Weapons> {
+public interface WeaponsDao {
 
     void saveOrUpdate(Weapons weapons);
 

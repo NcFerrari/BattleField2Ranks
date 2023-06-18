@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Army;
+
 import java.util.List;
 
-public interface ArmyDao<Army> {
+public interface ArmyDao {
 
     void saveOrUpdate(Army army);
 

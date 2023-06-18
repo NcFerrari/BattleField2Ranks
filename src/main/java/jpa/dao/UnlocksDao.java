@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Unlocks;
+
 import java.util.List;
 
-public interface UnlocksDao<Unlocks> {
+public interface UnlocksDao {
 
     void saveOrUpdate(Unlocks unlocks);
 

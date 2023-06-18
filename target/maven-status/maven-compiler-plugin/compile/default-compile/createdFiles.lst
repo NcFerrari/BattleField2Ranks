@@ -1,5 +1,2 @@
-JPACreator$FileObject.class
-JPACreator$ValidatedColumns.class
-JPACreator.class
-JPACreator$Column.class
-JPACreator$JPAType.class
+service\PictureService.class
+enums\PictureCategoryEnum.class

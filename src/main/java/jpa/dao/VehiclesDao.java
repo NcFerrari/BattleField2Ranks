@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Vehicles;
+
 import java.util.List;
 
-public interface VehiclesDao<Vehicles> {
+public interface VehiclesDao {
 
     void saveOrUpdate(Vehicles vehicles);
 

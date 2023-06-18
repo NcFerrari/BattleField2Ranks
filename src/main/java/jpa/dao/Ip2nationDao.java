@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Ip2nation;
+
 import java.util.List;
 
-public interface Ip2nationDao<Ip2nation> {
+public interface Ip2nationDao {
 
     void saveOrUpdate(Ip2nation ip2nation);
 

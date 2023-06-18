@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServersDaoImpl extends EntityManager implements ServersDao<Servers> {
+public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public void saveOrUpdate(Servers servers) {
-        if (servers != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(servers));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (servers == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(servers));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class ServersDaoImpl extends EntityManager implements ServersDao<Servers>
     @Override
     public List<Servers> getAllServers() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<ServersEntity> entities = getSession().createQuery("FROM ServersEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class ServersDaoImpl extends EntityManager implements ServersDao<Servers>
 
     @Override
     public void deleteServers(Servers servers) {
-        if (servers != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(servers));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (servers == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(servers));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteServers(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM ServersEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM ServersEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -77,6 +80,9 @@ public class ServersDaoImpl extends EntityManager implements ServersDao<Servers>
     }
 
     private ServersEntity mapDtoToEntity(Servers dto) {
+        if (dto == null) {
+            return null;
+        }
         ServersEntity entity = new ServersEntity();
         entity.setIdEntity(dto.getId());
         entity.setIpEntity(dto.getIp());
@@ -87,5 +93,4 @@ public class ServersDaoImpl extends EntityManager implements ServersDao<Servers>
         entity.setLastupdateEntity(dto.getLastupdate());
         return entity;
     }
-
 }

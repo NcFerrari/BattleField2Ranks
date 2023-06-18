@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistoryDao<PlayerHistory> {
+public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistoryDao {
 
     @Override
     public void saveOrUpdate(PlayerHistory playerHistory) {
-        if (playerHistory != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(playerHistory));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (playerHistory == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(playerHistory));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
     @Override
     public List<PlayerHistory> getAllPlayerHistory() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<PlayerHistoryEntity> entities = getSession().createQuery("FROM PlayerHistoryEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public void deletePlayerHistory(PlayerHistory playerHistory) {
-        if (playerHistory != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(playerHistory));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (playerHistory == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(playerHistory));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deletePlayerHistory(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM PlayerHistoryEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM PlayerHistoryEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -80,6 +83,9 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
     }
 
     private PlayerHistoryEntity mapDtoToEntity(PlayerHistory dto) {
+        if (dto == null) {
+            return null;
+        }
         PlayerHistoryEntity entity = new PlayerHistoryEntity();
         entity.setIdEntity(dto.getId());
         entity.setTimestampEntity(dto.getTimestamp());
@@ -93,5 +99,4 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
         entity.setRankEntity(dto.getRank());
         return entity;
     }
-
 }

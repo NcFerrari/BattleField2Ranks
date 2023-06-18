@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao<Ip2nation> {
+public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public void saveOrUpdate(Ip2nation ip2nation) {
-        if (ip2nation != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(ip2nation));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (ip2nation == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(ip2nation));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao<Ip2n
     @Override
     public List<Ip2nation> getAllIp2nation() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<Ip2nationEntity> entities = getSession().createQuery("FROM Ip2nationEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao<Ip2n
 
     @Override
     public void deleteIp2nation(Ip2nation ip2nation) {
-        if (ip2nation != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(ip2nation));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (ip2nation == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(ip2nation));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteIp2nation(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM Ip2nationEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM Ip2nationEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -72,10 +75,12 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao<Ip2n
     }
 
     private Ip2nationEntity mapDtoToEntity(Ip2nation dto) {
+        if (dto == null) {
+            return null;
+        }
         Ip2nationEntity entity = new Ip2nationEntity();
         entity.setIpEntity(dto.getIp());
         entity.setCountryEntity(dto.getCountry());
         return entity;
     }
-
 }

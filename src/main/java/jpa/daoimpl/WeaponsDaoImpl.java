@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class WeaponsDaoImpl extends EntityManager implements WeaponsDao<Weapons> {
+public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public void saveOrUpdate(Weapons weapons) {
-        if (weapons != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(weapons));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (weapons == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(weapons));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao<Weapons>
     @Override
     public List<Weapons> getAllWeapons() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<WeaponsEntity> entities = getSession().createQuery("FROM WeaponsEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao<Weapons>
 
     @Override
     public void deleteWeapons(Weapons weapons) {
-        if (weapons != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(weapons));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (weapons == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(weapons));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteWeapons(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM WeaponsEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM WeaponsEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -154,6 +157,9 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao<Weapons>
     }
 
     private WeaponsEntity mapDtoToEntity(Weapons dto) {
+        if (dto == null) {
+            return null;
+        }
         WeaponsEntity entity = new WeaponsEntity();
         entity.setIdEntity(dto.getId());
         entity.setTime0Entity(dto.getTime0());
@@ -241,5 +247,4 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao<Weapons>
         entity.setAtminehitEntity(dto.getAtminehit());
         return entity;
     }
-
 }

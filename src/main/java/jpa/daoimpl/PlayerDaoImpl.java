@@ -4,21 +4,34 @@ import business.dto.Player;
 import jpa.EntityManager;
 import jpa.dao.PlayerDao;
 import jpa.entity.PlayerEntity;
+import org.hibernate.query.NativeQuery;
 import org.hibernate.query.Query;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayerDaoImpl extends EntityManager implements PlayerDao<Player> {
+public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public void saveOrUpdate(Player player) {
-        if (player != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(player));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (player == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(player));
+        getSession().getTransaction().commit();
+        getSession().close();
+    }
+
+    @Override
+    public Player getPlayer(String name) {
+        getSession().beginTransaction();
+        NativeQuery query = getSession().createNativeQuery("SELECT * FROM Player WHERE name=:name");
+        query.setParameter("name", name);
+        query.getSingleResult();
+        getSession().getTransaction().commit();
+        getSession().close();
+        return mapEntityToDto(null);
     }
 
     @Override
@@ -33,6 +46,7 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao<Player> {
     @Override
     public List<Player> getAllPlayer() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<PlayerEntity> entities = getSession().createQuery("FROM PlayerEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +57,19 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao<Player> {
 
     @Override
     public void deletePlayer(Player player) {
-        if (player != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(player));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (player == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(player));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deletePlayer(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM PlayerEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM PlayerEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -123,6 +138,9 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao<Player> {
     }
 
     private PlayerEntity mapDtoToEntity(Player dto) {
+        if (dto == null) {
+            return null;
+        }
         PlayerEntity entity = new PlayerEntity();
         entity.setIdEntity(dto.getId());
         entity.setNameEntity(dto.getName());
@@ -179,5 +197,4 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao<Player> {
         entity.setClantagEntity(dto.getClantag());
         return entity;
     }
-
 }

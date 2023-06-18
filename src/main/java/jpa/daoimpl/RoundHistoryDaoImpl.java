@@ -9,16 +9,17 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDao<RoundHistory> {
+public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDao {
 
     @Override
     public void saveOrUpdate(RoundHistory roundHistory) {
-        if (roundHistory != null) {
-            getSession().beginTransaction();
-            getSession().saveOrUpdate(mapDtoToEntity(roundHistory));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (roundHistory == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().saveOrUpdate(mapDtoToEntity(roundHistory));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
@@ -33,6 +34,7 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
     @Override
     public List<RoundHistory> getAllRoundHistory() {
         getSession().beginTransaction();
+        @SuppressWarnings("unchecked")
         List<RoundHistoryEntity> entities = getSession().createQuery("FROM RoundHistoryEntity").getResultList();
         getSession().getTransaction().commit();
         getSession().close();
@@ -43,18 +45,19 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public void deleteRoundHistory(RoundHistory roundHistory) {
-        if (roundHistory != null) {
-            getSession().beginTransaction();
-            getSession().delete(mapDtoToEntity(roundHistory));
-            getSession().getTransaction().commit();
-            getSession().close();
+        if (roundHistory == null) {
+            return;
         }
+        getSession().beginTransaction();
+        getSession().delete(mapDtoToEntity(roundHistory));
+        getSession().getTransaction().commit();
+        getSession().close();
     }
 
     @Override
     public void deleteRoundHistory(int id) {
         getSession().beginTransaction();
-        Query query = getSession().createQuery("DELETE FROM RoundHistoryEntity WHERE id=:id");
+        Query<?> query = getSession().createQuery("DELETE FROM RoundHistoryEntity WHERE id=:id");
         query.setParameter("id", id);
         query.executeUpdate();
         getSession().getTransaction().commit();
@@ -82,6 +85,9 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
     }
 
     private RoundHistoryEntity mapDtoToEntity(RoundHistory dto) {
+        if (dto == null) {
+            return null;
+        }
         RoundHistoryEntity entity = new RoundHistoryEntity();
         entity.setIdEntity(dto.getId());
         entity.setTimestampEntity(dto.getTimestamp());
@@ -97,5 +103,4 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
         entity.setPids2EndEntity(dto.getPids2End());
         return entity;
     }
-
 }

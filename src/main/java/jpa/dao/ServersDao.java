@@ -1,8 +1,10 @@
 package jpa.dao;
 
+import business.dto.Servers;
+
 import java.util.List;
 
-public interface ServersDao<Servers> {
+public interface ServersDao {
 
     void saveOrUpdate(Servers servers);
 

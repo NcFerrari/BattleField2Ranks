@@ -26,7 +26,7 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
     @Override
     public Player getPlayer(String name) {
         getSession().beginTransaction();
-        NativeQuery query = getSession().createNativeQuery("SELECT * FROM Player WHERE name=:name");
+        NativeQuery<?> query = getSession().createNativeQuery("SELECT * FROM Player WHERE name=:name");
         query.setParameter("name", name);
         query.getSingleResult();
         getSession().getTransaction().commit();

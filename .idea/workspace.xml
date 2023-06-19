@@ -5,151 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Generators_1_0_SNAPSHOT_jar_with_dependencies.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/Generators-1.0-SNAPSHOT-jar-with-dependencies.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/2023-06-18/00.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/service/PictureService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/serviceimpl/PictureServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/0599bbb93a4e32c785930a61e92d26134a62caef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c081c3409000cde0b4a98ca12a6cbe437c0c791" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4d02c38861c91aea01e0e9a7ed17ac04c47aa369" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/e/4e5e482d24ae9914b93b1e74fc03335dc36700e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/623e6dae8390753578895e68ee005cdedf884cac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/9538f1c4129b0732d17531d56ed037970582dc7d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b183ccfc9965b6801c3d354b011fff0ec61d56b6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/5/c53fcfadeb039ce01f573492b8a1c16332007997" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/8/d898d30ce6eeab7f9a08c56125fa91bb4f51b26f" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_base_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_controls_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/fx/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_10_0_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_10_0_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_10_0_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_10_0_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_10_0_M1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/1/c1fabe2114613a5daa6136a61f5c7af5c83c10da" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/5/0599bbb93a4e32c785930a61e92d26134a62caef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/c/4c081c3409000cde0b4a98ca12a6cbe437c0c791" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/d/4d02c38861c91aea01e0e9a7ed17ac04c47aa369" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/e/4e5e482d24ae9914b93b1e74fc03335dc36700e9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/6/2/623e6dae8390753578895e68ee005cdedf884cac" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/9538f1c4129b0732d17531d56ed037970582dc7d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/b/1/b183ccfc9965b6801c3d354b011fff0ec61d56b6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/5/c53fcfadeb039ce01f573492b8a1c16332007997" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/d/8/d898d30ce6eeab7f9a08c56125fa91bb4f51b26f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/1/c1fabe2114613a5daa6136a61f5c7af5c83c10da" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BattleField2Ranks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleField2Ranks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/JPACreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/business/dto/Servers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/business/dto/Servers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/business/dto/Version.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/business/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PictureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/business/serviceimpl/PictureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serviceimpl/PictureServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/EntityManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/EntityManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/ArmyDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/ArmyDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/AwardsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/AwardsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/Ip2nationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/Ip2nationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/KillsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/KillsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/KitsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/KitsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/MapinfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/MapinfoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/MapsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/MapsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerHistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/PlayerHistoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/RoundHistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/RoundHistoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/ServersDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/ServersDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/UnlocksDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/UnlocksDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/VehiclesDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/VehiclesDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/VersionDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/dao/WeaponsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/dao/WeaponsDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ArmyDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ArmyDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/AwardsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/AwardsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/Ip2nationDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/Ip2nationDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KillsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KillsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KitsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/KitsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapinfoDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapinfoDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/MapsDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerHistoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/PlayerHistoryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/RoundHistoryDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/RoundHistoryDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ServersDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/ServersDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/UnlocksDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/UnlocksDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VehiclesDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VehiclesDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/VersionDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/WeaponsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/daoimpl/WeaponsDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/entity/VersionEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PictureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/serviceimpl/PictureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/serviceimpl/PictureServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$Column.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$FileObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$JPAType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator$ValidatedColumns.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/JPACreator.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Manager$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Army.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Army.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Awards.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Awards.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Ip2nation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Ip2nation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Kills.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Kills.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Kits.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Kits.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Mapinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Mapinfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Maps.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Maps.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Player.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/PlayerHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/PlayerHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/RoundHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/RoundHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Servers.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Servers.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Unlocks.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Unlocks.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Vehicles.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Vehicles.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Version.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/dto/Weapons.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/business/dto/Weapons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/service/PictureService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/business/serviceimpl/PictureServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/EntityManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/EntityManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/ArmyDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/ArmyDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/AwardsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/AwardsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/Ip2nationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/Ip2nationDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/KillsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/KillsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/KitsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/KitsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/MapinfoDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/MapinfoDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/MapsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/MapsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/PlayerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/PlayerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/PlayerHistoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/PlayerHistoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/RoundHistoryDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/RoundHistoryDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/ServersDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/ServersDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/UnlocksDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/UnlocksDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/VehiclesDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/VehiclesDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/VersionDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/dao/WeaponsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/dao/WeaponsDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/ArmyDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/ArmyDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/AwardsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/AwardsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/Ip2nationDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/Ip2nationDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/KillsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/KillsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/KitsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/KitsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/MapinfoDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/MapinfoDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/MapsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/MapsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/PlayerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/PlayerDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/PlayerHistoryDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/PlayerHistoryDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/RoundHistoryDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/RoundHistoryDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/ServersDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/ServersDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/UnlocksDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/UnlocksDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/VehiclesDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/VehiclesDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/VersionDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/daoimpl/WeaponsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/daoimpl/WeaponsDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/ArmyEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/ArmyEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/AwardsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/AwardsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/Ip2nationEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/Ip2nationEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/KillsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/KillsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/KitsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/KitsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/MapinfoEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/MapinfoEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/MapsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/MapsEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/PlayerEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/PlayerEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/PlayerHistoryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/PlayerHistoryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/RoundHistoryEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/RoundHistoryEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/ServersEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/ServersEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/UnlocksEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/UnlocksEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/VehiclesEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/VehiclesEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/VersionEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/entity/WeaponsEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/entity/WeaponsEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,8 +51,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -225,6 +116,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="MavenProjectNavigator">
     <treeState>
       <expand>
@@ -286,23 +184,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lpesek/Documents/Projekty/BattleField2Ranks/libs/Generators-1.0-SNAPSHOT-jar-with-dependencies.jar&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15820312&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.36206895&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;37c6b1c160678fa3c601b66f08a6705e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Final Projects/MovieList",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15820312",
+    "project.structure.side.proportion": "0.36206895",
+    "spring.configuration.checksum": "37c6b1c160678fa3c601b66f08a6705e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -419,7 +317,7 @@
       <workItem from="1683461941083" duration="52614000" />
       <workItem from="1683724811136" duration="306000" />
       <workItem from="1687040028195" duration="741000" />
-      <workItem from="1687040784820" duration="2352000" />
+      <workItem from="1687040784820" duration="6228000" />
     </task>
     <servers />
   </component>

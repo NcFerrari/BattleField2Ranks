@@ -10,7 +10,7 @@ public enum PictureCategoryEnum {
     RIBBONS("ribbons"),
     NO_AWARD("/");
 
-    private String path;
+    private final String path;
 
     PictureCategoryEnum(String path) {
         this.path = path;

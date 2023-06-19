@@ -7,7 +7,8 @@ public enum TextFXEnum {
     TAB_MENU_KIT_INFO("Kit Info", "Informace o výbavě"),
     TAB_MENU_STATS("Stats", "Statistiky"),
     TAB_MENU_LEADERBOARDS("Leaderboards", "Žebříčky"),
-    TAB_MENU_AWARDS("Awards", "Odměny");
+    TAB_MENU_AWARDS("Awards", "Odměny"),
+    MAIN_APPLICATION_TITLE("Battlefield 2 - Head Quarters", "Battlefield 2 - Informační přehledy");
 
     private final String engText;
     private final String czeText;

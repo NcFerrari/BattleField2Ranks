@@ -9,8 +9,8 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lp.Manager;
-import lp.enums.LangEnum;
 import lp.enums.TextEnum;
+import lp.enums.TextFXEnum;
 import org.apache.log4j.Logger;
 import service.LoggerService;
 import serviceimpl.LoggerServiceImpl;
@@ -26,9 +26,14 @@ public class MainApp extends Application {
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(MainApp.class);
     private final Logger log = loggerService.getLog();
 
+    private Stage stage;
+    private VBox mainPane;
+
     @Override
-    public void start(Stage stage) {
-        VBox mainPane = new VBox();
+    public void start(Stage primaryStage) {
+        stage = primaryStage;
+        stage.setTitle(TextFXEnum.MAIN_APPLICATION_TITLE.getText(stage.titleProperty()));
+        mainPane = new VBox();
         Scene scene = new Scene(mainPane, WIDTH, HEIGHT);
         setCssFile(scene, TextEnum.PANE_STYLES.getText());
         stage.setScene(scene);
@@ -36,27 +41,33 @@ public class MainApp extends Application {
 
         setLanguageChooser(mainPane);
         setTabPane(mainPane);
+
+        setListeners(stage);
+        resize();
+    }
+
+    private void setListeners(Stage stage) {
+        stage.widthProperty().addListener((observableValue, oldWidth, newWidth) -> resize());
+        stage.heightProperty().addListener((observableValue, oldHeight, newHeight) -> resize());
     }
 
     private void setLanguageChooser(VBox mainPane) {
-        FlowPane flowPane = new FlowPane();
-        flowPane.setAlignment(Pos.CENTER_RIGHT);
-        ComboBox<LangEnum> languageChoiceBox = new ComboBox<>();
-        languageChoiceBox.getItems().add(LangEnum.EN);
-        languageChoiceBox.getItems().add(LangEnum.CZ);
-        languageChoiceBox.getSelectionModel().selectFirst();
-        languageChoiceBox.setOnAction(event ->
-                manager.reloadLanguages(languageChoiceBox.getSelectionModel().getSelectedItem()));
-        flowPane.getChildren().add(languageChoiceBox);
+        FlowPane langPane = new FlowPane();
+        langPane.setAlignment(Pos.CENTER_RIGHT);
+        langPane.getChildren().add(manager.setLanguageChoiceBox(new ComboBox<>()));
 
-        mainPane.getChildren().add(flowPane);
+        mainPane.getChildren().add(langPane);
+    }
+
+    private void resize() {
+        mainPane.setPrefHeight(stage.getHeight());
+        mainPane.setPrefWidth(stage.getWidth());
     }
 
     private void setTabPane(VBox mainPain) {
         TabPane tabPane = new TabPane();
         tabPane.setPrefSize(WIDTH, HEIGHT);
         mainPain.getChildren().add(tabPane);
-
         manager.getTabs().forEach(tab -> tabPane.getTabs().add(tab));
     }
 

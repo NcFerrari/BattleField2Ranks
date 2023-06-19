@@ -1,6 +1,8 @@
 package lp;
 
 import javafx.beans.property.StringProperty;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.Tab;
 import lombok.Data;
 import lp.enums.LangEnum;
@@ -53,7 +55,11 @@ public class Manager {
         getComponentsForLanguage().forEach((stringProperty, textFXEnum) -> stringProperty.set(textFXEnum.reloadText()));
     }
 
-    public Map<StringProperty, TextFXEnum> getComponentsForLanguage() {
-        return componentsForLanguage;
+    public ComboBox<LangEnum> setLanguageChoiceBox(ComboBox<LangEnum> languageChoiceBox) {
+        languageChoiceBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
+        languageChoiceBox.getSelectionModel().selectFirst();
+        languageChoiceBox.setOnAction(event ->
+                reloadLanguages(languageChoiceBox.getSelectionModel().getSelectedItem()));
+        return languageChoiceBox;
     }
 }

@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="BattleField2Ranks" target="1.8" />
+      <module name="BattleField2Ranks" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

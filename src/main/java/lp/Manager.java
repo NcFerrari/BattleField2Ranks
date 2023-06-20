@@ -2,20 +2,15 @@ package lp;
 
 import javafx.beans.property.StringProperty;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.SingleSelectionModel;
-import javafx.scene.control.Tab;
 import lombok.Data;
 import lp.enums.LangEnum;
 import lp.enums.TextFXEnum;
-import lp.fx.KitInfoPane;
 import lp.fx.MainApp;
 import org.apache.log4j.Logger;
 import service.LoggerService;
 import serviceimpl.LoggerServiceImpl;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @Data
@@ -40,14 +35,6 @@ public class Manager {
 
     public static void main(String[] args) {
         Manager.getInstance();
-    }
-
-    public List<Tab> getTabs() {
-        List<Tab> resultList = new ArrayList<>();
-        KitInfoPane kitInfoPane = new KitInfoPane();
-        resultList.add(kitInfoPane);
-
-        return resultList;
     }
 
     public void reloadLanguages(LangEnum language) {

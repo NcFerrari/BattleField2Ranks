@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/AwardsPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/LeaderboardPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-06-19/11.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-19/11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-06-19/14.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-19/14.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/pane-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/pane-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/css/pane-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/pane-styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/KitInfoPane.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,8 +31,8 @@
       <list>
         <option value="Interface" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,7 +172,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/BattleField2Ranks",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Final Projects/MovieList",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -297,7 +304,7 @@
       <workItem from="1687040028195" duration="741000" />
       <workItem from="1687040784820" duration="11668000" />
       <workItem from="1687162473206" duration="6359000" />
-      <workItem from="1687170232686" duration="7327000" />
+      <workItem from="1687170232686" duration="12088000" />
     </task>
     <servers />
   </component>

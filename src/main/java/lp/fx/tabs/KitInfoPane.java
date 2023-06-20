@@ -1,4 +1,4 @@
-package lp.fx;
+package lp.fx.tabs;
 
 import javafx.scene.control.Tab;
 import lp.enums.TextFXEnum;

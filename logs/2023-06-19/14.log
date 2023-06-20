@@ -28,3 +28,4 @@
 [2023-06-19 14:00:08,071] INFO     (lp.fx.MainApp            ): 1528.0
 [2023-06-19 14:00:08,090] INFO     (lp.fx.MainApp            ): 1529.5999755859375
 [2023-06-19 14:00:08,131] INFO     (lp.fx.MainApp            ): 1530.4000244140625
+[2023-06-19 14:35:20,627] INFO     (lp.Manager               ): [.git, .gitignore, .idea, 7. Návody pro ocenění, BattleField2Ranks.iml, dependency-reduced-pom.xml, libs, logs, pictures, pom.xml, README.md, src, target]

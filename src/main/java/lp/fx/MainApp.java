@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -11,11 +12,17 @@ import javafx.stage.Stage;
 import lp.Manager;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
+import lp.fx.tabs.AwardsPane;
+import lp.fx.tabs.KitInfoPane;
+import lp.fx.tabs.LeaderboardPane;
+import lp.fx.tabs.StatsPane;
 import org.apache.log4j.Logger;
 import service.LoggerService;
 import serviceimpl.LoggerServiceImpl;
 
 import java.awt.Toolkit;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class MainApp extends Application {
@@ -68,11 +75,23 @@ public class MainApp extends Application {
         TabPane tabPane = new TabPane();
         tabPane.setPrefSize(WIDTH, HEIGHT);
         mainPain.getChildren().add(tabPane);
-        manager.getTabs().forEach(tab -> tabPane.getTabs().add(tab));
+        getTabs().forEach(tab -> {
+            tabPane.getTabs().add(tab);
+            tab.setClosable(false);
+        });
     }
 
     private void setCssFile(Scene scene, String path) {
         scene.getStylesheets().add(
                 Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
+    }
+
+    private List<Tab> getTabs() {
+        List<Tab> resultList = new ArrayList<>();
+        resultList.add(new KitInfoPane());
+        resultList.add(new StatsPane());
+        resultList.add(new LeaderboardPane());
+        resultList.add(new AwardsPane());
+        return resultList;
     }
 }

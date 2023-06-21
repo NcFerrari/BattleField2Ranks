@@ -1,6 +1,7 @@
 package lp.fx;
 
 import javafx.application.Application;
+import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
@@ -43,6 +44,20 @@ public class MainApp extends Application {
         mainPane = new VBox();
         Scene scene = new Scene(mainPane, WIDTH, HEIGHT);
         setCssFile(scene, TextEnum.PANE_STYLES.getText());
+        Thread t = new Thread(() -> {
+            while (true) {
+                Platform.runLater(() -> {
+                    setCssFile(scene, TextEnum.PANE_STYLES.getText());
+                });
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    System.out.println("test");
+                }
+            }
+        });
+        t.setDaemon(true);
+        t.start();
         stage.setScene(scene);
         stage.show();
 
@@ -76,14 +91,16 @@ public class MainApp extends Application {
         tabPane.setPrefSize(WIDTH, HEIGHT);
         mainPain.getChildren().add(tabPane);
         getTabs().forEach(tab -> {
+            tab.setText(tab.getText());
             tabPane.getTabs().add(tab);
             tab.setClosable(false);
         });
     }
 
     private void setCssFile(Scene scene, String path) {
-        scene.getStylesheets().add(
-                Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
+        scene.getStylesheets().clear();
+        scene.getStylesheets().add(path);
+//            Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
     }
 
     private List<Tab> getTabs() {

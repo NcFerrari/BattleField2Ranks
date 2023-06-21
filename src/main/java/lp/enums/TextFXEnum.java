@@ -4,11 +4,11 @@ import javafx.beans.property.StringProperty;
 import lp.Manager;
 
 public enum TextFXEnum {
-    TAB_MENU_KIT_INFO("Kit Info", "Informace o výbavě"),
-    TAB_MENU_STATS("Stats", "Statistiky"),
-    TAB_MENU_LEADERBOARDS("Leaderboards", "Žebříčky"),
-    TAB_MENU_AWARDS("Awards", "Odměny"),
-    MAIN_APPLICATION_TITLE("Battlefield 2 - Head Quarters", "Battlefield 2 - Informační přehledy");
+    TAB_MENU_KIT_INFO("KIT INFO", "INFORMACE O VÝBAVĚ"),
+    TAB_MENU_STATS("STATS", "STATISTIKY"),
+    TAB_MENU_LEADERBOARDS("LEADERBOARDS", "ŽEBŘÍČKY"),
+    TAB_MENU_AWARDS("AWARDS", "ODMĚNY"),
+    MAIN_APPLICATION_TITLE("Battlefi eld 2 - Head Quarters", "Battlefield 2 - Informační přehledy");
 
     private final String engText;
     private final String czeText;

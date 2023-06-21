@@ -1,7 +1,7 @@
 package lp.enums;
 
 public enum TextEnum {
-    PANE_STYLES("css/pane-styles.css");
+    PANE_STYLES("file:///C://temp/pane-styles.css");
 
     private final String text;
 

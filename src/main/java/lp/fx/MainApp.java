@@ -14,6 +14,7 @@ import lp.Manager;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
 import lp.fx.tabs.AwardsPane;
+import lp.fx.tabs.BF2Component;
 import lp.fx.tabs.KitInfoPane;
 import lp.fx.tabs.LeaderboardPane;
 import lp.fx.tabs.StatsPane;
@@ -24,18 +25,19 @@ import serviceimpl.LoggerServiceImpl;
 import java.awt.Toolkit;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class MainApp extends Application {
 
-    private static final double WIDTH = Toolkit.getDefaultToolkit().getScreenSize().width / 2.0; //19 * SCREEN_SIZE.width / 20.0
-    private static final double HEIGHT = Toolkit.getDefaultToolkit().getScreenSize().height / 2.0; //19 * SCREEN_SIZE.height / 20.0
+    private static final double WIDTH = 3 * Toolkit.getDefaultToolkit().getScreenSize().width / 4.0; //19 * SCREEN_SIZE.width / 20.0
+    private static final double HEIGHT = 3 * Toolkit.getDefaultToolkit().getScreenSize().height / 4.0; //19 * SCREEN_SIZE.height / 20.0
     private final Manager manager = Manager.getInstance();
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(MainApp.class);
     private final Logger log = loggerService.getLog();
+    private final List<BF2Component> bf2Components = new ArrayList<>();
 
     private Stage stage;
     private VBox mainPane;
+    private TabPane tabPane;
 
     @Override
     public void start(Stage primaryStage) {
@@ -46,9 +48,7 @@ public class MainApp extends Application {
         setCssFile(scene, TextEnum.PANE_STYLES.getText());
         Thread t = new Thread(() -> {
             while (true) {
-                Platform.runLater(() -> {
-                    setCssFile(scene, TextEnum.PANE_STYLES.getText());
-                });
+                Platform.runLater(() -> setCssFile(scene, TextEnum.PANE_STYLES.getText()));
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -84,13 +84,19 @@ public class MainApp extends Application {
     private void resize() {
         mainPane.setPrefHeight(stage.getHeight());
         mainPane.setPrefWidth(stage.getWidth());
+
+        tabPane.resize(stage.getWidth(), stage.getHeight());
+        tabPane.setTabMinWidth(stage.getWidth() / 5.824);
+        tabPane.setTabMinHeight(stage.getHeight() / 16.98);
+        tabPane.setStyle("-fx-font-size: " + stage.getHeight() / 32.65);
+
+        bf2Components.forEach(bf2Component -> bf2Component.resize(stage.getWidth(), stage.getHeight()));
     }
 
     private void setTabPane(VBox mainPain) {
-        TabPane tabPane = new TabPane();
-        tabPane.setPrefSize(WIDTH, HEIGHT);
+        tabPane = new TabPane();
         mainPain.getChildren().add(tabPane);
-        getTabs().forEach(tab -> {
+        initTabs().forEach(tab -> {
             tab.setText(tab.getText());
             tabPane.getTabs().add(tab);
             tab.setClosable(false);
@@ -103,7 +109,7 @@ public class MainApp extends Application {
 //            Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
     }
 
-    private List<Tab> getTabs() {
+    private List<Tab> initTabs() {
         List<Tab> resultList = new ArrayList<>();
         resultList.add(new KitInfoPane());
         resultList.add(new StatsPane());

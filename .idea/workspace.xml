@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabContents/BF2OneThirdPane.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,10 +22,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="CSS File" />
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -161,26 +160,26 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lpesek/Documents/Projekty/BattleField2Ranks/libs/Generators-1.0-SNAPSHOT-jar-with-dependencies.jar&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15820312&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.36206895&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;37c6b1c160678fa3c601b66f08a6705e&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/sazka/clv.clevercms.cssg.sazka.wsc",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.15820312",
+    "project.structure.side.proportion": "0.36206895",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "37c6b1c160678fa3c601b66f08a6705e",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -302,7 +301,7 @@
       <workItem from="1687162473206" duration="6359000" />
       <workItem from="1687170232686" duration="12088000" />
       <workItem from="1687251472950" duration="1141000" />
-      <workItem from="1687341568760" duration="9711000" />
+      <workItem from="1687341568760" duration="17725000" />
     </task>
     <servers />
   </component>

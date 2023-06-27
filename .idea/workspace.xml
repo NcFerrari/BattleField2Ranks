@@ -5,28 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabContents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabContents/BF2OneThirdPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/AwardsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/AwardsPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/LeaderboardPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/LeaderboardPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/AwardsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/AwardsPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/LeaderboardPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/LeaderboardPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +304,7 @@
       <workItem from="1687441973459" duration="5794000" />
       <workItem from="1687510537783" duration="14667000" />
       <workItem from="1687758086946" duration="8847000" />
-      <workItem from="1687779599409" duration="17529000" />
+      <workItem from="1687779599409" duration="19546000" />
     </task>
     <servers />
   </component>

@@ -71,6 +71,7 @@ public class MainApp extends Application {
     private void setListeners(Stage stage) {
         stage.widthProperty().addListener((observableValue, oldWidth, newWidth) -> resize());
         stage.heightProperty().addListener((observableValue, oldHeight, newHeight) -> resize());
+        stage.maximizedProperty().addListener((observableValue, oldHeight, newHeight) -> resize());
     }
 
     private void setLanguageChooser(VBox mainPane) {
@@ -82,15 +83,15 @@ public class MainApp extends Application {
     }
 
     private void resize() {
-        mainPane.setPrefHeight(scene.getHeight());
-        mainPane.setPrefWidth(scene.getWidth());
+        mainPane.setPrefHeight(stage.getHeight());
+        mainPane.setPrefWidth(stage.getWidth());
 
-        tabPane.setTabMinWidth(scene.getWidth() / 5.76);
-        tabPane.setTabMinHeight(scene.getHeight() / 16.2);
-        tabPane.setStyle("-fx-font-size: " + scene.getHeight() / 32.4);
-        double space = scene.getHeight() - (scene.getHeight() - scene.getHeight() / 32.4) - 37;
+        tabPane.setTabMinWidth(stage.getWidth() / 5.824);
+        tabPane.setTabMinHeight(stage.getHeight() / 16.98);
+        tabPane.setStyle("-fx-font-size: " + stage.getHeight() / 32.65);
+        double space = stage.getHeight() - (stage.getHeight() - stage.getHeight() / 32.4) - 37;
         bf2Components.forEach(bf2Component -> bf2Component.resize(
-                scene.getWidth(), scene.getHeight() - tabPane.getTabMinHeight() - space));
+                stage.getWidth(), stage.getHeight() - tabPane.getTabMinHeight() - space - 120));
     }
 
     private void setTabPane(VBox mainPain) {

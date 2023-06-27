@@ -8,7 +8,7 @@ public abstract class BF2Component {
 
     protected final Tab tab;
 
-    public BF2Component() {
+    BF2Component() {
         tab = new Tab();
     }
 

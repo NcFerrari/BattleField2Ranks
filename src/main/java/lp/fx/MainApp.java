@@ -35,17 +35,16 @@ public class MainApp extends Application {
     private final List<BF2Component> bf2Components = new ArrayList<>();
 
     private Stage stage;
-    private Scene scene;
-    private FlowPane langPane;
     private VBox mainPane;
     private TabPane tabPane;
 
     @Override
     public void start(Stage primaryStage) {
+        log.info("Application starting");
         stage = primaryStage;
         stage.setTitle(TextFXEnum.MAIN_APPLICATION_TITLE.getText(stage.titleProperty()));
         mainPane = new VBox();
-        scene = new Scene(mainPane, WIDTH, HEIGHT);
+        Scene scene = new Scene(mainPane, WIDTH, HEIGHT);
         setCssFile(scene, TextEnum.PANE_STYLES.getText());
         Thread t = new Thread(() -> {
             while (true) {
@@ -75,7 +74,7 @@ public class MainApp extends Application {
     }
 
     private void setLanguageChooser(VBox mainPane) {
-        langPane = new FlowPane();
+        FlowPane langPane = new FlowPane();
         langPane.setAlignment(Pos.CENTER_RIGHT);
         langPane.getChildren().add(manager.setLanguageChoiceBox(new ComboBox<>()));
 

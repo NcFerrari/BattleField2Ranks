@@ -14,6 +14,7 @@ public enum LangEnum {
         this.lang = lang;
     }
 
+    @Override
     public String toString() {
         return getLang();
     }

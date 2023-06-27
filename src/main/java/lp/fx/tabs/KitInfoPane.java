@@ -1,7 +1,7 @@
 package lp.fx.tabs;
 
 import lp.enums.TextFXEnum;
-import lp.fx.tabContents.BF2OneThirdPane;
+import lp.fx.tabcontents.BF2OneThirdPane;
 
 public class KitInfoPane extends BF2Component {
 
@@ -10,7 +10,7 @@ public class KitInfoPane extends BF2Component {
     public KitInfoPane() {
         tab.setText(TextFXEnum.TAB_MENU_KIT_INFO.getText(tab.textProperty()));
         bf2OneThirdPane = new BF2OneThirdPane();
-        tab.setContent(bf2OneThirdPane);
+        tab.setContent(bf2OneThirdPane.getVBox());
     }
 
     @Override

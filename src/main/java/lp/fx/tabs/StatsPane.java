@@ -1,12 +1,15 @@
 package lp.fx.tabs;
 
-import javafx.scene.control.Tab;
 import lp.enums.TextFXEnum;
 
-public class StatsPane extends Tab {
+public class StatsPane extends BF2Component {
 
     public StatsPane() {
-        super();
-        setText(TextFXEnum.TAB_MENU_STATS.getText(textProperty()));
+        tab.setText(TextFXEnum.TAB_MENU_STATS.getText(tab.textProperty()));
+    }
+
+    @Override
+    public void resize(double a, double b) {
+
     }
 }

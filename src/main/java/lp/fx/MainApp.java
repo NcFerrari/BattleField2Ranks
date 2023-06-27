@@ -5,7 +5,6 @@ import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -36,6 +35,8 @@ public class MainApp extends Application {
     private final List<BF2Component> bf2Components = new ArrayList<>();
 
     private Stage stage;
+    private Scene scene;
+    private FlowPane langPane;
     private VBox mainPane;
     private TabPane tabPane;
 
@@ -44,7 +45,7 @@ public class MainApp extends Application {
         stage = primaryStage;
         stage.setTitle(TextFXEnum.MAIN_APPLICATION_TITLE.getText(stage.titleProperty()));
         mainPane = new VBox();
-        Scene scene = new Scene(mainPane, WIDTH, HEIGHT);
+        scene = new Scene(mainPane, WIDTH, HEIGHT);
         setCssFile(scene, TextEnum.PANE_STYLES.getText());
         Thread t = new Thread(() -> {
             while (true) {
@@ -52,7 +53,6 @@ public class MainApp extends Application {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    System.out.println("test");
                 }
             }
         });
@@ -74,7 +74,7 @@ public class MainApp extends Application {
     }
 
     private void setLanguageChooser(VBox mainPane) {
-        FlowPane langPane = new FlowPane();
+        langPane = new FlowPane();
         langPane.setAlignment(Pos.CENTER_RIGHT);
         langPane.getChildren().add(manager.setLanguageChoiceBox(new ComboBox<>()));
 
@@ -82,24 +82,24 @@ public class MainApp extends Application {
     }
 
     private void resize() {
-        mainPane.setPrefHeight(stage.getHeight());
-        mainPane.setPrefWidth(stage.getWidth());
+        mainPane.setPrefHeight(scene.getHeight());
+        mainPane.setPrefWidth(scene.getWidth());
 
-        tabPane.resize(stage.getWidth(), stage.getHeight());
-        tabPane.setTabMinWidth(stage.getWidth() / 5.824);
-        tabPane.setTabMinHeight(stage.getHeight() / 16.98);
-        tabPane.setStyle("-fx-font-size: " + stage.getHeight() / 32.65);
-
-        bf2Components.forEach(bf2Component -> bf2Component.resize(stage.getWidth(), stage.getHeight()));
+        tabPane.setTabMinWidth(scene.getWidth() / 5.76);
+        tabPane.setTabMinHeight(scene.getHeight() / 16.2);
+        tabPane.setStyle("-fx-font-size: " + scene.getHeight() / 32.4);
+        double space = scene.getHeight() - (scene.getHeight() - scene.getHeight() / 32.4) - 37;
+        bf2Components.forEach(bf2Component -> bf2Component.resize(
+                scene.getWidth(), scene.getHeight() - tabPane.getTabMinHeight() - space));
     }
 
     private void setTabPane(VBox mainPain) {
         tabPane = new TabPane();
         mainPain.getChildren().add(tabPane);
-        initTabs().forEach(tab -> {
-            tab.setText(tab.getText());
-            tabPane.getTabs().add(tab);
-            tab.setClosable(false);
+        initTabs();
+        bf2Components.forEach(bf2Component -> {
+            tabPane.getTabs().add(bf2Component.getTab());
+            bf2Component.getTab().setClosable(false);
         });
     }
 
@@ -109,12 +109,10 @@ public class MainApp extends Application {
 //            Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
     }
 
-    private List<Tab> initTabs() {
-        List<Tab> resultList = new ArrayList<>();
-        resultList.add(new KitInfoPane());
-        resultList.add(new StatsPane());
-        resultList.add(new LeaderboardPane());
-        resultList.add(new AwardsPane());
-        return resultList;
+    private void initTabs() {
+        bf2Components.add(new KitInfoPane());
+        bf2Components.add(new StatsPane());
+        bf2Components.add(new LeaderboardPane());
+        bf2Components.add(new AwardsPane());
     }
 }

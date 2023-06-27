@@ -1,6 +1,16 @@
 package lp.fx.tabs;
 
-public interface BF2Component {
+import javafx.scene.control.Tab;
+import lombok.Getter;
 
-    void resize(double windowWidth, double windowHeight);
+@Getter
+public abstract class BF2Component {
+
+    protected final Tab tab;
+
+    public BF2Component() {
+        tab = new Tab();
+    }
+
+    public abstract void resize(double windowWidth, double windowHeight);
 }

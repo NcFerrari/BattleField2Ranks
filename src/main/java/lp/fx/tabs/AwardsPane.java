@@ -1,12 +1,17 @@
 package lp.fx.tabs;
 
-import javafx.scene.control.Tab;
+import lombok.Getter;
 import lp.enums.TextFXEnum;
 
-public class AwardsPane extends Tab {
+@Getter
+public class AwardsPane extends BF2Component {
 
     public AwardsPane() {
-        super();
-        setText(TextFXEnum.TAB_MENU_AWARDS.getText(textProperty()));
+        tab.setText(TextFXEnum.TAB_MENU_AWARDS.getText(tab.textProperty()));
+    }
+
+    @Override
+    public void resize(double a, double b) {
+
     }
 }

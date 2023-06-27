@@ -1,12 +1,15 @@
 package lp.fx.tabs;
 
-import javafx.scene.control.Tab;
 import lp.enums.TextFXEnum;
 
-public class LeaderboardPane extends Tab {
+public class LeaderboardPane extends BF2Component {
 
     public LeaderboardPane() {
-        super();
-        setText(TextFXEnum.TAB_MENU_LEADERBOARDS.getText(textProperty()));
+        tab.setText(TextFXEnum.TAB_MENU_LEADERBOARDS.getText(tab.textProperty()));
+    }
+
+    @Override
+    public void resize(double a, double b) {
+
     }
 }

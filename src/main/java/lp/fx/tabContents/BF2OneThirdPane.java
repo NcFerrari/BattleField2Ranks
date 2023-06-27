@@ -5,10 +5,12 @@ import javafx.scene.layout.VBox;
 public class BF2OneThirdPane extends VBox {
 
     public BF2OneThirdPane() {
-
+        super();
+        setStyle("-fx-border-color: yellow");
     }
 
-    public void resize(double frameWidth, double frameHeight) {
-        setPrefSize(frameWidth / 3, frameHeight);
+    public void resizeComponent(double frameWidth, double frameHeight) {
+        setMinSize(frameWidth / 3, frameHeight);
+        setMaxSize(getMinWidth(), getMinHeight());
     }
 }

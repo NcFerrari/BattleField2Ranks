@@ -1,0 +1,188 @@
+[2023-06-29 12:02:15,596] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:02:16,545] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:02:17,427] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:02:17,437] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:02:17,438] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:02:17,439] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:02:17,445] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:02:17,847] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:02:18,446] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:02:20,039] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:02:20,329] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:21,330] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:22,330] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:23,333] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:24,333] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:25,334] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:26,335] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:27,336] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:28,337] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:29,340] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:30,356] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:31,376] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:32,395] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:33,440] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:34,441] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:35,443] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:36,444] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:37,445] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:38,446] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:39,446] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:40,447] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:41,447] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:42,449] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:43,450] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:44,450] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:45,451] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:46,452] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:47,454] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:48,454] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:49,455] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:50,456] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:51,458] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:52,460] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:53,462] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:54,463] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:55,465] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:56,466] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:57,467] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:58,468] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:02:59,469] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:00,470] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:01,471] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:02,471] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:03,472] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:04,473] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:05,474] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:06,475] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:07,475] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:08,476] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:09,477] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:10,477] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:11,478] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:12,480] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:13,480] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:14,482] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:15,482] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:16,483] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:17,483] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:18,485] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:31,153] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:03:32,563] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:03:33,371] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:03:33,386] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:03:33,387] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:03:33,387] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:03:33,396] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:03:33,811] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:03:34,408] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:03:36,173] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:03:36,372] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:37,374] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:38,376] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:39,376] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:40,376] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:40,711] WARN     (org.hibernate.engine.jdbc.spi.SqlExceptionHelper): SQL Error: 1146, SQLState: 42S02
+[2023-06-29 12:03:40,711] ERROR    (org.hibernate.engine.jdbc.spi.SqlExceptionHelper): Table 'bf2stats.playerentity' doesn't exist
+[2023-06-29 12:03:41,377] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:03:42,378] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:31,908] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:04:33,253] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:04:34,145] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:04:34,156] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:04:34,156] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:04:34,157] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:04:34,163] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:04:34,604] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:04:35,289] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:04:37,386] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:04:37,641] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:38,643] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:39,644] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:40,644] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:41,645] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:42,645] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:04:43,646] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:05:40,512] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:05:53,753] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:05:55,309] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:05:56,793] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:05:56,811] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:05:56,812] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:05:56,812] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:05:56,829] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:05:57,560] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:05:58,792] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:06:00,796] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:06:01,052] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:02,055] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:03,061] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:04,064] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:10,025] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:06:12,526] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:06:13,616] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:06:13,638] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:06:13,639] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:06:13,640] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:06:13,652] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:06:14,251] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:06:15,213] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:06:17,377] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:06:17,624] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:18,626] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:19,626] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:20,628] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:21,629] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:22,630] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:33,681] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:06:34,681] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:35,685] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:36,686] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:37,687] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:38,688] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:39,688] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:40,688] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:06:41,688] INFO     (lp.fx.MainApp            ): Player(id=28999872, name=A. Andersson, country=, time=0, rounds=0, ip=, score=0, cmdscore=0, skillscore=0, teamscore=0, kills=0, deaths=0, captures=0, neutralizes=0, captureassists=0, neutralizeassists=0, defends=0, damageassists=0, heals=0, revives=0, ammos=0, repairs=0, targetassists=0, driverspecials=0, driverassists=0, passengerassists=0, teamkills=0, teamdamage=0, teamvehicledamage=0, suicides=0, killstreak=0, deathstreak=0, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=0, lwtime=0, wins=0, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=0, lastonline=0, chng=0, decr=0, mode0=0, mode1=0, mode2=0, permban=0, clantag=)
+[2023-06-29 12:06:42,690] INFO     (lp.fx.MainApp            ): Player(id=28999872, name=A. Andersson, country=, time=0, rounds=0, ip=, score=0, cmdscore=0, skillscore=0, teamscore=0, kills=0, deaths=0, captures=0, neutralizes=0, captureassists=0, neutralizeassists=0, defends=0, damageassists=0, heals=0, revives=0, ammos=0, repairs=0, targetassists=0, driverspecials=0, driverassists=0, passengerassists=0, teamkills=0, teamdamage=0, teamvehicledamage=0, suicides=0, killstreak=0, deathstreak=0, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=0, lwtime=0, wins=0, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=0, lastonline=0, chng=0, decr=0, mode0=0, mode1=0, mode2=0, permban=0, clantag=)
+[2023-06-29 12:06:43,690] INFO     (lp.fx.MainApp            ): Player(id=28999872, name=A. Andersson, country=, time=0, rounds=0, ip=, score=0, cmdscore=0, skillscore=0, teamscore=0, kills=0, deaths=0, captures=0, neutralizes=0, captureassists=0, neutralizeassists=0, defends=0, damageassists=0, heals=0, revives=0, ammos=0, repairs=0, targetassists=0, driverspecials=0, driverassists=0, passengerassists=0, teamkills=0, teamdamage=0, teamvehicledamage=0, suicides=0, killstreak=0, deathstreak=0, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=0, lwtime=0, wins=0, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=0, lastonline=0, chng=0, decr=0, mode0=0, mode1=0, mode2=0, permban=0, clantag=)
+[2023-06-29 12:09:02,513] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:09:03,479] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:09:04,260] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:09:04,274] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:09:04,275] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:09:04,276] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:09:04,281] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:09:04,725] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:09:05,504] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:09:07,209] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:09:31,088] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:09:32,658] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:09:33,543] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:09:33,560] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:09:33,561] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:09:33,561] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:09:33,573] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:09:34,262] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:09:35,790] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:09:39,759] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:09:40,055] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:09:41,056] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:09:42,057] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:09:43,058] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:09:44,059] INFO     (lp.fx.MainApp            ): 
+[2023-06-29 12:09:45,060] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:09:46,321] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:09:47,322] INFO     (lp.fx.MainApp            ): Player(id=28999936, name= NcFerrari, country=au, time=8802, rounds=4, ip=210.84.29.151, score=1354, cmdscore=0, skillscore=1244, teamscore=208, kills=622, deaths=65, captures=22, neutralizes=23, captureassists=4, neutralizeassists=5, defends=67, damageassists=28, heals=7, revives=19, ammos=0, repairs=0, targetassists=0, driverspecials=1, driverassists=4, passengerassists=0, teamkills=4, teamdamage=6, teamvehicledamage=0, suicides=4, killstreak=58, deathstreak=3, rank=3, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=1998, lwtime=6803, wins=4, losses=0, availunlocks=0, usedunlocks=0, joined=0, rndscore=530, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=4, permban=0, clantag=)
+[2023-06-29 12:09:48,323] INFO     (lp.fx.MainApp            ): Player(id=28999952, name=O. Carlen, country=us, time=6485, rounds=3, ip=127.0.0.1, score=26, cmdscore=0, skillscore=18, teamscore=8, kills=9, deaths=43, captures=1, neutralizes=0, captureassists=0, neutralizeassists=1, defends=0, damageassists=7, heals=0, revives=1, ammos=1, repairs=0, targetassists=0, driverspecials=0, driverassists=5, passengerassists=0, teamkills=2, teamdamage=0, teamvehicledamage=0, suicides=1, killstreak=2, deathstreak=18, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=6485, lwtime=0, wins=1, losses=2, availunlocks=0, usedunlocks=0, joined=0, rndscore=19, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=3, permban=0, clantag=)
+[2023-06-29 12:09:49,323] INFO     (lp.fx.MainApp            ): Player(id=28999952, name=O. Carlen, country=us, time=6485, rounds=3, ip=127.0.0.1, score=26, cmdscore=0, skillscore=18, teamscore=8, kills=9, deaths=43, captures=1, neutralizes=0, captureassists=0, neutralizeassists=1, defends=0, damageassists=7, heals=0, revives=1, ammos=1, repairs=0, targetassists=0, driverspecials=0, driverassists=5, passengerassists=0, teamkills=2, teamdamage=0, teamvehicledamage=0, suicides=1, killstreak=2, deathstreak=18, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=6485, lwtime=0, wins=1, losses=2, availunlocks=0, usedunlocks=0, joined=0, rndscore=19, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=3, permban=0, clantag=)
+[2023-06-29 12:09:50,324] INFO     (lp.fx.MainApp            ): Player(id=28999952, name=O. Carlen, country=us, time=6485, rounds=3, ip=127.0.0.1, score=26, cmdscore=0, skillscore=18, teamscore=8, kills=9, deaths=43, captures=1, neutralizes=0, captureassists=0, neutralizeassists=1, defends=0, damageassists=7, heals=0, revives=1, ammos=1, repairs=0, targetassists=0, driverspecials=0, driverassists=5, passengerassists=0, teamkills=2, teamdamage=0, teamvehicledamage=0, suicides=1, killstreak=2, deathstreak=18, rank=0, banned=0, kicked=0, cmdtime=0, sqltime=0, sqmtime=6485, lwtime=0, wins=1, losses=2, availunlocks=0, usedunlocks=0, joined=0, rndscore=19, lastonline=1685822235, chng=0, decr=0, mode0=0, mode1=0, mode2=3, permban=0, clantag=)
+[2023-06-29 12:10:08,860] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:10:09,911] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:10:10,765] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:10:10,778] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:10:10,778] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:10:10,779] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:10:10,784] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:10:11,231] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:10:11,896] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:10:13,705] INFO     (lp.fx.MainApp            ): Application starting

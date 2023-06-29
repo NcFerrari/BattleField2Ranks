@@ -1,20 +1,24 @@
 package lp.fx.tabcontents;
 
+import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import lombok.Data;
+import lp.Manager;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
-
-import java.util.List;
 
 @Data
 public class BF2OneThirdPane {
 
+    private static final long COMBO_BOX_COUNTER_TIME = 2000;
+
     private VBox vBox;
     private Label playerNameTitle;
     private ComboBox<String> nameComboBox;
+    private String letters = TextEnum.EMPTY_STRING.getText();
+    private long timeCount;
 
     public BF2OneThirdPane() {
         vBox = new VBox();
@@ -37,7 +41,22 @@ public class BF2OneThirdPane {
         nameComboBox.setMaxWidth(nameComboBox.getMinWidth());
     }
 
-    public void fillNameComboBox(List<String> names) {
+    public void fillNameComboBox(ObservableList<String> names) {
         nameComboBox.getItems().addAll(names);
+        nameComboBox.setOnKeyPressed(evt -> {
+            if (timeCount < (System.currentTimeMillis() - COMBO_BOX_COUNTER_TIME)) {
+                timeCount = System.currentTimeMillis();
+                letters = TextEnum.EMPTY_STRING.getText();
+            }
+            letters += evt.getText();
+            for (String item : names) {
+                if (item.toLowerCase().trim().startsWith(letters.toLowerCase().trim())) {
+                    nameComboBox.getSelectionModel().select(item);
+                    break;
+                }
+            }
+        });
+        nameComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
+                Manager.getInstance().setSelectedPlayer(newValue));
     }
 }

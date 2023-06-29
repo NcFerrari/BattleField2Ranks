@@ -39,7 +39,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        log.info("Application starting");
+        log.info(TextEnum.APP_STARTED.getText());
         stage = primaryStage;
         stage.setTitle(TextFXEnum.MAIN_APPLICATION_TITLE.getText(stage.titleProperty()));
         mainPane = new VBox();
@@ -105,9 +105,6 @@ public class MainApp extends Application {
 
     /**
      * Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
-     *
-     * @param scene
-     * @param path
      */
     private void setCssFile(Scene scene, String path) {
         scene.getStylesheets().clear();
@@ -115,7 +112,7 @@ public class MainApp extends Application {
     }
 
     private void initTabs() {
-        bf2Components.add(new KitInfoPane());
+        bf2Components.add(new KitInfoPane(manager.getPlayerNames()));
         bf2Components.add(new StatsPane());
         bf2Components.add(new LeaderboardPane());
         bf2Components.add(new AwardsPane());

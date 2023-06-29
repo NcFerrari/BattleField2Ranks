@@ -10,6 +10,8 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
+import lp.enums.TextEnum;
+
 public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
@@ -26,12 +28,15 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
     @Override
     public Player getPlayer(String name) {
         getSession().beginTransaction();
-        NativeQuery<?> query = getSession().createNativeQuery("SELECT * FROM Player WHERE name=:name");
-        query.setParameter("name", name);
-        query.getSingleResult();
+        NativeQuery<PlayerEntity> query = getSession().createNativeQuery("SELECT * " +
+                        "FROM Player " +
+                        "WHERE name=:name",
+                PlayerEntity.class);
+        query.setParameter(TextEnum.NAME.getText(), name);
+        PlayerEntity playerEntity = query.getSingleResult();
         getSession().getTransaction().commit();
         getSession().close();
-        return mapEntityToDto(null);
+        return mapEntityToDto(playerEntity);
     }
 
     @Override

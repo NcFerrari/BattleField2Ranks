@@ -42,11 +42,12 @@ public class Manager {
         getComponentsForLanguage().forEach((stringProperty, textFXEnum) -> stringProperty.set(textFXEnum.reloadText()));
     }
 
-    public ComboBox<LangEnum> setLanguageChoiceBox(ComboBox<LangEnum> languageChoiceBox) {
-        languageChoiceBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
-        languageChoiceBox.getSelectionModel().selectFirst();
-        languageChoiceBox.setOnAction(event ->
-                reloadLanguages(languageChoiceBox.getSelectionModel().getSelectedItem()));
-        return languageChoiceBox;
+    public ComboBox<LangEnum> setLanguageComboBox() {
+        ComboBox<LangEnum> languageComboBox = new ComboBox<>();
+        languageComboBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
+        languageComboBox.getSelectionModel().selectFirst();
+        languageComboBox.setOnAction(event ->
+                reloadLanguages(languageComboBox.getSelectionModel().getSelectedItem()));
+        return languageComboBox;
     }
 }

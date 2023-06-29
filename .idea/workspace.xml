@@ -5,28 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2b6214b91cfc0b553bfe3d2e85b29244c010a95a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/484f29c1837adb1c04e09c73aec78fdac3f28de0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/b/4bd9ecf52569550bd5097cd19a8fa489c018a79e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/4/c45f8b983360300d350d16dc493368a941b263ea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/9/c915c53ab66142cf48c7fbf8f3ac90625c66a9cf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/2/b/2b6214b91cfc0b553bfe3d2e85b29244c010a95a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/8/484f29c1837adb1c04e09c73aec78fdac3f28de0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/4/b/4bd9ecf52569550bd5097cd19a8fa489c018a79e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/4/c45f8b983360300d350d16dc493368a941b263ea" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/c/9/c915c53ab66142cf48c7fbf8f3ac90625c66a9cf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/LangEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/LangEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-06-27/15.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-27/15.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabContents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/LangEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/LangEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,7 +320,7 @@
       <workItem from="1687441973459" duration="5794000" />
       <workItem from="1687510537783" duration="14667000" />
       <workItem from="1687758086946" duration="8847000" />
-      <workItem from="1687779599409" duration="20206000" />
+      <workItem from="1687779599409" duration="29470000" />
     </task>
     <servers />
   </component>

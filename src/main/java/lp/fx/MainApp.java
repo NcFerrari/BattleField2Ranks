@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
@@ -52,6 +51,7 @@ public class MainApp extends Application {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
+                    log.warn(e);
                 }
             }
         });
@@ -76,7 +76,7 @@ public class MainApp extends Application {
     private void setLanguageChooser(VBox mainPane) {
         FlowPane langPane = new FlowPane();
         langPane.setAlignment(Pos.CENTER_RIGHT);
-        langPane.getChildren().add(manager.setLanguageChoiceBox(new ComboBox<>()));
+        langPane.getChildren().add(manager.setLanguageComboBox());
 
         mainPane.getChildren().add(langPane);
     }
@@ -103,10 +103,15 @@ public class MainApp extends Application {
         });
     }
 
+    /**
+     * Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
+     *
+     * @param scene
+     * @param path
+     */
     private void setCssFile(Scene scene, String path) {
         scene.getStylesheets().clear();
         scene.getStylesheets().add(path);
-//            Objects.requireNonNull(MainApp.class.getClassLoader().getResource(path)).toExternalForm());
     }
 
     private void initTabs() {

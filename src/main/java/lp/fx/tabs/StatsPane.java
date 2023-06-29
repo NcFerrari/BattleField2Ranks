@@ -10,6 +10,5 @@ public class StatsPane extends BF2Component {
 
     @Override
     public void resize(double a, double b) {
-
     }
 }

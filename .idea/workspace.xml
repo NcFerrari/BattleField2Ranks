@@ -5,33 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/Valueable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/kit-info.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/css/language-pane.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_example_Generators_1_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_example_Generators_1_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BattleField2Ranks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleField2Ranks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2023-06-29/12.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-29/12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/Manager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/css/pane-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/tabs.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/css/pane-styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/Manager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +180,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/lpesek/Documents/Final Projects/Generator",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/BattleField2Ranks/src/main/resources/pictures/smallRanks",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -207,6 +203,7 @@
       <recent name="lp" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\resources\pictures\smallRanks" />
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\libs" />
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks" />
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\resources" />
@@ -297,7 +294,7 @@
       <workItem from="1687441973459" duration="5794000" />
       <workItem from="1687510537783" duration="14667000" />
       <workItem from="1687758086946" duration="8847000" />
-      <workItem from="1687779599409" duration="69151000" />
+      <workItem from="1687779599409" duration="70203000" />
     </task>
     <servers />
   </component>

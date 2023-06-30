@@ -186,3 +186,53 @@
 [2023-06-29 12:10:11,231] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
 [2023-06-29 12:10:11,896] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
 [2023-06-29 12:10:13,705] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:37:32,854] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:37:33,374] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:37:33,817] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:37:33,824] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:37:33,825] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:37:33,825] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:37:33,829] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:37:34,068] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:37:34,409] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:37:35,342] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:38:07,026] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:38:07,717] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:38:08,286] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:38:08,296] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:38:08,297] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:38:08,297] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:38:08,303] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:38:08,592] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:38:09,045] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:38:10,090] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:39:18,001] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:39:18,530] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:39:18,953] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:39:18,961] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:39:18,962] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:39:18,962] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:39:18,967] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:39:19,260] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:39:19,596] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:39:20,569] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:45:03,630] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:45:04,171] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:45:04,600] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:45:04,606] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:45:04,606] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:45:04,607] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:45:04,610] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:45:04,853] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:45:05,204] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:45:06,156] INFO     (lp.fx.MainApp            ): Application starting
+[2023-06-29 12:45:21,383] INFO     (org.hibernate.Version    ): HHH000412: Hibernate ORM core version 5.6.15.Final
+[2023-06-29 12:45:21,920] INFO     (org.hibernate.annotations.common.Version): HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2023-06-29 12:45:22,449] WARN     (org.hibernate.orm.connections.pooling): HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[2023-06-29 12:45:22,458] INFO     (org.hibernate.orm.connections.pooling): HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/bf2stats]
+[2023-06-29 12:45:22,459] INFO     (org.hibernate.orm.connections.pooling): HHH10001001: Connection properties: {password=****, user=root}
+[2023-06-29 12:45:22,459] INFO     (org.hibernate.orm.connections.pooling): HHH10001003: Autocommit mode: false
+[2023-06-29 12:45:22,465] INFO     (org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl): HHH000115: Hibernate connection pool size: 1 (min=1)
+[2023-06-29 12:45:22,803] INFO     (org.hibernate.dialect.Dialect): HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[2023-06-29 12:45:23,341] INFO     (org.hibernate.validator.internal.util.Version): HV000001: Hibernate Validator 6.0.2.Final
+[2023-06-29 12:45:24,677] INFO     (lp.fx.MainApp            ): Application starting

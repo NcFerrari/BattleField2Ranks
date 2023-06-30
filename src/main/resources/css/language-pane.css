@@ -1,0 +1,18 @@
+VBox FlowPane .combo-box {
+    -fx-background-color: #4b4331;
+    -fx-border-radius: 50px;
+    -fx-background-radius: 50px;
+    -fx-border-color: #a9a570;
+}
+
+VBox FlowPane .combo-box:hover {
+    -fx-background-color: #776539;
+}
+
+VBox FlowPane .combo-box .cell {
+    -fx-text-fill: yellow;
+}
+
+VBox FlowPane .combo-box .list-view .cell {
+    -fx-text-fill: black;
+}

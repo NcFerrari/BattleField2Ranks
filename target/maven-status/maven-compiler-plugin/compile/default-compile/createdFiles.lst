@@ -28,6 +28,7 @@ lp\jpa\entity\KitsEntity.class
 lp\business\dto\Vehicles.class
 lp\jpa\dao\KillsDao.class
 lp\business\dto\Maps.class
+lp\fx\tabs\Valueable.class
 lp\jpa\dao\Ip2nationDao.class
 lp\jpa\entity\VehiclesEntity.class
 lp\jpa\daoimpl\MapsDaoImpl.class

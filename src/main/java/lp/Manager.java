@@ -1,5 +1,6 @@
 package lp;
 
+import generator.FXFontChooser;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -9,11 +10,12 @@ import lp.business.dto.Player;
 import lp.enums.LangEnum;
 import lp.enums.TextFXEnum;
 import lp.fx.MainApp;
+import lp.fx.tabs.Valueable;
 import lp.jpa.dao.PlayerDao;
 import lp.jpa.daoimpl.PlayerDaoImpl;
 import org.apache.log4j.Logger;
-import service.LoggerService;
-import serviceimpl.LoggerServiceImpl;
+import generator.service.LoggerService;
+import generator.serviceimpl.LoggerServiceImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,6 +33,7 @@ public class Manager {
     private final Logger log = loggerService.getLog();
     private final List<Player> players = new ArrayList<>();
     private final PlayerDao playerDao = new PlayerDaoImpl();
+    private final List<Valueable> valueableClasses = new ArrayList<>();
 
     private LangEnum language = LangEnum.EN;
     private Player selectedPlayer;
@@ -52,20 +55,12 @@ public class Manager {
 
     public void setSelectedPlayer(String playerName) {
         selectedPlayer = playerDao.getPlayer(playerName);
+        refreshSelectedPlayerValues();
     }
 
     public void reloadLanguages(LangEnum language) {
         this.language = language;
         getComponentsForLanguage().forEach((stringProperty, textFXEnum) -> stringProperty.set(textFXEnum.reloadText()));
-    }
-
-    public ComboBox<LangEnum> setLanguageComboBox() {
-        ComboBox<LangEnum> languageComboBox = new ComboBox<>();
-        languageComboBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
-        languageComboBox.getSelectionModel().selectFirst();
-        languageComboBox.setOnAction(event ->
-                reloadLanguages(languageComboBox.getSelectionModel().getSelectedItem()));
-        return languageComboBox;
     }
 
     public ObservableList<String> getPlayerNames() {
@@ -76,5 +71,14 @@ public class Manager {
         players.forEach(player -> playerNames.add(player.getName()));
         Collections.sort(playerNames);
         return playerNames;
+    }
+
+    public void registerValueable(Valueable valueable) {
+        valueableClasses.add(valueable);
+    }
+
+    private void refreshSelectedPlayerValues() {
+        valueableClasses.forEach(Valueable::reloadData);
+        reloadLanguages(language);
     }
 }

@@ -4,11 +4,13 @@ import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TabPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import lp.Manager;
+import lp.enums.LangEnum;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
 import lp.fx.tabs.AwardsPane;
@@ -17,8 +19,8 @@ import lp.fx.tabs.KitInfoPane;
 import lp.fx.tabs.LeaderboardPane;
 import lp.fx.tabs.StatsPane;
 import org.apache.log4j.Logger;
-import service.LoggerService;
-import serviceimpl.LoggerServiceImpl;
+import generator.service.LoggerService;
+import generator.serviceimpl.LoggerServiceImpl;
 
 import java.awt.Toolkit;
 import java.util.ArrayList;
@@ -60,23 +62,29 @@ public class MainApp extends Application {
         stage.setScene(scene);
         stage.show();
 
-        setLanguageChooser(mainPane);
-        setTabPane(mainPane);
+        setLanguageChooser();
+        setTabPane();
 
-        setListeners(stage);
+        setListeners();
         resize();
     }
 
-    private void setListeners(Stage stage) {
+    private void setListeners() {
         stage.widthProperty().addListener((observableValue, oldWidth, newWidth) -> resize());
         stage.heightProperty().addListener((observableValue, oldHeight, newHeight) -> resize());
         stage.maximizedProperty().addListener((observableValue, oldHeight, newHeight) -> resize());
     }
 
-    private void setLanguageChooser(VBox mainPane) {
+    private void setLanguageChooser() {
         FlowPane langPane = new FlowPane();
         langPane.setAlignment(Pos.CENTER_RIGHT);
-        langPane.getChildren().add(manager.setLanguageComboBox());
+
+        ComboBox<LangEnum> languageComboBox = new ComboBox<>();
+        languageComboBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
+        languageComboBox.getSelectionModel().selectFirst();
+        languageComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
+                manager.reloadLanguages(newValue));
+        langPane.getChildren().add(languageComboBox);
 
         mainPane.getChildren().add(langPane);
     }
@@ -93,9 +101,9 @@ public class MainApp extends Application {
                 stage.getWidth(), stage.getHeight() - tabPane.getTabMinHeight() - space - 120));
     }
 
-    private void setTabPane(VBox mainPain) {
+    private void setTabPane() {
         tabPane = new TabPane();
-        mainPain.getChildren().add(tabPane);
+        mainPane.getChildren().add(tabPane);
         initTabs();
         bf2Components.forEach(bf2Component -> {
             tabPane.getTabs().add(bf2Component.getTab());

@@ -12,7 +12,7 @@ public class KitInfoPane extends BF2Component {
         tab.setText(TextFXEnum.TAB_MENU_KIT_INFO.getText(tab.textProperty()));
         bf2OneThirdPane = new BF2OneThirdPane();
         bf2OneThirdPane.fillNameComboBox(playerNames);
-        tab.setContent(bf2OneThirdPane.getVBox());
+        tab.setContent(bf2OneThirdPane.getMainPane());
     }
 
     @Override

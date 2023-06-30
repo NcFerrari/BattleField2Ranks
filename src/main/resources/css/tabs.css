@@ -1,0 +1,29 @@
+VBox {
+    -fx-background-color: #2b2b2b;
+}
+
+VBox .tab {
+    -fx-background-color: #44433d;
+    -fx-background-insets: 2px 10px 2px 2px;
+    -fx-border-insets: 2px 10px 2px 2px;
+    -fx-border-width: 3px;
+}
+
+VBox .tab:selected {
+    -fx-background-color: #4b4331;
+    -fx-border-color: #f8e704;
+    -fx-focus-traversable: false;
+}
+
+VBox .tab-label {
+    -fx-text-fill: yellow;
+}
+
+VBox .tab-pane {
+    -fx-font-family: "Haettenschweiler";
+}
+
+/*Remove the glowing border from focused tab with CSS*/
+VBox .tab-pane:focused > .tab-header-area > .headers-region > .tab:selected .focus-indicator {
+    -fx-border-color: transparent;
+}

@@ -1,0 +1,43 @@
+.title {
+    -fx-background-color: #545454;
+    -fx-padding: 0 0 0 20;
+}
+
+.sub-title {
+    -fx-background-color: #323232;
+}
+
+.title, .sub-title {
+    -fx-text-fill: white;
+    -fx-border-color: #a9a570;
+}
+
+.tab-pane VBox {
+    -fx-border-color: #a9a570;
+}
+
+VBox .tab-pane VBox .combo-box {
+    -fx-background-color: #4b4331;
+    -fx-font-family: "Arial";
+    -fx-font-size: 17px;
+}
+
+VBox .tab-pane VBox .combo-box .list-cell {
+    -fx-background-color: #4b4331;
+}
+
+VBox .tab-pane VBox .combo-box .cell {
+    -fx-text-fill: yellow;
+}
+
+.value {
+    -fx-text-fill: #757474;
+}
+
+.db-value {
+    -fx-text-fill: white;
+}
+
+.value, .db-value {
+    -fx-font-family: "Arial Narrow";
+}

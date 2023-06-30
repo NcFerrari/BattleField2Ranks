@@ -5,21 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/Valueable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/kit-info.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/css/language-pane.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_example_Generators_1_0_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_example_Generators_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BattleField2Ranks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/BattleField2Ranks.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-06-29/12.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-29/12.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/Manager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/jpa/daoimpl/PlayerDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/jpa/daoimpl/PlayerDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/css/pane-styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/css/tabs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/css/pane-styles.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/Manager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/jpa/daoimpl/PlayerDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/jpa/daoimpl/PlayerDaoImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,10 +41,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -123,7 +135,7 @@
     <option name="jreName" value="11" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1912" />
@@ -172,7 +184,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/lpesek/Documents/Projekty/skoda/skoda.skodaplus.service.data",
+    "last_opened_file_path": "C:/Users/lpesek/Documents/Final Projects/Generator",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -210,7 +222,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Manager">
+  <component name="RunManager">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -218,32 +230,9 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="JPACreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="JPACreator" />
-      <module name="BattleField2Ranks" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Manager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lp.Manager" />
       <module name="BattleField2Ranks" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PictureServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lp.serviceimpl.PictureServiceImpl" />
-      <module name="BattleField2Ranks" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value=".*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -281,16 +270,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.PictureServiceImpl" />
-      <item itemvalue="Application.Manager" />
-      <item itemvalue="Application.JPACreator" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Manager" />
-        <item itemvalue="Application.JPACreator" />
-        <item itemvalue="Application.PictureServiceImpl" />
       </list>
     </recent_temporary>
   </component>
@@ -315,7 +297,7 @@
       <workItem from="1687441973459" duration="5794000" />
       <workItem from="1687510537783" duration="14667000" />
       <workItem from="1687758086946" duration="8847000" />
-      <workItem from="1687779599409" duration="38065000" />
+      <workItem from="1687779599409" duration="69151000" />
     </task>
     <servers />
   </component>

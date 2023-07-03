@@ -1,5 +1,6 @@
 .title {
     -fx-background-color: #545454;
+    -fx-border-color: #a9a570;
     -fx-padding: 0 0 0 20;
 }
 
@@ -9,11 +10,6 @@
 
 .title, .sub-title {
     -fx-text-fill: white;
-    -fx-border-color: #a9a570;
-}
-
-.tab-pane VBox {
-    -fx-border-color: #a9a570;
 }
 
 VBox .tab-pane VBox .combo-box {
@@ -26,8 +22,17 @@ VBox .tab-pane VBox .combo-box .list-cell {
     -fx-background-color: #4b4331;
 }
 
+VBox .tab-pane VBox .combo-box {
+    -fx-text-fill: yellow;
+    -fx-border-color: #a9a570;
+}
+
 VBox .tab-pane VBox .combo-box .cell {
     -fx-text-fill: yellow;
+}
+
+.one-third {
+    -fx-border-color: #a9a570;
 }
 
 .value {

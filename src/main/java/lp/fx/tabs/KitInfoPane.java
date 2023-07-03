@@ -1,6 +1,7 @@
 package lp.fx.tabs;
 
 import javafx.collections.ObservableList;
+import javafx.scene.input.KeyEvent;
 import lp.enums.TextFXEnum;
 import lp.fx.tabcontents.BF2OneThirdPane;
 
@@ -18,5 +19,23 @@ public class KitInfoPane extends BF2Component {
     @Override
     public void resize(double windowWidth, double windowHeight) {
         bf2OneThirdPane.resizeComponent(windowWidth, windowHeight);
+    }
+
+    @Override
+    public void addKeyFocus(KeyEvent evt) {
+        int selectedIndex = bf2OneThirdPane.getNameComboBox().getSelectionModel().getSelectedIndex();
+        switch (evt.getCode()) {
+            case UP:
+                if (selectedIndex > 0) {
+                    bf2OneThirdPane.getNameComboBox().getSelectionModel().select(selectedIndex - 1);
+                }
+                break;
+            case DOWN:
+                if (selectedIndex < bf2OneThirdPane.getNameComboBox().getItems().size()) {
+                    bf2OneThirdPane.getNameComboBox().getSelectionModel().select(selectedIndex + 1);
+                }
+                break;
+            default:
+        }
     }
 }

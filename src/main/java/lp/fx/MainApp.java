@@ -6,6 +6,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TabPane;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -24,6 +26,7 @@ import generator.serviceimpl.LoggerServiceImpl;
 
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import java.util.EnumSet;
 import java.util.List;
 
 public class MainApp extends Application {
@@ -104,6 +107,22 @@ public class MainApp extends Application {
     private void setTabPane() {
         tabPane = new TabPane();
         mainPane.getChildren().add(tabPane);
+        tabPane.setOnKeyPressed(evt -> {
+            if (evt.getCode() == KeyCode.UP) {
+                if (tabPane.getSelectionModel().isSelected(tabPane.getTabs().size() - 1)) {
+                    tabPane.getSelectionModel().selectFirst();
+                } else {
+                    tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() + 1);
+                }
+            } else if (evt.getCode() == KeyCode.DOWN) {
+                if (tabPane.getSelectionModel().isSelected(0)) {
+                    tabPane.getSelectionModel().selectLast();
+                } else {
+                    tabPane.getSelectionModel().select(tabPane.getSelectionModel().getSelectedIndex() - 1);
+                }
+            }
+            bf2Components.get(tabPane.getSelectionModel().getSelectedIndex()).addKeyFocus(evt);
+        });
         initTabs();
         bf2Components.forEach(bf2Component -> {
             tabPane.getTabs().add(bf2Component.getTab());

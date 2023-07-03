@@ -3,6 +3,8 @@ package lp.fx.tabcontents;
 import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import lombok.Data;
@@ -28,6 +30,7 @@ public class BF2OneThirdPane implements Valueable {
     private Label rankTitle;
     private Label currentRank;
     private Label nextRank;
+    private ImageView rankImage;
 
     public BF2OneThirdPane() {
         manager.registerValueable(this);
@@ -46,10 +49,12 @@ public class BF2OneThirdPane implements Valueable {
 
     @Override
     public void reloadData() {
+        int rank = manager.getSelectedPlayer().getRank();
         manager.getComponentsForLanguage().replace(
-                currentRank.textProperty(), TextFXEnum.getRank(manager.getSelectedPlayer().getRank()));
+                currentRank.textProperty(), TextFXEnum.getRank(rank));
         manager.getComponentsForLanguage().replace(
-                nextRank.textProperty(), TextFXEnum.getRank(manager.getSelectedPlayer().getRank() + 1));
+                nextRank.textProperty(), TextFXEnum.getRank(rank + 1));
+        rankImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream("pictures/smallRanks/" + rank + ".png")));
     }
 
     public void resizeComponent(double frameWidth, double frameHeight) {
@@ -57,9 +62,11 @@ public class BF2OneThirdPane implements Valueable {
         mainPane.setMaxSize(mainPane.getMinWidth(), mainPane.getMinHeight());
         playerNameTitle.setMinWidth(frameWidth / 3 - 2);
         rankPane.setMinWidth(frameWidth / 3 - 2);
-        rankTitle.setMinWidth(frameWidth / 3 - 2);
+        rankTitle.setMinWidth(frameWidth / 6 - 2);
         nameComboBox.setMinWidth(frameWidth / 3 - 2);
         nameComboBox.setMaxWidth(nameComboBox.getMinWidth());
+        rankImage.setFitWidth(frameWidth / 6 - 2);
+        rankImage.setFitHeight(frameWidth / 6 - 2);
     }
 
     public void fillNameComboBox(ObservableList<String> names) {
@@ -101,6 +108,9 @@ public class BF2OneThirdPane implements Valueable {
         addLabel(TextFXEnum.PROGRESS_TOWARDS_NEXT_RANK, false);
 
         rankPane.getChildren().add(rankDataPane);
+
+        rankImage = new ImageView();
+        rankPane.getChildren().add(rankImage);
     }
 
     private Label addLabel(TextFXEnum textFXEnum, boolean valueFromDB) {

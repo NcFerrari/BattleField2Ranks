@@ -5,29 +5,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-06-30/14.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-06-30/14.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/AwardsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/AwardsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/BF2Component.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/KitInfoPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/LeaderboardPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/LeaderboardPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabs/StatsPane.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/smallRanks/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/css/kit-info.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/kit-info.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/AwardsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/AwardsPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/BF2Component.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/KitInfoPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/LeaderboardPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/LeaderboardPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabs/StatsPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-BattleField2Ranks-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +59,8 @@
       <list>
         <option value="Enum" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -210,6 +230,7 @@
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\jpa\entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\resources\pictures" />
       <recent name="C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\libs" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -294,7 +315,7 @@
       <workItem from="1687441973459" duration="5794000" />
       <workItem from="1687510537783" duration="14667000" />
       <workItem from="1687758086946" duration="8847000" />
-      <workItem from="1687779599409" duration="70203000" />
+      <workItem from="1687779599409" duration="77824000" />
     </task>
     <servers />
   </component>

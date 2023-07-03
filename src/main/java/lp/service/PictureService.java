@@ -5,6 +5,8 @@ import javafx.scene.image.Image;
 
 public interface PictureService {
 
-    Image getFXPicture(PictureCategoryEnum pictureCategory, String name);
+    Image getAwardImage(PictureCategoryEnum pictureCategory, int rankNumber);
+
+    Image getNoAwardImage();
 
 }

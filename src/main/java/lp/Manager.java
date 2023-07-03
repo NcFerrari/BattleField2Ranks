@@ -1,21 +1,19 @@
 package lp;
 
-import generator.FXFontChooser;
+import generator.service.LoggerService;
+import generator.serviceimpl.LoggerServiceImpl;
 import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.control.ComboBox;
 import lombok.Data;
 import lp.business.dto.Player;
 import lp.enums.LangEnum;
 import lp.enums.TextFXEnum;
 import lp.fx.MainApp;
-import lp.fx.tabs.Valueable;
+import lp.fx.tabs.Valuable;
 import lp.jpa.dao.PlayerDao;
 import lp.jpa.daoimpl.PlayerDaoImpl;
 import org.apache.log4j.Logger;
-import generator.service.LoggerService;
-import generator.serviceimpl.LoggerServiceImpl;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,9 +29,9 @@ public class Manager {
     private final Map<StringProperty, TextFXEnum> componentsForLanguage = new HashMap<>();
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(Manager.class);
     private final Logger log = loggerService.getLog();
-    private final List<Player> players = new ArrayList<>();
+    private final Map<String, Player> players = new HashMap<>();
     private final PlayerDao playerDao = new PlayerDaoImpl();
-    private final List<Valueable> valueableClasses = new ArrayList<>();
+    private final List<Valuable> valuableClasses = new ArrayList<>();
 
     private LangEnum language = LangEnum.EN;
     private Player selectedPlayer;
@@ -47,6 +45,7 @@ public class Manager {
     }
 
     private Manager() {
+        loadPlayersFromDB();
     }
 
     public static void main(String[] args) {
@@ -54,7 +53,7 @@ public class Manager {
     }
 
     public void setSelectedPlayer(String playerName) {
-        selectedPlayer = playerDao.getPlayer(playerName);
+        selectedPlayer = players.get(playerName);
         refreshSelectedPlayerValues();
     }
 
@@ -65,20 +64,25 @@ public class Manager {
 
     public ObservableList<String> getPlayerNames() {
         ObservableList<String> playerNames = FXCollections.observableArrayList();
-        if (players.isEmpty()) {
-            players.addAll(playerDao.getAllPlayer());
-        }
-        players.forEach(player -> playerNames.add(player.getName()));
+        playerNames.addAll(players.keySet());
         Collections.sort(playerNames);
         return playerNames;
     }
 
-    public void registerValueable(Valueable valueable) {
-        valueableClasses.add(valueable);
+    public void loadPlayersFromDB() {
+        players.clear();
+        playerDao.getAllPlayer().forEach(player -> players.put(player.getName(), player));
+        if (getSelectedPlayer() != null) {
+            setSelectedPlayer(getSelectedPlayer().getName());
+        }
+    }
+
+    public void registerValuable(Valuable valuable) {
+        valuableClasses.add(valuable);
     }
 
     private void refreshSelectedPlayerValues() {
-        valueableClasses.forEach(Valueable::reloadData);
+        valuableClasses.forEach(Valuable::reloadData);
         reloadLanguages(language);
     }
 }

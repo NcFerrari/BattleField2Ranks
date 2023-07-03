@@ -4,15 +4,20 @@ import lombok.Getter;
 
 @Getter
 public enum PictureCategoryEnum {
-    BADGES("badges/"),
-    MEDALS("medals/"),
-    RANKS("ranks/"),
-    RIBBONS("ribbons"),
-    NO_AWARD("/");
+    BADGES_BRONZE("pictures/badges/bronze/badge_", ".jpg"),
+    BADGES_SILVER("pictures/badges/silver/", ".jpg"),
+    BADGES_GOLD("pictures/badges/gold/", ".jpg"),
+    MEDALS("pictures/medals/medal_", ".jpg"),
+    RANKS("pictures/ranks/", ".jpg"),
+    RIBBONS("pictures/ribbons/ribbon_", ".jpg"),
+    SMALL_RANKS("pictures/smallRanks/", ".png"),
+    NO_AWARD("pictures/NO_AWARD", ".png");
 
     private final String path;
+    private final String suffix;
 
-    PictureCategoryEnum(String path) {
+    PictureCategoryEnum(String path, String suffix) {
         this.path = path;
+        this.suffix = suffix;
     }
 }

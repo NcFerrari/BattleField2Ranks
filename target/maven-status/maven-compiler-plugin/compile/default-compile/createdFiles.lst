@@ -21,6 +21,7 @@ lp\jpa\entity\ArmyEntity.class
 lp\jpa\dao\MapsDao.class
 lp\jpa\entity\AwardsEntity.class
 lp\jpa\entity\PlayerEntity.class
+lp\fx\tabs\KitInfoPane$1.class
 lp\jpa\daoimpl\Ip2nationDaoImpl.class
 lp\jpa\daoimpl\ServersDaoImpl.class
 lp\jpa\entity\RoundHistoryEntity.class

@@ -36,7 +36,8 @@ public enum TextFXEnum {
     MAJOR_GENERAL("Major General", "Generálmajor"),
     LIEUTENANT_GENERAL("Lieutenant General", "Generálporučík"),
     GENERAL("General", "Generál"),
-    PROGRESS_TOWARDS_NEXT_RANK("Progress towards next rank", "Postup pro další hodnost");
+    PROGRESS_TOWARDS_NEXT_RANK("Progress towards next rank", "Postup pro další hodnost"),
+    UPDATE_DATA_BUTTON("Update Data", "Aktualizovat Data");
 
     private final String engText;
     private final String czeText;

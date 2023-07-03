@@ -1,13 +1,15 @@
 package lp.fx;
 
+import generator.service.LoggerService;
+import generator.serviceimpl.LoggerServiceImpl;
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TabPane;
 import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -21,18 +23,16 @@ import lp.fx.tabs.KitInfoPane;
 import lp.fx.tabs.LeaderboardPane;
 import lp.fx.tabs.StatsPane;
 import org.apache.log4j.Logger;
-import generator.service.LoggerService;
-import generator.serviceimpl.LoggerServiceImpl;
 
 import java.awt.Toolkit;
 import java.util.ArrayList;
-import java.util.EnumSet;
 import java.util.List;
 
 public class MainApp extends Application {
 
     private static final double WIDTH = 3 * Toolkit.getDefaultToolkit().getScreenSize().width / 4.0; //19 * SCREEN_SIZE.width / 20.0
     private static final double HEIGHT = 3 * Toolkit.getDefaultToolkit().getScreenSize().height / 4.0; //19 * SCREEN_SIZE.height / 20.0
+
     private final Manager manager = Manager.getInstance();
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(MainApp.class);
     private final Logger log = loggerService.getLog();
@@ -56,7 +56,7 @@ public class MainApp extends Application {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    log.warn(e);
+                    Thread.currentThread().interrupt();
                 }
             }
         });
@@ -79,17 +79,22 @@ public class MainApp extends Application {
     }
 
     private void setLanguageChooser() {
-        FlowPane langPane = new FlowPane();
-        langPane.setAlignment(Pos.CENTER_RIGHT);
+        FlowPane topPane = new FlowPane();
+        topPane.setAlignment(Pos.CENTER_RIGHT);
+
+        Button updateButton = new Button();
+        updateButton.setText(TextFXEnum.UPDATE_DATA_BUTTON.getText(updateButton.textProperty()));
+        updateButton.setOnAction(evt -> manager.loadPlayersFromDB());
+        topPane.getChildren().add(updateButton);
 
         ComboBox<LangEnum> languageComboBox = new ComboBox<>();
         languageComboBox.getItems().addAll(LangEnum.EN, LangEnum.CZ);
         languageComboBox.getSelectionModel().selectFirst();
         languageComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
                 manager.reloadLanguages(newValue));
-        langPane.getChildren().add(languageComboBox);
+        topPane.getChildren().add(languageComboBox);
 
-        mainPane.getChildren().add(langPane);
+        mainPane.getChildren().add(topPane);
     }
 
     private void resize() {
@@ -139,7 +144,7 @@ public class MainApp extends Application {
     }
 
     private void initTabs() {
-        bf2Components.add(new KitInfoPane(manager.getPlayerNames()));
+        bf2Components.add(new KitInfoPane());
         bf2Components.add(new StatsPane());
         bf2Components.add(new LeaderboardPane());
         bf2Components.add(new AwardsPane());

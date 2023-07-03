@@ -1,25 +1,27 @@
 package lp.fx.tabcontents;
 
-import javafx.collections.ObservableList;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import lombok.Data;
 import lp.Manager;
+import lp.enums.PictureCategoryEnum;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
-import lp.fx.tabs.Valueable;
+import lp.fx.tabs.Valuable;
+import lp.service.PictureService;
+import lp.serviceimpl.PictureServiceImpl;
 
 @Data
-public class BF2OneThirdPane implements Valueable {
+public class BF2OneThirdPane implements Valuable {
 
     private static final long COMBO_BOX_COUNTER_TIME = 2000;
 
     private final VBox mainPane = new VBox();
     private final Manager manager = Manager.getInstance();
+    private PictureService pictureService = new PictureServiceImpl();
 
     private Label playerNameTitle;
     private ComboBox<String> nameComboBox;
@@ -33,7 +35,7 @@ public class BF2OneThirdPane implements Valueable {
     private ImageView rankImage;
 
     public BF2OneThirdPane() {
-        manager.registerValueable(this);
+        manager.registerValuable(this);
         mainPane.getStyleClass().add(TextEnum.ONE_THIRD_STYLE.getText());
 
         playerNameTitle = new Label();
@@ -45,39 +47,45 @@ public class BF2OneThirdPane implements Valueable {
         mainPane.getChildren().add(nameComboBox);
 
         initRankPane();
+        fillNameComboBox();
     }
 
     @Override
     public void reloadData() {
+        if (manager.getSelectedPlayer() == null) {
+            return;
+        }
         int rank = manager.getSelectedPlayer().getRank();
         manager.getComponentsForLanguage().replace(
                 currentRank.textProperty(), TextFXEnum.getRank(rank));
         manager.getComponentsForLanguage().replace(
                 nextRank.textProperty(), TextFXEnum.getRank(rank + 1));
-        rankImage.setImage(new Image(getClass().getClassLoader().getResourceAsStream("pictures/smallRanks/" + rank + ".png")));
+        rankImage.setImage(pictureService.getAwardImage(PictureCategoryEnum.SMALL_RANKS, rank));
     }
 
     public void resizeComponent(double frameWidth, double frameHeight) {
-        mainPane.setMinSize(frameWidth / 3, frameHeight);
+        double oneThird = frameWidth / 3 - 2;
+        double oneSixth = frameWidth / 6 - 2;
+        mainPane.setMinSize(oneThird, frameHeight);
         mainPane.setMaxSize(mainPane.getMinWidth(), mainPane.getMinHeight());
-        playerNameTitle.setMinWidth(frameWidth / 3 - 2);
-        rankPane.setMinWidth(frameWidth / 3 - 2);
-        rankTitle.setMinWidth(frameWidth / 6 - 2);
-        nameComboBox.setMinWidth(frameWidth / 3 - 2);
+        playerNameTitle.setMinWidth(oneThird);
+        rankPane.setMinWidth(oneThird);
+        rankTitle.setMinWidth(oneSixth);
+        nameComboBox.setMinWidth(oneThird);
         nameComboBox.setMaxWidth(nameComboBox.getMinWidth());
-        rankImage.setFitWidth(frameWidth / 6 - 2);
-        rankImage.setFitHeight(frameWidth / 6 - 2);
+        rankImage.setFitWidth(oneSixth);
+        rankImage.setFitHeight(oneSixth);
     }
 
-    public void fillNameComboBox(ObservableList<String> names) {
-        nameComboBox.getItems().addAll(names);
+    private void fillNameComboBox() {
+        nameComboBox.getItems().addAll(manager.getPlayerNames());
         nameComboBox.setOnKeyPressed(evt -> {
             if (timeCount < (System.currentTimeMillis() - COMBO_BOX_COUNTER_TIME)) {
                 timeCount = System.currentTimeMillis();
                 letters = TextEnum.EMPTY_STRING.getText();
             }
             letters += evt.getText();
-            for (String item : names) {
+            for (String item : nameComboBox.getItems()) {
                 if (item.toLowerCase().trim().startsWith(letters.toLowerCase().trim())) {
                     nameComboBox.getSelectionModel().select(item);
                     break;

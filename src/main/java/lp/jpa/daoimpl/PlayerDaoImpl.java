@@ -1,6 +1,7 @@
 package lp.jpa.daoimpl;
 
 import lp.business.dto.Player;
+import lp.enums.TextEnum;
 import lp.jpa.EntityManager;
 import lp.jpa.dao.PlayerDao;
 import lp.jpa.entity.PlayerEntity;
@@ -10,13 +11,11 @@ import org.hibernate.query.Query;
 import java.util.ArrayList;
 import java.util.List;
 
-import lp.enums.TextEnum;
-
 public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public void saveOrUpdate(Player player) {
-        if (player == null) {
+        if (getSession() == null || player == null) {
             return;
         }
         getSession().beginTransaction();
@@ -27,6 +26,9 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public Player getPlayer(String name) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         NativeQuery<PlayerEntity> query = getSession().createNativeQuery("SELECT * " +
                         "FROM Player " +
@@ -41,6 +43,9 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public Player getPlayer(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         PlayerEntity entity = getSession().get(PlayerEntity.class, id);
         getSession().getTransaction().commit();
@@ -50,6 +55,9 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public List<Player> getAllPlayer() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<PlayerEntity> entities = getSession().createQuery("FROM PlayerEntity").getResultList();
@@ -62,7 +70,7 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public void deletePlayer(Player player) {
-        if (player == null) {
+        if (getSession() == null || player == null) {
             return;
         }
         getSession().beginTransaction();
@@ -73,6 +81,9 @@ public class PlayerDaoImpl extends EntityManager implements PlayerDao {
 
     @Override
     public void deletePlayer(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM PlayerEntity WHERE id=:id");
         query.setParameter("id", id);

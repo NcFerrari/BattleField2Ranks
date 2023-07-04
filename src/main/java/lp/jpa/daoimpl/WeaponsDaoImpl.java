@@ -13,7 +13,7 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public void saveOrUpdate(Weapons weapons) {
-        if (weapons == null) {
+        if (getSession() == null || weapons == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public Weapons getWeapons(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         WeaponsEntity entity = getSession().get(WeaponsEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public List<Weapons> getAllWeapons() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<WeaponsEntity> entities = getSession().createQuery("FROM WeaponsEntity").getResultList();
@@ -45,7 +51,7 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public void deleteWeapons(Weapons weapons) {
-        if (weapons == null) {
+        if (getSession() == null || weapons == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class WeaponsDaoImpl extends EntityManager implements WeaponsDao {
 
     @Override
     public void deleteWeapons(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM WeaponsEntity WHERE id=:id");
         query.setParameter("id", id);

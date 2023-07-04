@@ -13,7 +13,7 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public void saveOrUpdate(Army army) {
-        if (army == null) {
+        if (getSession() == null || army == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public Army getArmy(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         ArmyEntity entity = getSession().get(ArmyEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public List<Army> getAllArmy() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<ArmyEntity> entities = getSession().createQuery("FROM ArmyEntity").getResultList();
@@ -45,7 +51,7 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public void deleteArmy(Army army) {
-        if (army == null) {
+        if (getSession() == null || army == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class ArmyDaoImpl extends EntityManager implements ArmyDao {
 
     @Override
     public void deleteArmy(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM ArmyEntity WHERE id=:id");
         query.setParameter("id", id);

@@ -13,7 +13,7 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public void saveOrUpdate(Vehicles vehicles) {
-        if (vehicles == null) {
+        if (getSession() == null || vehicles == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public Vehicles getVehicles(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         VehiclesEntity entity = getSession().get(VehiclesEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public List<Vehicles> getAllVehicles() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<VehiclesEntity> entities = getSession().createQuery("FROM VehiclesEntity").getResultList();
@@ -45,7 +51,7 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public void deleteVehicles(Vehicles vehicles) {
-        if (vehicles == null) {
+        if (getSession() == null || vehicles == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class VehiclesDaoImpl extends EntityManager implements VehiclesDao {
 
     @Override
     public void deleteVehicles(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM VehiclesEntity WHERE id=:id");
         query.setParameter("id", id);

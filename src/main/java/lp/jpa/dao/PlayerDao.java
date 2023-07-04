@@ -17,5 +17,4 @@ public interface PlayerDao {
     void deletePlayer(Player player);
 
     void deletePlayer(int id);
-
 }

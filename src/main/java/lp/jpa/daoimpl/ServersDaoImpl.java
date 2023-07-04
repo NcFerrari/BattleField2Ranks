@@ -13,7 +13,7 @@ public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public void saveOrUpdate(Servers servers) {
-        if (servers == null) {
+        if (getSession() == null || servers == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public Servers getServers(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         ServersEntity entity = getSession().get(ServersEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public List<Servers> getAllServers() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<ServersEntity> entities = getSession().createQuery("FROM ServersEntity").getResultList();
@@ -45,7 +51,7 @@ public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public void deleteServers(Servers servers) {
-        if (servers == null) {
+        if (getSession() == null || servers == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class ServersDaoImpl extends EntityManager implements ServersDao {
 
     @Override
     public void deleteServers(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM ServersEntity WHERE id=:id");
         query.setParameter("id", id);

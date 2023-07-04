@@ -33,15 +33,16 @@ C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\business\d
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\Ip2nationDaoImpl.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\entity\KitsEntity.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\business\dto\Weapons.java
+C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\tabs\Valuable.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\business\dto\Awards.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\entity\MapinfoEntity.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\entity\WeaponsEntity.java
+C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\enums\FXText.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\MainApp.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\dao\UnlocksDao.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\ServersDaoImpl.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\tabs\KitInfoPane.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\serviceimpl\PictureServiceImpl.java
-C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\tabs\Valueable.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\KitsDaoImpl.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\tabs\BF2Component.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\fx\tabcontents\BF2OneThirdPane.java
@@ -55,6 +56,7 @@ C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\entity
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\business\dto\Player.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\UnlocksDaoImpl.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\AwardsDaoImpl.java
+C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\enums\RankEnum.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\daoimpl\WeaponsDaoImpl.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\business\dto\Mapinfo.java
 C:\Users\lpesek\Documents\Projekty\BattleField2Ranks\src\main\java\lp\jpa\dao\KillsDao.java

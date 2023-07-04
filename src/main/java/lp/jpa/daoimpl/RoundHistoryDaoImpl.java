@@ -13,7 +13,7 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public void saveOrUpdate(RoundHistory roundHistory) {
-        if (roundHistory == null) {
+        if (getSession() == null || roundHistory == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public RoundHistory getRoundHistory(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         RoundHistoryEntity entity = getSession().get(RoundHistoryEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public List<RoundHistory> getAllRoundHistory() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<RoundHistoryEntity> entities = getSession().createQuery("FROM RoundHistoryEntity").getResultList();
@@ -45,7 +51,7 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public void deleteRoundHistory(RoundHistory roundHistory) {
-        if (roundHistory == null) {
+        if (getSession() == null || roundHistory == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class RoundHistoryDaoImpl extends EntityManager implements RoundHistoryDa
 
     @Override
     public void deleteRoundHistory(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM RoundHistoryEntity WHERE id=:id");
         query.setParameter("id", id);

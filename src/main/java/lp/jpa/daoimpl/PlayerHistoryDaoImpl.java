@@ -13,7 +13,7 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public void saveOrUpdate(PlayerHistory playerHistory) {
-        if (playerHistory == null) {
+        if (getSession() == null || playerHistory == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public PlayerHistory getPlayerHistory(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         PlayerHistoryEntity entity = getSession().get(PlayerHistoryEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public List<PlayerHistory> getAllPlayerHistory() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<PlayerHistoryEntity> entities = getSession().createQuery("FROM PlayerHistoryEntity").getResultList();
@@ -45,7 +51,7 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public void deletePlayerHistory(PlayerHistory playerHistory) {
-        if (playerHistory == null) {
+        if (getSession() == null || playerHistory == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class PlayerHistoryDaoImpl extends EntityManager implements PlayerHistory
 
     @Override
     public void deletePlayerHistory(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM PlayerHistoryEntity WHERE id=:id");
         query.setParameter("id", id);

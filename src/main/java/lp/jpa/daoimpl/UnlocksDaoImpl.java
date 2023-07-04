@@ -13,7 +13,7 @@ public class UnlocksDaoImpl extends EntityManager implements UnlocksDao {
 
     @Override
     public void saveOrUpdate(Unlocks unlocks) {
-        if (unlocks == null) {
+        if (getSession() == null || unlocks == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class UnlocksDaoImpl extends EntityManager implements UnlocksDao {
 
     @Override
     public Unlocks getUnlocks(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         UnlocksEntity entity = getSession().get(UnlocksEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class UnlocksDaoImpl extends EntityManager implements UnlocksDao {
 
     @Override
     public List<Unlocks> getAllUnlocks() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<UnlocksEntity> entities = getSession().createQuery("FROM UnlocksEntity").getResultList();
@@ -45,7 +51,7 @@ public class UnlocksDaoImpl extends EntityManager implements UnlocksDao {
 
     @Override
     public void deleteUnlocks(Unlocks unlocks) {
-        if (unlocks == null) {
+        if (getSession() == null || unlocks == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class UnlocksDaoImpl extends EntityManager implements UnlocksDao {
 
     @Override
     public void deleteUnlocks(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM UnlocksEntity WHERE id=:id");
         query.setParameter("id", id);

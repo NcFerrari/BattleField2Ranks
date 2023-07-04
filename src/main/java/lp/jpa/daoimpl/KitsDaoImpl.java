@@ -13,7 +13,7 @@ public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public void saveOrUpdate(Kits kits) {
-        if (kits == null) {
+        if (getSession() == null || kits == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public Kits getKits(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         KitsEntity entity = getSession().get(KitsEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public List<Kits> getAllKits() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<KitsEntity> entities = getSession().createQuery("FROM KitsEntity").getResultList();
@@ -45,7 +51,7 @@ public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public void deleteKits(Kits kits) {
-        if (kits == null) {
+        if (getSession() == null || kits == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class KitsDaoImpl extends EntityManager implements KitsDao {
 
     @Override
     public void deleteKits(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM KitsEntity WHERE id=:id");
         query.setParameter("id", id);

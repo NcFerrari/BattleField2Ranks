@@ -13,7 +13,7 @@ public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public void saveOrUpdate(Maps maps) {
-        if (maps == null) {
+        if (getSession() == null || maps == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public Maps getMaps(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         MapsEntity entity = getSession().get(MapsEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public List<Maps> getAllMaps() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<MapsEntity> entities = getSession().createQuery("FROM MapsEntity").getResultList();
@@ -45,7 +51,7 @@ public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public void deleteMaps(Maps maps) {
-        if (maps == null) {
+        if (getSession() == null || maps == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class MapsDaoImpl extends EntityManager implements MapsDao {
 
     @Override
     public void deleteMaps(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM MapsEntity WHERE id=:id");
         query.setParameter("id", id);

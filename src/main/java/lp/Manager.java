@@ -7,8 +7,8 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lombok.Data;
 import lp.business.dto.Player;
+import lp.enums.FXText;
 import lp.enums.LangEnum;
-import lp.enums.TextFXEnum;
 import lp.fx.MainApp;
 import lp.fx.tabs.Valuable;
 import lp.jpa.dao.PlayerDao;
@@ -26,12 +26,12 @@ public class Manager {
 
     private static Manager manager;
 
-    private final Map<StringProperty, TextFXEnum> componentsForLanguage = new HashMap<>();
     private final LoggerService loggerService = LoggerServiceImpl.getInstance(Manager.class);
     private final Logger log = loggerService.getLog();
+    private final List<Valuable> valuableClasses = new ArrayList<>();
+    private final Map<StringProperty, FXText> componentsForLanguage = new HashMap<>();
     private final Map<String, Player> players = new HashMap<>();
     private final PlayerDao playerDao = new PlayerDaoImpl();
-    private final List<Valuable> valuableClasses = new ArrayList<>();
 
     private LangEnum language = LangEnum.EN;
     private Player selectedPlayer;

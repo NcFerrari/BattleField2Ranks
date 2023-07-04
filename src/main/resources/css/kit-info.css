@@ -46,3 +46,12 @@ VBox .tab-pane VBox .combo-box .cell {
 .value, .db-value {
     -fx-font-family: "Arial Narrow";
 }
+
+.progress-bar {
+    -fx-pref-height: 30px;
+    -fx-padding: 6px;
+}
+
+.progress-bar .bar {
+    -fx-background-color: linear-gradient(to left, #4c4738, #e9ee13);
+}

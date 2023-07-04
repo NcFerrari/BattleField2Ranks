@@ -13,7 +13,7 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public void saveOrUpdate(Awards awards) {
-        if (awards == null) {
+        if (getSession() == null || awards == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public Awards getAwards(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         AwardsEntity entity = getSession().get(AwardsEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public List<Awards> getAllAwards() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<AwardsEntity> entities = getSession().createQuery("FROM AwardsEntity").getResultList();
@@ -45,7 +51,7 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public void deleteAwards(Awards awards) {
-        if (awards == null) {
+        if (getSession() == null || awards == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class AwardsDaoImpl extends EntityManager implements AwardsDao {
 
     @Override
     public void deleteAwards(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM AwardsEntity WHERE id=:id");
         query.setParameter("id", id);

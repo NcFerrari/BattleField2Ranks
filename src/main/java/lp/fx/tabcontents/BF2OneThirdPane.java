@@ -2,12 +2,17 @@ package lp.fx.tabcontents;
 
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import lombok.Data;
 import lp.Manager;
 import lp.enums.PictureCategoryEnum;
+import lp.enums.RankEnum;
 import lp.enums.TextEnum;
 import lp.enums.TextFXEnum;
 import lp.fx.tabs.Valuable;
@@ -27,12 +32,15 @@ public class BF2OneThirdPane implements Valuable {
     private ComboBox<String> nameComboBox;
     private String letters = TextEnum.EMPTY_STRING.getText();
     private long timeCount;
-    private HBox rankPane;
+    private HBox rankCenterPane;
     private VBox rankDataPane;
     private Label rankTitle;
     private Label currentRank;
     private Label nextRank;
+    private StackPane imagePane;
     private ImageView rankImage;
+    private BorderPane progressPane;
+    private ProgressBar progressBar;
 
     public BF2OneThirdPane() {
         manager.registerValuable(this);
@@ -57,24 +65,37 @@ public class BF2OneThirdPane implements Valuable {
         }
         int rank = manager.getSelectedPlayer().getRank();
         manager.getComponentsForLanguage().replace(
-                currentRank.textProperty(), TextFXEnum.getRank(rank));
+                currentRank.textProperty(), RankEnum.getRank(rank));
         manager.getComponentsForLanguage().replace(
-                nextRank.textProperty(), TextFXEnum.getRank(rank + 1));
+                nextRank.textProperty(), RankEnum.getRank(rank + 1));
         rankImage.setImage(pictureService.getAwardImage(PictureCategoryEnum.SMALL_RANKS, rank));
+        double totalScore = 20_000;
+        if (rank < 22) {
+            totalScore = RankEnum.getRank(rank + 1).getGoalScore() - (double) RankEnum.getRank(rank).getGoalScore();
+        }
+        double currentScore = manager.getSelectedPlayer().getScore() - (double) RankEnum.getRank(rank).getGoalScore();
+        progressBar.setProgress(currentScore / totalScore);
     }
 
     public void resizeComponent(double frameWidth, double frameHeight) {
-        double oneThird = frameWidth / 3 - 2;
-        double oneSixth = frameWidth / 6 - 2;
+        double oneThird = frameWidth / 3;
+        double oneSixth = frameWidth / 6;
         mainPane.setMinSize(oneThird, frameHeight);
         mainPane.setMaxSize(mainPane.getMinWidth(), mainPane.getMinHeight());
         playerNameTitle.setMinWidth(oneThird);
-        rankPane.setMinWidth(oneThird);
-        rankTitle.setMinWidth(oneSixth);
+        rankCenterPane.setMinWidth(oneThird);
+        rankDataPane.setMinWidth(oneSixth);
+        rankTitle.setPrefWidth(oneThird);
         nameComboBox.setMinWidth(oneThird);
         nameComboBox.setMaxWidth(nameComboBox.getMinWidth());
-        rankImage.setFitWidth(oneSixth);
-        rankImage.setFitHeight(oneSixth);
+        imagePane.setMinWidth(oneSixth);
+        imagePane.setMaxWidth(oneSixth);
+        rankImage.setFitWidth(oneThird / 3);
+        rankImage.setFitHeight(oneThird / 3);
+        progressPane.setMinWidth(oneThird);
+        progressPane.setMaxWidth(oneThird);
+        progressBar.setMinWidth(oneSixth);
+        progressBar.setMaxWidth(oneSixth);
     }
 
     private void fillNameComboBox() {
@@ -97,31 +118,39 @@ public class BF2OneThirdPane implements Valuable {
     }
 
     private void initRankPane() {
-        rankPane = new HBox();
-        mainPane.getChildren().add(rankPane);
-
-        rankDataPane = new VBox();
-
         rankTitle = new Label();
         rankTitle.setText(TextFXEnum.RANK_TITLE.getText(rankTitle.textProperty()));
         rankTitle.getStyleClass().add(TextEnum.SUB_TITLE_STYLE.getText());
-        rankDataPane.getChildren().add(rankTitle);
+        mainPane.getChildren().add(rankTitle);
 
-        addLabel(TextFXEnum.CURRENT_RANK, false);
-        currentRank = addLabel(TextFXEnum.EMPTY_STRING, true);
-        addLabel(TextFXEnum.EMPTY_STRING, false);
-        addLabel(TextFXEnum.NEXT_RANK, false);
-        nextRank = addLabel(TextFXEnum.EMPTY_STRING, true);
-        addLabel(TextFXEnum.EMPTY_STRING, false);
-        addLabel(TextFXEnum.PROGRESS_TOWARDS_NEXT_RANK, false);
+        rankCenterPane = new HBox();
+        mainPane.getChildren().add(rankCenterPane);
+        rankDataPane = new VBox();
+        addLabel(rankDataPane, TextFXEnum.CURRENT_RANK, false);
+        currentRank = addLabel(rankDataPane, TextFXEnum.EMPTY_STRING, true);
+        addLabel(rankDataPane, TextFXEnum.EMPTY_STRING, false);
+        addLabel(rankDataPane, TextFXEnum.NEXT_RANK, false);
+        nextRank = addLabel(rankDataPane, TextFXEnum.EMPTY_STRING, true);
+        addLabel(rankDataPane, TextFXEnum.EMPTY_STRING, false);
+        rankCenterPane.getChildren().add(rankDataPane);
 
-        rankPane.getChildren().add(rankDataPane);
-
+        imagePane = new StackPane();
+        imagePane.getStyleClass().add(TextEnum.RANK_IMAGE_STYLE.getText());
         rankImage = new ImageView();
-        rankPane.getChildren().add(rankImage);
+        imagePane.getChildren().add(rankImage);
+        rankCenterPane.getChildren().add(imagePane);
+
+        progressPane = new BorderPane();
+        mainPane.getChildren().add(progressPane);
+        Label progressTowLabel = new Label();
+        progressTowLabel.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
+        progressTowLabel.setText(TextFXEnum.PROGRESS_TOWARDS_NEXT_RANK.getText(progressTowLabel.textProperty()));
+        progressPane.setLeft(progressTowLabel);
+        progressBar = new ProgressBar();
+        progressPane.setRight(progressBar);
     }
 
-    private Label addLabel(TextFXEnum textFXEnum, boolean valueFromDB) {
+    private Label addLabel(Pane rootPane, TextFXEnum textFXEnum, boolean valueFromDB) {
         Label label = new Label();
         if (valueFromDB) {
             label.getStyleClass().add(TextEnum.DB_VALUE_STYLE.getText());
@@ -129,7 +158,7 @@ public class BF2OneThirdPane implements Valuable {
             label.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
         }
         label.setText(textFXEnum.getText(label.textProperty()));
-        rankDataPane.getChildren().add(label);
+        rootPane.getChildren().add(label);
         return label;
     }
 }

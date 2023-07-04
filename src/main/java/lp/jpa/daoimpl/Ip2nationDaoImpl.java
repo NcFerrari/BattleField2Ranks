@@ -13,7 +13,7 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public void saveOrUpdate(Ip2nation ip2nation) {
-        if (ip2nation == null) {
+        if (getSession() == null || ip2nation == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public Ip2nation getIp2nation(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         Ip2nationEntity entity = getSession().get(Ip2nationEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public List<Ip2nation> getAllIp2nation() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<Ip2nationEntity> entities = getSession().createQuery("FROM Ip2nationEntity").getResultList();
@@ -45,7 +51,7 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public void deleteIp2nation(Ip2nation ip2nation) {
-        if (ip2nation == null) {
+        if (getSession() == null || ip2nation == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class Ip2nationDaoImpl extends EntityManager implements Ip2nationDao {
 
     @Override
     public void deleteIp2nation(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM Ip2nationEntity WHERE id=:id");
         query.setParameter("id", id);

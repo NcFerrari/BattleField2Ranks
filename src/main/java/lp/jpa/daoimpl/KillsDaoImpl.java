@@ -13,7 +13,7 @@ public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public void saveOrUpdate(Kills kills) {
-        if (kills == null) {
+        if (getSession() == null || kills == null) {
             return;
         }
         getSession().beginTransaction();
@@ -24,6 +24,9 @@ public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public Kills getKills(int id) {
+        if (getSession() == null) {
+            return null;
+        }
         getSession().beginTransaction();
         KillsEntity entity = getSession().get(KillsEntity.class, id);
         getSession().getTransaction().commit();
@@ -33,6 +36,9 @@ public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public List<Kills> getAllKills() {
+        if (getSession() == null) {
+            return new ArrayList<>();
+        }
         getSession().beginTransaction();
         @SuppressWarnings("unchecked")
         List<KillsEntity> entities = getSession().createQuery("FROM KillsEntity").getResultList();
@@ -45,7 +51,7 @@ public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public void deleteKills(Kills kills) {
-        if (kills == null) {
+        if (getSession() == null || kills == null) {
             return;
         }
         getSession().beginTransaction();
@@ -56,6 +62,9 @@ public class KillsDaoImpl extends EntityManager implements KillsDao {
 
     @Override
     public void deleteKills(int id) {
+        if (getSession() == null) {
+            return;
+        }
         getSession().beginTransaction();
         Query<?> query = getSession().createQuery("DELETE FROM KillsEntity WHERE id=:id");
         query.setParameter("id", id);

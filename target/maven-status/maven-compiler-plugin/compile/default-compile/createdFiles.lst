@@ -4,6 +4,7 @@ lp\jpa\dao\AwardsDao.class
 lp\jpa\daoimpl\VehiclesDaoImpl.class
 lp\jpa\daoimpl\AwardsDaoImpl.class
 lp\jpa\dao\WeaponsDao.class
+lp\enums\RankEnum.class
 lp\fx\MainApp.class
 lp\jpa\dao\MapinfoDao.class
 lp\enums\LangEnum.class
@@ -17,6 +18,7 @@ lp\business\dto\Army.class
 lp\Manager.class
 lp\jpa\entity\PlayerHistoryEntity.class
 lp\serviceimpl\PictureServiceImpl.class
+lp\enums\FXText.class
 lp\jpa\entity\ArmyEntity.class
 lp\jpa\dao\MapsDao.class
 lp\jpa\entity\AwardsEntity.class
@@ -29,7 +31,6 @@ lp\jpa\entity\KitsEntity.class
 lp\business\dto\Vehicles.class
 lp\jpa\dao\KillsDao.class
 lp\business\dto\Maps.class
-lp\fx\tabs\Valueable.class
 lp\jpa\dao\Ip2nationDao.class
 lp\jpa\entity\VehiclesEntity.class
 lp\jpa\daoimpl\MapsDaoImpl.class
@@ -51,6 +52,7 @@ lp\jpa\entity\KillsEntity.class
 lp\jpa\dao\ServersDao.class
 lp\jpa\dao\RoundHistoryDao.class
 lp\enums\TextFXEnum.class
+lp\fx\tabs\Valuable.class
 lp\jpa\daoimpl\KillsDaoImpl.class
 lp\jpa\entity\UnlocksEntity.class
 lp\jpa\dao\KitsDao.class

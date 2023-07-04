@@ -11,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import lombok.Data;
 import lp.Manager;
+import lp.business.dto.Player;
 import lp.enums.PictureCategoryEnum;
 import lp.enums.RankEnum;
 import lp.enums.TextEnum;
@@ -19,6 +20,9 @@ import lp.fx.tabs.Valuable;
 import lp.service.PictureService;
 import lp.serviceimpl.PictureServiceImpl;
 
+import java.util.EnumMap;
+import java.util.Map;
+
 @Data
 public class BF2OneThirdPane implements Valuable {
 
@@ -26,11 +30,12 @@ public class BF2OneThirdPane implements Valuable {
 
     private final VBox mainPane = new VBox();
     private final Manager manager = Manager.getInstance();
-    private PictureService pictureService = new PictureServiceImpl();
+    private final PictureService pictureService = new PictureServiceImpl();
+    private final Map<TextFXEnum, Label> personalInfoLabels = new EnumMap<>(TextFXEnum.class);
+    private String letters = TextEnum.EMPTY_STRING.getText();
 
     private Label playerNameTitle;
     private ComboBox<String> nameComboBox;
-    private String letters = TextEnum.EMPTY_STRING.getText();
     private long timeCount;
     private HBox rankCenterPane;
     private VBox rankDataPane;
@@ -41,6 +46,7 @@ public class BF2OneThirdPane implements Valuable {
     private ImageView rankImage;
     private BorderPane progressPane;
     private ProgressBar progressBar;
+    private Label personalInfoTitle;
 
     public BF2OneThirdPane() {
         manager.registerValuable(this);
@@ -55,15 +61,17 @@ public class BF2OneThirdPane implements Valuable {
         mainPane.getChildren().add(nameComboBox);
 
         initRankPane();
+        initPersonalInfoPane();
         fillNameComboBox();
     }
 
     @Override
     public void reloadData() {
+        Player player = manager.getSelectedPlayer();
         if (manager.getSelectedPlayer() == null) {
             return;
         }
-        int rank = manager.getSelectedPlayer().getRank();
+        int rank = player.getRank();
         manager.getComponentsForLanguage().replace(
                 currentRank.textProperty(), RankEnum.getRank(rank));
         manager.getComponentsForLanguage().replace(
@@ -73,8 +81,16 @@ public class BF2OneThirdPane implements Valuable {
         if (rank < 22) {
             totalScore = RankEnum.getRank(rank + 1).getGoalScore() - (double) RankEnum.getRank(rank).getGoalScore();
         }
-        double currentScore = manager.getSelectedPlayer().getScore() - (double) RankEnum.getRank(rank).getGoalScore();
+        double currentScore = player.getScore() - (double) RankEnum.getRank(rank).getGoalScore();
         progressBar.setProgress(currentScore / totalScore);
+
+        personalInfoLabels.get(TextFXEnum.GLOBAL_SCORE).setText(String.valueOf(player.getScore()));
+        personalInfoLabels.get(TextFXEnum.TIME).setText(formatTime(player.getTime().intValue()));
+        personalInfoLabels.get(TextFXEnum.KILLS).setText(String.valueOf(player.getKills()));
+        personalInfoLabels.get(TextFXEnum.DEATHS).setText(String.valueOf(player.getDeaths()));
+        personalInfoLabels.get(TextFXEnum.TEAM_KILLS).setText(String.valueOf(player.getTeamkills()));
+        personalInfoLabels.get(TextFXEnum.WINS).setText(String.valueOf(player.getWins()));
+        personalInfoLabels.get(TextFXEnum.LOSSES).setText(String.valueOf(player.getLosses()));
     }
 
     public void resizeComponent(double frameWidth, double frameHeight) {
@@ -86,35 +102,14 @@ public class BF2OneThirdPane implements Valuable {
         rankCenterPane.setMinWidth(oneThird);
         rankDataPane.setMinWidth(oneSixth);
         rankTitle.setPrefWidth(oneThird);
-        nameComboBox.setMinWidth(oneThird);
-        nameComboBox.setMaxWidth(nameComboBox.getMinWidth());
-        imagePane.setMinWidth(oneSixth);
-        imagePane.setMaxWidth(oneSixth);
+        nameComboBox.setPrefWidth(oneThird);
+        imagePane.setPrefWidth(oneSixth);
         rankImage.setFitWidth(oneThird / 3);
         rankImage.setFitHeight(oneThird / 3);
         progressPane.setMinWidth(oneThird);
         progressPane.setMaxWidth(oneThird);
-        progressBar.setMinWidth(oneSixth);
-        progressBar.setMaxWidth(oneSixth);
-    }
-
-    private void fillNameComboBox() {
-        nameComboBox.getItems().addAll(manager.getPlayerNames());
-        nameComboBox.setOnKeyPressed(evt -> {
-            if (timeCount < (System.currentTimeMillis() - COMBO_BOX_COUNTER_TIME)) {
-                timeCount = System.currentTimeMillis();
-                letters = TextEnum.EMPTY_STRING.getText();
-            }
-            letters += evt.getText();
-            for (String item : nameComboBox.getItems()) {
-                if (item.toLowerCase().trim().startsWith(letters.toLowerCase().trim())) {
-                    nameComboBox.getSelectionModel().select(item);
-                    break;
-                }
-            }
-        });
-        nameComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
-                manager.setSelectedPlayer(newValue));
+        progressBar.setPrefWidth(oneSixth);
+        personalInfoTitle.setPrefWidth(oneThird);
     }
 
     private void initRankPane() {
@@ -145,7 +140,7 @@ public class BF2OneThirdPane implements Valuable {
         Label progressTowLabel = new Label();
         progressTowLabel.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
         progressTowLabel.setText(TextFXEnum.PROGRESS_TOWARDS_NEXT_RANK.getText(progressTowLabel.textProperty()));
-        progressPane.setLeft(progressTowLabel);
+        progressPane.setCenter(progressTowLabel);
         progressBar = new ProgressBar();
         progressPane.setRight(progressBar);
     }
@@ -160,5 +155,79 @@ public class BF2OneThirdPane implements Valuable {
         label.setText(textFXEnum.getText(label.textProperty()));
         rootPane.getChildren().add(label);
         return label;
+    }
+
+    private void initPersonalInfoPane() {
+        personalInfoTitle = new Label();
+        personalInfoTitle.setText(TextFXEnum.PERSONAL_INFO.getText(personalInfoTitle.textProperty()));
+        personalInfoTitle.getStyleClass().add(TextEnum.SUB_TITLE_STYLE.getText());
+        mainPane.getChildren().add(personalInfoTitle);
+
+        addBorderLine(TextFXEnum.GLOBAL_SCORE);
+        addBorderLine(TextFXEnum.TIME);
+        addBorderLine(TextFXEnum.KILLS);
+        addBorderLine(TextFXEnum.DEATHS);
+        addBorderLine(TextFXEnum.TEAM_KILLS);
+        addBorderLine(TextFXEnum.WINS);
+        addBorderLine(TextFXEnum.LOSSES);
+    }
+
+    private void addBorderLine(TextFXEnum textFXEnum) {
+        BorderPane borderPane = new BorderPane();
+        if (personalInfoLabels.size() % 2 == 0) {
+            borderPane.getStyleClass().add(TextEnum.BORDER_LIGHT_STYLE.getText());
+        }
+        mainPane.getChildren().add(borderPane);
+
+        Label textLabel = new Label();
+        textLabel.setText(textFXEnum.getText(textLabel.textProperty()));
+        textLabel.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
+        borderPane.setLeft(textLabel);
+        Label valueLabel = new Label();
+        valueLabel.getStyleClass().add(TextEnum.DB_VALUE_STYLE.getText());
+        borderPane.setRight(valueLabel);
+        personalInfoLabels.put(textFXEnum, valueLabel);
+    }
+
+    private void fillNameComboBox() {
+        nameComboBox.getItems().addAll(manager.getPlayerNames());
+        nameComboBox.setOnKeyPressed(evt -> {
+            if (timeCount < (System.currentTimeMillis() - COMBO_BOX_COUNTER_TIME)) {
+                timeCount = System.currentTimeMillis();
+                letters = TextEnum.EMPTY_STRING.getText();
+            }
+            letters += evt.getText();
+            for (String item : nameComboBox.getItems()) {
+                if (item.toLowerCase().trim().startsWith(letters.toLowerCase().trim())) {
+                    nameComboBox.getSelectionModel().select(item);
+                    break;
+                }
+            }
+        });
+        nameComboBox.valueProperty().addListener((observable, oldValue, newValue) ->
+                manager.setSelectedPlayer(newValue));
+    }
+
+    private String formatTime(int time) {
+        int days = 0;
+        int hours = 0;
+        int min = 0;
+        if (time >= 86400) {
+            days = time / 86400;
+            time = time % 86400;
+        }
+        if (time > 3600) {
+            hours = time / 3600;
+            time = time % 3600;
+        }
+        if (time > 60) {
+            min = time / 60;
+            time = time % 60;
+        }
+        return String.format(TextEnum.TIME_TEXT_FORMAT.getText(),
+                days > 0 ? days + TextEnum.DAYS_LETTER.getText() : TextEnum.EMPTY_STRING.getText(),
+                hours > 0 ? hours + TextEnum.HOURS_LETTER.getText() : TextEnum.EMPTY_STRING.getText(),
+                min > 0 ? min + TextEnum.MINUTES_LETTER.getText() : TextEnum.EMPTY_STRING.getText(),
+                time + TextEnum.SECONDS_LETTER.getText());
     }
 }

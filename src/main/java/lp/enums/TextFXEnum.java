@@ -5,6 +5,7 @@ import lp.Manager;
 
 public enum TextFXEnum implements FXText {
     EMPTY_STRING("", ""),
+    UPDATE_DATA_BUTTON("Update Data", "Aktualizovat Data"),
     TAB_MENU_KIT_INFO("KIT INFO", "INFORMACE O VÝBAVĚ"),
     TAB_MENU_STATS("STATS", "STATISTIKY"),
     TAB_MENU_LEADERBOARDS("LEADERBOARDS", "ŽEBŘÍČKY"),
@@ -15,7 +16,15 @@ public enum TextFXEnum implements FXText {
     CURRENT_RANK("Current rank", "Aktuální hodnost"),
     NEXT_RANK("Next rank", "Následující hodnost"),
     PROGRESS_TOWARDS_NEXT_RANK("Progress towards next rank", "Postup pro další hodnost"),
-    UPDATE_DATA_BUTTON("Update Data", "Aktualizovat Data");
+    PERSONAL_INFO("PERSONAL INFO", "OSOBNÍ INFORMACE"),
+    GLOBAL_SCORE("Global score", "Globální skóre"),
+    TIME("Total time", "Celkový čas"),
+    KILLS("Kills", "Počet zabití"),
+    DEATHS("Deaths", "Počet smrtí"),
+    TEAM_KILLS("Team kills", "Zabití kamaráda"),
+    WINS("Wins", "Výhry"),
+    LOSSES("Losses", "Proher");
+
 
     private final String engText;
     private final String czeText;

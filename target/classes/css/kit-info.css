@@ -55,3 +55,7 @@ VBox .tab-pane VBox .combo-box .cell {
 .progress-bar .bar {
     -fx-background-color: linear-gradient(to left, #4c4738, #e9ee13);
 }
+
+.border-light {
+    -fx-background-color: #3a3939;
+}

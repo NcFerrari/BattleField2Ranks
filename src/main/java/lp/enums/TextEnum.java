@@ -7,6 +7,7 @@ public enum TextEnum {
     RANK_IMAGE_STYLE("rank-image"),
     SUB_TITLE_STYLE("sub-title"),
     DB_VALUE_STYLE("db-value"),
+    AWARDS_PANE_STYLE("awards"),
     BORDER_LIGHT_STYLE("border-light"),
     VALUE_STYLE("value"),
     EMPTY_STRING(""),

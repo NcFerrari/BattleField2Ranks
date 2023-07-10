@@ -5,8 +5,8 @@ import lombok.Getter;
 @Getter
 public enum PictureCategoryEnum {
     BADGES_BRONZE("pictures/badges/bronze/badge_", ".jpg"),
-    BADGES_SILVER("pictures/badges/silver/", ".jpg"),
-    BADGES_GOLD("pictures/badges/gold/", ".jpg"),
+    BADGES_SILVER("pictures/badges/silver/badge_", ".jpg"),
+    BADGES_GOLD("pictures/badges/gold/badge_", ".jpg"),
     MEDALS("pictures/medals/medal_", ".jpg"),
     RANKS("pictures/ranks/", ".jpg"),
     RIBBONS("pictures/ribbons/ribbon_", ".jpg"),

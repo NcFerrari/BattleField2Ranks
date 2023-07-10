@@ -20,7 +20,9 @@ import lp.fx.tabs.Valuable;
 import lp.service.PictureService;
 import lp.serviceimpl.PictureServiceImpl;
 
+import java.util.ArrayList;
 import java.util.EnumMap;
+import java.util.List;
 import java.util.Map;
 
 @Data
@@ -32,6 +34,7 @@ public class BF2OneThirdPane implements Valuable {
     private final Manager manager = Manager.getInstance();
     private final PictureService pictureService = new PictureServiceImpl();
     private final Map<TextFXEnum, Label> personalInfoLabels = new EnumMap<>(TextFXEnum.class);
+    private final List<ImageView> awards = new ArrayList<>();
     private String letters = TextEnum.EMPTY_STRING.getText();
 
     private Label playerNameTitle;
@@ -47,6 +50,7 @@ public class BF2OneThirdPane implements Valuable {
     private BorderPane progressPane;
     private ProgressBar progressBar;
     private Label personalInfoTitle;
+    private Label lastThreeAwardsTitle;
 
     public BF2OneThirdPane() {
         manager.registerValuable(this);
@@ -62,6 +66,7 @@ public class BF2OneThirdPane implements Valuable {
 
         initRankPane();
         initPersonalInfoPane();
+        initLastThreeAwards();
         fillNameComboBox();
     }
 
@@ -110,6 +115,11 @@ public class BF2OneThirdPane implements Valuable {
         progressPane.setMaxWidth(oneThird);
         progressBar.setPrefWidth(oneSixth);
         personalInfoTitle.setPrefWidth(oneThird);
+        lastThreeAwardsTitle.setPrefWidth(oneThird);
+        awards.forEach(imageView -> {
+            imageView.setFitWidth(oneThird / 3 - 20);
+            imageView.setFitHeight(oneThird / 6);
+        });
     }
 
     private void initRankPane() {
@@ -140,7 +150,7 @@ public class BF2OneThirdPane implements Valuable {
         Label progressTowLabel = new Label();
         progressTowLabel.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
         progressTowLabel.setText(TextFXEnum.PROGRESS_TOWARDS_NEXT_RANK.getText(progressTowLabel.textProperty()));
-        progressPane.setCenter(progressTowLabel);
+        progressPane.setLeft(progressTowLabel);
         progressBar = new ProgressBar();
         progressPane.setRight(progressBar);
     }
@@ -229,5 +239,23 @@ public class BF2OneThirdPane implements Valuable {
                 hours > 0 ? hours + TextEnum.HOURS_LETTER.getText() : TextEnum.EMPTY_STRING.getText(),
                 min > 0 ? min + TextEnum.MINUTES_LETTER.getText() : TextEnum.EMPTY_STRING.getText(),
                 time + TextEnum.SECONDS_LETTER.getText());
+    }
+
+    private void initLastThreeAwards() {
+        lastThreeAwardsTitle = new Label();
+        lastThreeAwardsTitle.setText(TextFXEnum.LAST_THREE_AWARDS_TITLE.getText(lastThreeAwardsTitle.textProperty()));
+        lastThreeAwardsTitle.getStyleClass().add(TextEnum.SUB_TITLE_STYLE.getText());
+        mainPane.getChildren().add(lastThreeAwardsTitle);
+
+        HBox awardsPane = new HBox();
+        awardsPane.setSpacing(20);
+        awardsPane.getStyleClass().add(TextEnum.AWARDS_PANE_STYLE.getText());
+        mainPane.getChildren().add(awardsPane);
+
+        for (int i = 0; i < 3; i++) {
+            ImageView imageView = new ImageView(pictureService.getAwardImage(PictureCategoryEnum.BADGES_GOLD, 2));
+            awards.add(imageView);
+            awardsPane.getChildren().add(imageView);
+        }
     }
 }

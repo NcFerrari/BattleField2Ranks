@@ -23,7 +23,8 @@ public enum TextFXEnum implements FXText {
     DEATHS("Deaths", "Počet smrtí"),
     TEAM_KILLS("Team kills", "Zabití kamaráda"),
     WINS("Wins", "Výhry"),
-    LOSSES("Losses", "Proher");
+    LOSSES("Losses", "Prohry"),
+    LAST_THREE_AWARDS_TITLE("THREE LATEST AWARDS", "POSLEDNÍ TŘI OCENĚNÍ");
 
 
     private final String engText;

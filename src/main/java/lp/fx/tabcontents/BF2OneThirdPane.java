@@ -52,6 +52,7 @@ public class BF2OneThirdPane implements Valuable {
     private ProgressBar progressBar;
     private Label personalInfoTitle;
     private Label lastThreeAwardsTitle;
+    private Label lastAwardValueLabel;
 
     public BF2OneThirdPane() {
         manager.registerValuable(this);
@@ -101,6 +102,9 @@ public class BF2OneThirdPane implements Valuable {
         resetAwardsImages();
         int i = 0;
         for (Awards award : manager.getLastThreeAwardsForSelectedPlayer()) {
+            if (i == 0) {
+                lastAwardValueLabel.setText("" +award.getAwd());
+            }
             awards.get(i++).setImage(pictureService.getAwardImageById(award.getAwd(), award.getLevel().intValue()));
         }
     }
@@ -265,6 +269,16 @@ public class BF2OneThirdPane implements Valuable {
             awardsPane.getChildren().add(imageView);
         }
         resetAwardsImages();
+
+        BorderPane lastAwardPane = new BorderPane();
+        mainPane.getChildren().add(lastAwardPane);
+        Label textLabel = new Label();
+        textLabel.setText(TextFXEnum.LAST_AWARD.getText(textLabel.textProperty()));
+        textLabel.getStyleClass().add(TextEnum.VALUE_STYLE.getText());
+        lastAwardPane.setLeft(textLabel);
+        lastAwardValueLabel = new Label();
+        lastAwardValueLabel.getStyleClass().add(TextEnum.DB_VALUE_STYLE.getText());
+        lastAwardPane.setRight(lastAwardValueLabel);
     }
 
     private void resetAwardsImages() {

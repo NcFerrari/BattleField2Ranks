@@ -10,7 +10,7 @@ public enum TextFXEnum implements FXText {
     TAB_MENU_STATS("STATS", "STATISTIKY"),
     TAB_MENU_LEADERBOARDS("LEADERBOARDS", "ŽEBŘÍČKY"),
     TAB_MENU_AWARDS("AWARDS", "ODMĚNY"),
-    MAIN_APPLICATION_TITLE("Battlefi eld 2 - Head Quarters", "Battlefield 2 - Informační přehledy"),
+    MAIN_APPLICATION_TITLE("Battlefield 2 - Head Quarters", "Battlefield 2 - Informační přehledy"),
     PLAYER_NAME_TITLE("PLAYER NAME", "JMÉNO HRÁČE"),
     RANK_TITLE("RANK", "HODNOST"),
     CURRENT_RANK("Current rank", "Aktuální hodnost"),
@@ -24,7 +24,8 @@ public enum TextFXEnum implements FXText {
     TEAM_KILLS("Team kills", "Zabití kamaráda"),
     WINS("Wins", "Výhry"),
     LOSSES("Losses", "Prohry"),
-    LAST_THREE_AWARDS_TITLE("THREE LATEST AWARDS", "POSLEDNÍ TŘI OCENĚNÍ");
+    LAST_THREE_AWARDS_TITLE("THREE LATEST AWARDS", "POSLEDNÍ TŘI OCENĚNÍ"),
+    LAST_AWARD("LATEST AWARD", "POSLEDNÍ OCENĚNÍ");
 
 
     private final String engText;

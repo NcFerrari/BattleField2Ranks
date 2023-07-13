@@ -91,7 +91,6 @@ public class Manager {
     }
 
     public List<Awards> getLastThreeAwardsForSelectedPlayer() {
-        List<Awards> awards = awardsDao.getAllAwardsById(getSelectedPlayer().getId(), 3);
-        return awards;
+        return awardsDao.getAllAwardsById(getSelectedPlayer().getId(), 3);
     }
 }

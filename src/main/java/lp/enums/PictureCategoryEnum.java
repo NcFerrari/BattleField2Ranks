@@ -10,6 +10,7 @@ public enum PictureCategoryEnum {
     MEDALS("pictures/medals/medal_", ".jpg"),
     RANKS("pictures/ranks/", ".jpg"),
     RIBBONS("pictures/ribbons/ribbon_", ".jpg"),
+    SMALL_RIBBONS("pictures/smallRibbons/ribbon_", ".png"),
     SMALL_RANKS("pictures/smallRanks/", ".png"),
     NO_AWARD("pictures/NO_AWARD", ".png");
 

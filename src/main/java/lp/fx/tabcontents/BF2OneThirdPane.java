@@ -11,6 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import lombok.Data;
 import lp.Manager;
+import lp.business.dto.Awards;
 import lp.business.dto.Player;
 import lp.enums.PictureCategoryEnum;
 import lp.enums.RankEnum;
@@ -73,7 +74,7 @@ public class BF2OneThirdPane implements Valuable {
     @Override
     public void reloadData() {
         Player player = manager.getSelectedPlayer();
-        if (manager.getSelectedPlayer() == null) {
+        if (player == null) {
             return;
         }
         int rank = player.getRank();
@@ -96,6 +97,12 @@ public class BF2OneThirdPane implements Valuable {
         personalInfoLabels.get(TextFXEnum.TEAM_KILLS).setText(String.valueOf(player.getTeamkills()));
         personalInfoLabels.get(TextFXEnum.WINS).setText(String.valueOf(player.getWins()));
         personalInfoLabels.get(TextFXEnum.LOSSES).setText(String.valueOf(player.getLosses()));
+
+        resetAwardsImages();
+        int i = 0;
+        for (Awards award : manager.getLastThreeAwardsForSelectedPlayer()) {
+            awards.get(i++).setImage(pictureService.getAwardImageById(award.getAwd(), award.getLevel().intValue()));
+        }
     }
 
     public void resizeComponent(double frameWidth, double frameHeight) {
@@ -253,9 +260,14 @@ public class BF2OneThirdPane implements Valuable {
         mainPane.getChildren().add(awardsPane);
 
         for (int i = 0; i < 3; i++) {
-            ImageView imageView = new ImageView(pictureService.getAwardImage(PictureCategoryEnum.BADGES_GOLD, 2));
+            ImageView imageView = new ImageView();
             awards.add(imageView);
             awardsPane.getChildren().add(imageView);
         }
+        resetAwardsImages();
+    }
+
+    private void resetAwardsImages() {
+        awards.forEach(award -> award.setImage(pictureService.getNoAwardImage()));
     }
 }

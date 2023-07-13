@@ -5,15 +5,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fed49903-e427-45a8-ba1b-f22c3e8245c9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/2023-07-04/19.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-07-04/19.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/2023-07-10/17.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/2023-07-10/17.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/Manager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/Manager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/business/dto/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/business/dto/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/PictureCategoryEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/PictureCategoryEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/enums/TextFXEnum.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/fx/tabcontents/BF2OneThirdPane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/PictureCategoryEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/PictureCategoryEnum.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/enums/TextFXEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/jpa/dao/AwardsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/jpa/dao/AwardsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/jpa/daoimpl/AwardsDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/jpa/daoimpl/AwardsDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/service/PictureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/service/PictureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/serviceimpl/PictureServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/serviceimpl/PictureServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/badges/bronze/badge_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/badges/bronze/badge_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/medals/medal_19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/medals/medal_19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_10.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_10.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_11.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_11.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_12.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_12.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_13.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_13.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_14.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_14.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_15.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_15.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_16.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_16.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_17.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_17.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_18.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_18.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_19.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_19.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_7.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_8.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_8.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_9.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pictures/ribbons/ribbon_9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring.components" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring.components" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/Manager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/Manager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/business/dto/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/business/dto/Player.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/fx/tabContents/BF2OneThirdPane.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/jpa/dao/AwardsDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/jpa/dao/AwardsDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/jpa/daoimpl/AwardsDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/jpa/daoimpl/AwardsDaoImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +73,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Class" />
         <option value="Enum" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -166,7 +215,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/lpesek/Documents/Final Projects/Generator&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/lpesek/Documents/Projekty/BattleField2Ranks&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -302,6 +351,11 @@
       <workItem from="1688458008058" duration="24946000" />
       <workItem from="1688713898583" duration="18000" />
       <workItem from="1689002103432" duration="677000" />
+      <workItem from="1689058194487" duration="646000" />
+      <workItem from="1689058859902" duration="1487000" />
+      <workItem from="1689091512577" duration="867000" />
+      <workItem from="1689153024291" duration="9872000" />
+      <workItem from="1689227375960" duration="23219000" />
     </task>
     <servers />
   </component>

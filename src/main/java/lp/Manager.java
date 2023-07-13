@@ -6,12 +6,15 @@ import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import lombok.Data;
+import lp.business.dto.Awards;
 import lp.business.dto.Player;
 import lp.enums.FXText;
 import lp.enums.LangEnum;
 import lp.fx.MainApp;
 import lp.fx.tabs.Valuable;
+import lp.jpa.dao.AwardsDao;
 import lp.jpa.dao.PlayerDao;
+import lp.jpa.daoimpl.AwardsDaoImpl;
 import lp.jpa.daoimpl.PlayerDaoImpl;
 import org.apache.log4j.Logger;
 
@@ -32,6 +35,7 @@ public class Manager {
     private final Map<StringProperty, FXText> componentsForLanguage = new HashMap<>();
     private final Map<String, Player> players = new HashMap<>();
     private final PlayerDao playerDao = new PlayerDaoImpl();
+    private final AwardsDao awardsDao = new AwardsDaoImpl();
 
     private LangEnum language = LangEnum.EN;
     private Player selectedPlayer;
@@ -84,5 +88,10 @@ public class Manager {
     private void refreshSelectedPlayerValues() {
         valuableClasses.forEach(Valuable::reloadData);
         reloadLanguages(language);
+    }
+
+    public List<Awards> getLastThreeAwardsForSelectedPlayer() {
+        List<Awards> awards = awardsDao.getAllAwardsById(getSelectedPlayer().getId(), 3);
+        return awards;
     }
 }

@@ -12,6 +12,10 @@ public interface AwardsDao {
 
     List<Awards> getAllAwards();
 
+    List<Awards> getAllAwardsById(int playerId, int limit);
+
+    List<Awards> getAllAwardsById(int playerId);
+
     void deleteAwards(Awards awards);
 
     void deleteAwards(int id);

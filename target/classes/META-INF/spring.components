@@ -1,11 +1,11 @@
 #
-#Mon Jul 10 17:25:50 CEST 2023
+#Thu Jul 13 16:50:02 CEST 2023
 lp.jpa.entity.MapsEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.RoundHistoryEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.UnlocksEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.VehiclesEntity=javax.persistence.Entity,javax.persistence.Table
-lp.jpa.entity.ArmyEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.PlayerEntity=javax.persistence.Entity,javax.persistence.Table
+lp.jpa.entity.ArmyEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.AwardsEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.ServersEntity=javax.persistence.Entity,javax.persistence.Table
 lp.jpa.entity.MapinfoEntity=javax.persistence.Entity,javax.persistence.Table

@@ -9,4 +9,6 @@ public interface PictureService {
 
     Image getNoAwardImage();
 
+    Image getAwardImageById(int awardId, int level);
+
 }
